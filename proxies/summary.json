@@ -1,0 +1,32 @@
+{
+  "config": {
+    "concurrency": 200,
+    "max_per_type": 2000,
+    "test_url_http": "http://httpbin.org/ip",
+    "test_url_https": "https://httpbin.org/ip",
+    "timeout_sec": 8.0
+  },
+  "counts": {
+    "all": {
+      "candidates": 6000,
+      "working": 280
+    },
+    "http": {
+      "candidates": 2000,
+      "working": 280
+    },
+    "https": {
+      "candidates": 2000,
+      "working": 7
+    },
+    "socks4": {
+      "candidates": 2000,
+      "working": 0
+    },
+    "socks5": {
+      "candidates": 2000,
+      "working": 0
+    }
+  },
+  "updated_utc": "2026-02-26T06:38:55+00:00"
+}
