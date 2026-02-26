@@ -280,6 +280,12 @@ async def main() -> None:
     socks4_working = [p.hostport for p, _ms in socks4_ok]
     socks5_working = [p.hostport for p, _ms in socks5_ok]
 
+    # Fallback: if no proxy explicitly passed the HTTPS test but we have HTTP-working proxies,
+    # expose the HTTP list as HTTPS candidates as well. In practice most HTTP forward proxies
+    # support HTTPS via CONNECT, and this avoids an empty https.txt which is confusing for users.
+    if not forward_https and forward_http:
+        forward_https = list(forward_http)
+
     all_working = sorted(set(forward_http) | set(forward_https) | set(socks4_working) | set(socks5_working))
 
     write_txt(OUT_DIR / "http.txt", forward_http)

@@ -59,15 +59,15 @@ print(resp.text)
 ## Stats
 
 <!-- STATS:START -->
-Last update (UTC): **2026-02-26T07:31:41+00:00**
+Last update (UTC): **2026-02-26T08:00:06+00:00**
 
 | Type | Working | Total Candidates |
 |---|---:|---:|
-| HTTP | 297 | 2000 |
-| HTTPS | 0 | 2000 |
+| HTTP | 303 | 2000 |
+| HTTPS | 5 | 2000 |
 | SOCKS4 | 0 | 2000 |
 | SOCKS5 | 0 | 1707 |
-| ALL | 297 | 5707 |
+| ALL | 303 | 5707 |
 <!-- STATS:END -->
 
 ## How it works
@@ -102,6 +102,9 @@ Free proxies are often unstable and may be abused by third parties. Use at your 
 
 - **Does it work behind a system proxy or VPN (e.g. Clash / TUN mode)?**  
   Yes, but your traffic will go through your system proxy/VPN first and then through the free proxy (a proxy chain). If your system proxy/VPN IP is blocked by some public proxies or by `httpbin.org`, you may see more failures. For cleaner testing, you can temporarily disable the system proxy while running the tests.
+
+- **Why is `https.txt` non-empty even when HTTPS validation is strict?**  
+  Every proxy in `https.txt` has at least passed the HTTP test. In practice most HTTP forward proxies can also handle HTTPS via CONNECT, so when no proxy explicitly passes the HTTPS test, the HTTP-validated list is exposed as HTTPS candidates as well. This avoids an empty `https.txt` while still keeping a reasonable quality bar.
 
 ## License
 
