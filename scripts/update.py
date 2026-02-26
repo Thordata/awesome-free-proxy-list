@@ -22,6 +22,7 @@ README = ROOT / "README.md"
 DEFAULT_TIMEOUT_SEC = float(os.getenv("PROXY_TIMEOUT_SEC", "8"))
 CONCURRENCY = int(os.getenv("PROXY_CONCURRENCY", "200"))
 MAX_PER_TYPE = int(os.getenv("PROXY_MAX_PER_TYPE", "2000"))
+TOP_HTTP_LIMIT = int(os.getenv("PROXY_TOP_HTTP_LIMIT", "100"))
 
 # You can override these via environment variables if you prefer other targets.
 TEST_URL_HTTPS = os.getenv("PROXY_TEST_URL_HTTPS", "https://api.ipify.org?format=json")
@@ -293,6 +294,10 @@ async def main() -> None:
     write_txt(OUT_DIR / "socks4.txt", socks4_working)
     write_txt(OUT_DIR / "socks5.txt", socks5_working)
     write_txt(OUT_DIR / "all.txt", all_working)
+
+    # Also expose a small subset of the fastest HTTP proxies for convenience.
+    top_http = forward_http[:TOP_HTTP_LIMIT] if forward_http else []
+    write_txt(OUT_DIR / "top-http.txt", top_http)
 
     stats = {
         "updated_utc": utc_now_iso(),

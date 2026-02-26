@@ -20,6 +20,7 @@ All outputs are generated into the `proxies/` directory:
 - `proxies/socks5.txt`
 - `proxies/all.txt`
 - `proxies/summary.json`
+- `proxies/top-http.txt` (fastest HTTP proxies)
 
 ## Quick start
 
@@ -36,6 +37,11 @@ curl -s https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/
 ```
 
 - **Download only HTTPS-capable proxies**
+- **Download the fastest HTTP proxies (small curated subset)**
+
+```bash
+curl -s https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/proxies/top-http.txt | head
+```
 
 ```bash
 curl -s https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/proxies/https.txt | head
@@ -59,7 +65,7 @@ print(resp.text)
 ## Stats
 
 <!-- STATS:START -->
-Last update (UTC): **2026-02-26T08:00:06+00:00**
+Last update (UTC): **2026-02-26T09:02:32+00:00**
 
 | Type | Working | Total Candidates |
 |---|---:|---:|
