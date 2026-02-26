@@ -23,8 +23,9 @@ DEFAULT_TIMEOUT_SEC = float(os.getenv("PROXY_TIMEOUT_SEC", "8"))
 CONCURRENCY = int(os.getenv("PROXY_CONCURRENCY", "200"))
 MAX_PER_TYPE = int(os.getenv("PROXY_MAX_PER_TYPE", "2000"))
 
-TEST_URL_HTTPS = os.getenv("PROXY_TEST_URL_HTTPS", "https://httpbin.org/ip")
-TEST_URL_HTTP = os.getenv("PROXY_TEST_URL_HTTP", "http://httpbin.org/ip")
+# You can override these via environment variables if you prefer other targets.
+TEST_URL_HTTPS = os.getenv("PROXY_TEST_URL_HTTPS", "https://api.ipify.org?format=json")
+TEST_URL_HTTP = os.getenv("PROXY_TEST_URL_HTTP", "http://api.ipify.org?format=json")
 
 PROXY_RE = re.compile(r"^\s*(?P<host>\d{1,3}(?:\.\d{1,3}){3})\s*:\s*(?P<port>\d{2,5})\s*$")
 
@@ -97,7 +98,7 @@ async def scrape_all_sources() -> dict[str, set[str]]:
     connector = aiohttp.TCPConnector(ssl=False, limit=20)
     results: dict[str, set[str]] = {"forward": set(), "socks4": set(), "socks5": set()}
 
-    async with aiohttp.ClientSession(timeout=timeout, connector=connector) as session:
+    async with aiohttp.ClientSession(timeout=timeout, connector=connector, trust_env=True) as session:
         tasks = []
         for url, typ in sources:
             tasks.append((url, typ, asyncio.create_task(fetch_text(session, url))))
@@ -134,7 +135,7 @@ async def check_forward_proxy(proxy: Proxy, timeout_s: float) -> tuple[float | N
     """
     timeout = aiohttp.ClientTimeout(total=timeout_s)
     connector = aiohttp.TCPConnector(ssl=False)
-    async with aiohttp.ClientSession(timeout=timeout, connector=connector) as session:
+    async with aiohttp.ClientSession(timeout=timeout, connector=connector, trust_env=True) as session:
         http_ms: float | None = None
         https_ms: float | None = None
 
@@ -160,7 +161,7 @@ async def check_forward_proxy(proxy: Proxy, timeout_s: float) -> tuple[float | N
 async def check_socks(proxy: Proxy, timeout_s: float) -> float | None:
     timeout = aiohttp.ClientTimeout(total=timeout_s)
     connector = ProxyConnector.from_url(proxy.url, rdns=True)
-    async with aiohttp.ClientSession(timeout=timeout, connector=connector) as session:
+    async with aiohttp.ClientSession(timeout=timeout, connector=connector, trust_env=True) as session:
         start = time.perf_counter()
         for url in (TEST_URL_HTTPS, TEST_URL_HTTP):
             try:
