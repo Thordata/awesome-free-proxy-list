@@ -65,15 +65,15 @@ print(resp.text)
 ## Stats
 
 <!-- STATS:START -->
-Last update (UTC): **2026-03-19T01:00:01+00:00**
+Last update (UTC): **2026-03-20T00:57:16+00:00**
 
 | Type | Working | Total Candidates |
 |---|---:|---:|
-| HTTP | 225 | 2000 |
-| HTTPS | 65 | 2000 |
-| SOCKS4 | 138 | 2000 |
-| SOCKS5 | 112 | 1678 |
-| ALL | 431 | 5678 |
+| HTTP | 195 | 2000 |
+| HTTPS | 94 | 2000 |
+| SOCKS4 | 127 | 2000 |
+| SOCKS5 | 130 | 1649 |
+| ALL | 430 | 5649 |
 <!-- STATS:END -->
 
 ## How it works
