@@ -1,6 +1,6 @@
 # Free Proxy List — Fast tier (<500ms)
-# Generated: 2026-08-22T13:03:39+00:00
-# Proxies: 27
+# Generated: 2026-08-22T18:51:14+00:00
+# Proxies: 20
 # Source: kael-odin/awesome-free-proxy-list
 
 mixed-port: 7890
@@ -24,6 +24,11 @@ proxies:
     server: 159.65.230.46
     port: 8888
     udp: false
+  - name: "🇺🇸 HTTP 162.214.159.94:8085 F"
+    type: http
+    server: 162.214.159.94
+    port: 8085
+    udp: false
   - name: "🇺🇸 HTTP 162.214.74.29:8085 F"
     type: http
     server: 162.214.74.29
@@ -34,19 +39,9 @@ proxies:
     server: 12.50.107.221
     port: 80
     udp: false
-  - name: "🇺🇸 HTTP 162.214.159.94:8085 F"
-    type: http
-    server: 162.214.159.94
-    port: 8085
-    udp: false
   - name: "🇺🇸 HTTP 137.66.1.45:80 F"
     type: http
     server: 137.66.1.45
-    port: 80
-    udp: false
-  - name: "🇩🇪 HTTP 116.203.27.109:80 F"
-    type: http
-    server: 116.203.27.109
     port: 80
     udp: false
   - name: "🇭🇰 HTTP 16.163.88.228:80 F"
@@ -59,6 +54,11 @@ proxies:
     server: 109.199.119.160
     port: 80
     udp: false
+  - name: "🇩🇪 HTTP 116.203.27.109:80 F"
+    type: http
+    server: 116.203.27.109
+    port: 80
+    udp: false
   - name: "🇺🇸 HTTP 174.138.119.88:80 F"
     type: http
     server: 174.138.119.88
@@ -69,20 +69,20 @@ proxies:
     server: 178.212.144.7
     port: 80
     udp: false
-  - name: "🇫🇷 HTTP 145.239.41.4:5060 F"
+  - name: "🇨🇳 HTTP 115.239.234.43:7302 F"
     type: http
-    server: 145.239.41.4
-    port: 5060
-    udp: false
-  - name: "🇮🇩 HTTP 103.156.17.83:8080 F"
-    type: http
-    server: 103.156.17.83
-    port: 8080
+    server: 115.239.234.43
+    port: 7302
     udp: false
   - name: "🇯🇵 HTTP 152.32.145.146:8888 F"
     type: http
     server: 152.32.145.146
     port: 8888
+    udp: false
+  - name: "🇫🇷 HTTP 145.239.41.4:5060 F"
+    type: http
+    server: 145.239.41.4
+    port: 5060
     udp: false
   - name: "🇪🇨 HTTP 181.39.25.196:8118 F"
     type: http
@@ -94,55 +94,20 @@ proxies:
     server: 103.237.102.191
     port: 11111
     udp: false
-  - name: "🇭🇰 HTTP 176.111.37.216:39811 F"
+  - name: "🇰🇷 HTTP 1.231.81.166:3128 F"
     type: http
-    server: 176.111.37.216
-    port: 39811
-    udp: false
-  - name: "🇨🇳 HTTP 115.239.234.43:7302 F"
-    type: http
-    server: 115.239.234.43
-    port: 7302
+    server: 1.231.81.166
+    port: 3128
     udp: false
   - name: "🇨🇴 HTTP 181.78.74.252:999 F"
     type: http
     server: 181.78.74.252
     port: 999
     udp: false
-  - name: "🇺🇸 HTTP 153.72.68.0:8080 F"
-    type: http
-    server: 153.72.68.0
-    port: 8080
-    udp: false
-  - name: "🇭🇰 HTTP 176.111.37.5:39811 F"
-    type: http
-    server: 176.111.37.5
-    port: 39811
-    udp: false
   - name: "🇨🇴 HTTP 181.78.74.253:999 F"
     type: http
     server: 181.78.74.253
     port: 999
-    udp: false
-  - name: "🇺🇸 SOCKS5 43.162.94.99:1080 F"
-    type: socks5
-    server: 43.162.94.99
-    port: 1080
-    udp: false
-  - name: "🇷🇺 SOCKS5 147.45.60.124:1082 F"
-    type: socks5
-    server: 147.45.60.124
-    port: 1082
-    udp: false
-  - name: "🇺🇸 SOCKS5 67.207.92.87:1088 F"
-    type: socks5
-    server: 67.207.92.87
-    port: 1088
-    udp: false
-  - name: "🇺🇸 SOCKS5 45.76.164.255:1085 F"
-    type: socks5
-    server: 45.76.164.255
-    port: 1085
     udp: false
 proxy-groups:
   - name: 🚀 PROXY
@@ -153,60 +118,46 @@ proxy-groups:
       - "🇺🇸 HTTP 13.221.202.200:3128 F"
       - "🇺🇸 HTTP 142.93.202.130:3128 F"
       - "🇺🇸 HTTP 159.65.230.46:8888 F"
+      - "🇺🇸 HTTP 162.214.159.94:8085 F"
       - "🇺🇸 HTTP 162.214.74.29:8085 F"
       - "🇺🇸 HTTP 12.50.107.221:80 F"
-      - "🇺🇸 HTTP 162.214.159.94:8085 F"
       - "🇺🇸 HTTP 137.66.1.45:80 F"
-      - "🇩🇪 HTTP 116.203.27.109:80 F"
       - "🇭🇰 HTTP 16.163.88.228:80 F"
       - "🇫🇷 HTTP 109.199.119.160:80 F"
+      - "🇩🇪 HTTP 116.203.27.109:80 F"
       - "🇺🇸 HTTP 174.138.119.88:80 F"
       - "🇵🇱 HTTP 178.212.144.7:80 F"
-      - "🇫🇷 HTTP 145.239.41.4:5060 F"
-      - "🇮🇩 HTTP 103.156.17.83:8080 F"
+      - "🇨🇳 HTTP 115.239.234.43:7302 F"
       - "🇯🇵 HTTP 152.32.145.146:8888 F"
+      - "🇫🇷 HTTP 145.239.41.4:5060 F"
       - "🇪🇨 HTTP 181.39.25.196:8118 F"
       - "🇩🇪 HTTP 103.237.102.191:11111 F"
-      - "🇭🇰 HTTP 176.111.37.216:39811 F"
-      - "🇨🇳 HTTP 115.239.234.43:7302 F"
+      - "🇰🇷 HTTP 1.231.81.166:3128 F"
       - "🇨🇴 HTTP 181.78.74.252:999 F"
-      - "🇺🇸 HTTP 153.72.68.0:8080 F"
-      - "🇭🇰 HTTP 176.111.37.5:39811 F"
       - "🇨🇴 HTTP 181.78.74.253:999 F"
-      - "🇺🇸 SOCKS5 43.162.94.99:1080 F"
-      - "🇷🇺 SOCKS5 147.45.60.124:1082 F"
-      - "🇺🇸 SOCKS5 67.207.92.87:1088 F"
-      - "🇺🇸 SOCKS5 45.76.164.255:1085 F"
   - name: ♻️ AUTO
     type: url-test
     proxies:
       - "🇺🇸 HTTP 13.221.202.200:3128 F"
       - "🇺🇸 HTTP 142.93.202.130:3128 F"
       - "🇺🇸 HTTP 159.65.230.46:8888 F"
+      - "🇺🇸 HTTP 162.214.159.94:8085 F"
       - "🇺🇸 HTTP 162.214.74.29:8085 F"
       - "🇺🇸 HTTP 12.50.107.221:80 F"
-      - "🇺🇸 HTTP 162.214.159.94:8085 F"
       - "🇺🇸 HTTP 137.66.1.45:80 F"
-      - "🇩🇪 HTTP 116.203.27.109:80 F"
       - "🇭🇰 HTTP 16.163.88.228:80 F"
       - "🇫🇷 HTTP 109.199.119.160:80 F"
+      - "🇩🇪 HTTP 116.203.27.109:80 F"
       - "🇺🇸 HTTP 174.138.119.88:80 F"
       - "🇵🇱 HTTP 178.212.144.7:80 F"
-      - "🇫🇷 HTTP 145.239.41.4:5060 F"
-      - "🇮🇩 HTTP 103.156.17.83:8080 F"
+      - "🇨🇳 HTTP 115.239.234.43:7302 F"
       - "🇯🇵 HTTP 152.32.145.146:8888 F"
+      - "🇫🇷 HTTP 145.239.41.4:5060 F"
       - "🇪🇨 HTTP 181.39.25.196:8118 F"
       - "🇩🇪 HTTP 103.237.102.191:11111 F"
-      - "🇭🇰 HTTP 176.111.37.216:39811 F"
-      - "🇨🇳 HTTP 115.239.234.43:7302 F"
+      - "🇰🇷 HTTP 1.231.81.166:3128 F"
       - "🇨🇴 HTTP 181.78.74.252:999 F"
-      - "🇺🇸 HTTP 153.72.68.0:8080 F"
-      - "🇭🇰 HTTP 176.111.37.5:39811 F"
       - "🇨🇴 HTTP 181.78.74.253:999 F"
-      - "🇺🇸 SOCKS5 43.162.94.99:1080 F"
-      - "🇷🇺 SOCKS5 147.45.60.124:1082 F"
-      - "🇺🇸 SOCKS5 67.207.92.87:1088 F"
-      - "🇺🇸 SOCKS5 45.76.164.255:1085 F"
     url: "http://www.gstatic.com/generate_204"
     interval: 300
   - name: 📦 HTTP
@@ -215,77 +166,61 @@ proxy-groups:
       - "🇺🇸 HTTP 13.221.202.200:3128 F"
       - "🇺🇸 HTTP 142.93.202.130:3128 F"
       - "🇺🇸 HTTP 159.65.230.46:8888 F"
+      - "🇺🇸 HTTP 162.214.159.94:8085 F"
       - "🇺🇸 HTTP 162.214.74.29:8085 F"
       - "🇺🇸 HTTP 12.50.107.221:80 F"
-      - "🇺🇸 HTTP 162.214.159.94:8085 F"
       - "🇺🇸 HTTP 137.66.1.45:80 F"
-      - "🇩🇪 HTTP 116.203.27.109:80 F"
       - "🇭🇰 HTTP 16.163.88.228:80 F"
       - "🇫🇷 HTTP 109.199.119.160:80 F"
+      - "🇩🇪 HTTP 116.203.27.109:80 F"
       - "🇺🇸 HTTP 174.138.119.88:80 F"
       - "🇵🇱 HTTP 178.212.144.7:80 F"
-      - "🇫🇷 HTTP 145.239.41.4:5060 F"
-      - "🇮🇩 HTTP 103.156.17.83:8080 F"
+      - "🇨🇳 HTTP 115.239.234.43:7302 F"
       - "🇯🇵 HTTP 152.32.145.146:8888 F"
+      - "🇫🇷 HTTP 145.239.41.4:5060 F"
       - "🇪🇨 HTTP 181.39.25.196:8118 F"
       - "🇩🇪 HTTP 103.237.102.191:11111 F"
-      - "🇭🇰 HTTP 176.111.37.216:39811 F"
-      - "🇨🇳 HTTP 115.239.234.43:7302 F"
+      - "🇰🇷 HTTP 1.231.81.166:3128 F"
       - "🇨🇴 HTTP 181.78.74.252:999 F"
-      - "🇺🇸 HTTP 153.72.68.0:8080 F"
-      - "🇭🇰 HTTP 176.111.37.5:39811 F"
       - "🇨🇴 HTTP 181.78.74.253:999 F"
-  - name: 📦 SOCKS5
-    type: select
-    proxies:
-      - "🇺🇸 SOCKS5 43.162.94.99:1080 F"
-      - "🇷🇺 SOCKS5 147.45.60.124:1082 F"
-      - "🇺🇸 SOCKS5 67.207.92.87:1088 F"
-      - "🇺🇸 SOCKS5 45.76.164.255:1085 F"
   - name: 🇺🇸 US
     type: select
     proxies:
       - "🇺🇸 HTTP 13.221.202.200:3128 F"
       - "🇺🇸 HTTP 142.93.202.130:3128 F"
       - "🇺🇸 HTTP 159.65.230.46:8888 F"
+      - "🇺🇸 HTTP 162.214.159.94:8085 F"
       - "🇺🇸 HTTP 162.214.74.29:8085 F"
       - "🇺🇸 HTTP 12.50.107.221:80 F"
-      - "🇺🇸 HTTP 162.214.159.94:8085 F"
       - "🇺🇸 HTTP 137.66.1.45:80 F"
       - "🇺🇸 HTTP 174.138.119.88:80 F"
-      - "🇺🇸 HTTP 153.72.68.0:8080 F"
-      - "🇺🇸 SOCKS5 43.162.94.99:1080 F"
-      - "🇺🇸 SOCKS5 67.207.92.87:1088 F"
-      - "🇺🇸 SOCKS5 45.76.164.255:1085 F"
-  - name: 🇭🇰 HK
-    type: select
-    proxies:
-      - "🇭🇰 HTTP 16.163.88.228:80 F"
-      - "🇭🇰 HTTP 176.111.37.216:39811 F"
-      - "🇭🇰 HTTP 176.111.37.5:39811 F"
-  - name: 🇩🇪 DE
-    type: select
-    proxies:
-      - "🇩🇪 HTTP 116.203.27.109:80 F"
-      - "🇩🇪 HTTP 103.237.102.191:11111 F"
   - name: 🇫🇷 FR
     type: select
     proxies:
       - "🇫🇷 HTTP 109.199.119.160:80 F"
       - "🇫🇷 HTTP 145.239.41.4:5060 F"
+  - name: 🇩🇪 DE
+    type: select
+    proxies:
+      - "🇩🇪 HTTP 116.203.27.109:80 F"
+      - "🇩🇪 HTTP 103.237.102.191:11111 F"
   - name: 🇨🇴 CO
     type: select
     proxies:
       - "🇨🇴 HTTP 181.78.74.252:999 F"
       - "🇨🇴 HTTP 181.78.74.253:999 F"
+  - name: 🇭🇰 HK
+    type: select
+    proxies:
+      - "🇭🇰 HTTP 16.163.88.228:80 F"
   - name: 🇵🇱 PL
     type: select
     proxies:
       - "🇵🇱 HTTP 178.212.144.7:80 F"
-  - name: 🇮🇩 ID
+  - name: 🇨🇳 CN
     type: select
     proxies:
-      - "🇮🇩 HTTP 103.156.17.83:8080 F"
+      - "🇨🇳 HTTP 115.239.234.43:7302 F"
   - name: 🇯🇵 JP
     type: select
     proxies:
