@@ -1,3 +1,5 @@
-aiohttp==3.9.5
-aiohttp_socks==0.8.4
-
+aiohttp>=3.9,<4
+aiohttp_socks>=0.8,<1
+# Offline GeoIP country lookups (pure-Python reader; mmdb data is fetched at runtime
+# from the community mirror, no MaxMind license key required).
+geoip2>=5,<6

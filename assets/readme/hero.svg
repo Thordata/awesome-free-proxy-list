@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" role="img" aria-label="awesome-free-proxy-list — daily-verified free proxies with country, latency tier, anonymity, streak and IP-type metadata, plus Clash/V2Ray subscriptions and a live dashboard">
+  <title>awesome-free-proxy-list</title>
+  <desc>Daily + every-6h GitHub Actions verification of free HTTP/HTTPS/SOCKS4/SOCKS5 proxies, enriched with GeoIP country, latency tier, anonymity rating, survival streak and ASN-based IP-type inference, exported as txt/json/csv plus Clash/V2Ray subscriptions and a live dashboard.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#010409"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2ee59d"/>
+      <stop offset="1" stop-color="#4a9eff"/>
+    </linearGradient>
+    <style>
+      .sans{font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+      .mono{font-family:ui-monospace,'SF Mono',SFMono-Regular,Menlo,Consolas,monospace}
+    </style>
+  </defs>
+
+  <!-- canvas -->
+  <rect width="1200" height="520" fill="url(#bg)"/>
+
+  <!-- subtle grid motif (network ops) -->
+  <g stroke="#1f2630" stroke-width="1">
+    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200 M0 400 H1200 M0 480 H1200"/>
+    <path d="M40 0 V520 M160 0 V520 M280 0 V520 M400 0 V520 M520 0 V520 M640 0 V520 M760 0 V520 M880 0 V520 M1000 0 V520 M1120 0 V520"/>
+  </g>
+
+  <!-- ===== LEFT: title block ===== -->
+  <g transform="translate(48,56)">
+    <!-- satellite glyph + category eyebrow -->
+    <text x="0" y="22" class="sans" font-size="22">🛰️</text>
+    <text x="34" y="22" class="mono" font-size="13" letter-spacing="2" fill="#7d8590">FREE PROXY · DAILY-VERIFIED · ZERO-SERVER</text>
+
+    <!-- title -->
+    <text x="0" y="86" class="sans" font-weight="700" font-size="46" fill="#e6edf3">awesome-free-proxy-list</text>
+
+    <!-- promise -->
+    <text x="0" y="124" class="sans" font-size="19" fill="#e6edf3">More than a raw <tspan class="mono" fill="#2ee59d">ip:port</tspan> list — every proxy ships with</text>
+    <text x="0" y="150" class="sans" font-size="19" fill="#c9d1d9">country · latency tier · anonymity · streak · IP-type metadata.</text>
+
+    <!-- metadata chips -->
+    <g transform="translate(0,178)" class="mono" font-size="13">
+      <g>
+        <rect width="150" height="28" rx="6" fill="#11231b" stroke="#2ee59d" stroke-opacity="0.4"/>
+        <text x="12" y="18" fill="#2ee59d">HTTP · HTTPS</text>
+      </g>
+      <g transform="translate(162,0)">
+        <rect width="140" height="28" rx="6" fill="#11231b" stroke="#2ee59d" stroke-opacity="0.4"/>
+        <text x="12" y="18" fill="#2ee59d">SOCKS4 · 5</text>
+      </g>
+      <g transform="translate(314,0)">
+        <rect width="186" height="28" rx="6" fill="#0d1a2e" stroke="#4a9eff" stroke-opacity="0.4"/>
+        <text x="12" y="18" fill="#4a9eff">Clash · V2Ray · Surge</text>
+      </g>
+      <g transform="translate(512,0)">
+        <rect width="168" height="28" rx="6" fill="#161b22" stroke="#30363d"/>
+        <text x="12" y="18" fill="#c9d1d9">live dashboard</text>
+      </g>
+    </g>
+
+    <!-- first action -->
+    <g transform="translate(0,236)">
+      <text x="0" y="0" class="mono" font-size="12" fill="#7d8590"># first successful action</text>
+      <rect y="10" width="540" height="44" rx="8" fill="#0d1117" stroke="#30363d"/>
+      <text x="16" y="38" class="mono" font-size="14" fill="#7d8590">$ <tspan fill="#2ee59d">curl -s</tspan> raw.../proxies/all.txt <tspan fill="#7d8590">| head</tspan></text>
+    </g>
+  </g>
+
+  <!-- ===== RIGHT: proxy card (mirrors a real dashboard row) ===== -->
+  <g transform="translate(660,56)">
+    <!-- card frame -->
+    <rect width="492" height="408" rx="12" fill="url(#card)" stroke="#30363d"/>
+    <!-- card header -->
+    <text x="20" y="32" class="mono" font-size="12" fill="#7d8590" letter-spacing="1">REAL VALIDATED PROXY · row sample</text>
+    <text x="472" y="32" class="mono" font-size="12" fill="#2ee59d" text-anchor="end">● live</text>
+
+    <!-- ip:port + country -->
+    <text x="20" y="78" class="mono" font-weight="700" font-size="26" fill="#e6edf3">185.238.228.89<tspan fill="#7d8590">:80</tspan></text>
+    <g transform="translate(20,96)">
+      <rect width="116" height="26" rx="13" fill="#0d1a2e" stroke="#4a9eff" stroke-opacity="0.4"/>
+      <text x="12" y="18" class="mono" font-size="12" fill="#4a9eff">🇬🇧 GB · United Kingdom</text>
+    </g>
+    <g transform="translate(146,96)">
+      <rect width="68" height="26" rx="13" fill="#161b22" stroke="#30363d"/>
+      <text x="34" y="18" class="mono" font-size="12" fill="#c9d1d9" text-anchor="middle">HTTP</text>
+    </g>
+
+    <!-- latency bars (the project motif) -->
+    <text x="20" y="166" class="mono" font-size="11" fill="#7d8590">LATENCY</text>
+    <text x="472" y="166" class="mono" font-weight="700" font-size="18" fill="#2ee59d" text-anchor="end">43ms</text>
+    <g transform="translate(20,176)">
+      <rect width="452" height="10" rx="5" fill="#21262d"/>
+      <rect width="38" height="10" rx="5" fill="url(#bar)"/>
+      <!-- tier ticks -->
+      <g stroke="#30363d" stroke-width="1">
+        <path d="M113 0 V10 M226 0 V10"/>
+      </g>
+      <text x="20" y="34" class="mono" font-size="10" fill="#2ee59d">⚡ fast &lt;500ms</text>
+      <text x="170" y="34" class="mono" font-size="10" fill="#7d8590">🔷 medium &lt;2s</text>
+      <text x="320" y="34" class="mono" font-size="10" fill="#7d8590">🐢 slow</text>
+    </g>
+
+    <!-- metadata grid -->
+    <g transform="translate(20,236)" class="mono" font-size="12">
+      <text x="0" y="0" fill="#7d8590">ANONYMITY</text>
+      <text x="0" y="20" fill="#2ee59d">⚪ untested</text>
+      <text x="0" y="44" fill="#7d8590">STREAK</text>
+      <text x="0" y="64" fill="#e6edf3">2 days</text>
+
+      <text x="232" y="0" fill="#7d8590">IP TYPE</text>
+      <text x="232" y="20" fill="#e6edf3">🏢 datacenter</text>
+      <text x="232" y="44" fill="#7d8590">ASN</text>
+      <text x="232" y="64" fill="#e6edf3">org lookup</text>
+    </g>
+
+    <!-- export formats strip -->
+    <g transform="translate(20,330)">
+      <text x="0" y="0" class="mono" font-size="11" fill="#7d8590">EXPORTED AS</text>
+      <g transform="translate(0,12)" class="mono" font-size="12">
+        <rect width="58" height="24" rx="5" fill="#0d1117" stroke="#30363d"/><text x="29" y="16" fill="#c9d1d9" text-anchor="middle">.txt</text>
+        <rect x="66" width="58" height="24" rx="5" fill="#0d1117" stroke="#30363d"/><text x="95" y="16" fill="#c9d1d9" text-anchor="middle">.json</text>
+        <rect x="132" width="58" height="24" rx="5" fill="#0d1117" stroke="#30363d"/><text x="161" y="16" fill="#c9d1d9" text-anchor="middle">.csv</text>
+        <rect x="198" width="78" height="24" rx="5" fill="#0d1a2e" stroke="#4a9eff" stroke-opacity="0.4"/><text x="237" y="16" fill="#4a9eff" text-anchor="middle">.yaml</text>
+        <rect x="284" width="78" height="24" rx="5" fill="#0d1a2e" stroke="#4a9eff" stroke-opacity="0.4"/><text x="323" y="16" fill="#4a9eff" text-anchor="middle">base64</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- footer rail -->
+  <g transform="translate(48,492)" class="mono" font-size="12" fill="#7d8590">
+    <text>⚙️ scrape → validate → enrich(GeoIP+ASN) → rank → export + inject README</text>
+    <text x="1104" text-anchor="end">GitHub Actions · daily + 6h</text>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" role="img" aria-label="Pipeline: 10+ sources scrape to candidate pool, validate over HTTP/HTTPS/SOCKS, enrich with GeoIP country and ASN IP-type, rank by latency tier, export to txt/json/csv/clash/v2ray/by-country, then inject README stats and deploy Pages — driven by GitHub Actions daily + every 6h">
+  <title>How it works</title>
+  <desc>The pipeline from public sources through validation, enrichment, ranking, multi-format export, and README/Pages publish.</desc>
+  <defs>
+    <style>.sans{font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}.mono{font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace}</style>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#7d8590"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="320" fill="#0d1117"/>
+  <g stroke="#1f2630" stroke-width="1"><path d="M0 80 H1200 M0 160 H1200 M0 240 H1200"/></g>
+
+  <text x="48" y="36" class="mono" font-size="12" fill="#7d8590" letter-spacing="2">PIPELINE · ZERO SERVER COST</text>
+  <text x="48" y="64" class="sans" font-weight="700" font-size="22" fill="#e6edf3">How every proxy gets verified, enriched and exported</text>
+
+  <!-- stage boxes -->
+  <g class="sans" font-size="14" fill="#e6edf3">
+    <!-- 1 sources -->
+    <g transform="translate(48,108)">
+      <rect width="180" height="96" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="14" y="26" class="mono" font-size="11" fill="#7d8590">1 · SCRAPE</text>
+      <text x="14" y="50" font-weight="600">10+ public</text>
+      <text x="14" y="70">sources</text>
+      <text x="14" y="86" class="mono" font-size="11" fill="#2ee59d">aiohttp · concurrent</text>
+    </g>
+    <path d="M236 156 H268" stroke="#7d8590" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- 2 candidate pool -->
+    <g transform="translate(276,108)">
+      <rect width="180" height="96" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="14" y="26" class="mono" font-size="11" fill="#7d8590">2 · DEDUP</text>
+      <text x="14" y="50" font-weight="600">candidate</text>
+      <text x="14" y="70">ip:port pool</text>
+      <text x="14" y="86" class="mono" font-size="11" fill="#c9d1d9">per-type cap</text>
+    </g>
+    <path d="M464 156 H496" stroke="#7d8590" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- 3 validate -->
+    <g transform="translate(504,108)">
+      <rect width="180" height="96" rx="10" fill="#11231b" stroke="#2ee59d" stroke-opacity="0.5"/>
+      <text x="14" y="26" class="mono" font-size="11" fill="#2ee59d">3 · VALIDATE</text>
+      <text x="14" y="50" font-weight="600">HTTP/HTTPS</text>
+      <text x="14" y="70">SOCKS4/5</text>
+      <text x="14" y="86" class="mono" font-size="11" fill="#2ee59d">measure latency ms</text>
+    </g>
+    <path d="M692 156 H724" stroke="#7d8590" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- 4 enrich -->
+    <g transform="translate(732,108)">
+      <rect width="180" height="96" rx="10" fill="#0d1a2e" stroke="#4a9eff" stroke-opacity="0.5"/>
+      <text x="14" y="26" class="mono" font-size="11" fill="#4a9eff">4 · ENRICH</text>
+      <text x="14" y="50" font-weight="600">GeoIP country</text>
+      <text x="14" y="70">ASN IP-type</text>
+      <text x="14" y="86" class="mono" font-size="11" fill="#4a9eff">GeoLite2 · offline</text>
+    </g>
+    <path d="M920 156 H952" stroke="#7d8590" stroke-width="2" marker-end="url(#arr)"/>
+
+    <!-- 5 export -->
+    <g transform="translate(960,108)">
+      <rect width="192" height="96" rx="10" fill="#161b22" stroke="#30363d"/>
+      <text x="14" y="26" class="mono" font-size="11" fill="#7d8590">5 · EXPORT</text>
+      <text x="14" y="50" font-weight="600">txt/json/csv</text>
+      <text x="14" y="70">clash/v2ray</text>
+      <text x="14" y="86" class="mono" font-size="11" fill="#c9d1d9">by-country · top-*</text>
+    </g>
+  </g>
+
+  <!-- feedback loop: inject README + deploy -->
+  <path d="M1056 108 C1056 60 600 60 280 60" stroke="#4a9eff" stroke-width="1.5" fill="none" stroke-dasharray="4 4" marker-end="url(#arr)"/>
+  <g transform="translate(280,44)" class="mono" font-size="11" fill="#4a9eff">
+    <text>inject README stats · sync docs/data · deploy Pages</text>
+  </g>
+
+  <!-- trigger rail -->
+  <g transform="translate(48,244)" class="mono" font-size="12" fill="#7d8590">
+    <text x="0" y="0">⏱  triggers:  </text>
+    <g transform="translate(108,-14)">
+      <rect width="186" height="24" rx="6" fill="#0d1a2e" stroke="#4a9eff" stroke-opacity="0.4"/>
+      <text x="14" y="16" fill="#4a9eff">daily 00:15 UTC · full scrape</text>
+    </g>
+    <g transform="translate(308,-14)">
+      <rect width="200" height="24" rx="6" fill="#11231b" stroke="#2ee59d" stroke-opacity="0.4"/>
+      <text x="14" y="16" fill="#2ee59d">every 6h · re-validate only (~5×)</text>
+    </g>
+    <g transform="translate(524,-14)">
+      <rect width="120" height="24" rx="6" fill="#161b22" stroke="#30363d"/>
+      <text x="14" y="16" fill="#c9d1d9">workflow_dispatch</text>
+    </g>
+  </g>
+</svg>

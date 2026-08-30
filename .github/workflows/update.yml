@@ -2,11 +2,22 @@ name: update-proxy-list
 
 on:
   workflow_dispatch:
+    inputs:
+      max_per_type:
+        description: "Max candidates per type (smaller = faster test run)"
+        required: false
+        default: "2000"
+      concurrency:
+        description: "Max concurrent validations"
+        required: false
+        default: "200"
   schedule:
     - cron: "15 0 * * *" # daily 00:15 UTC
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: update-proxy-list
@@ -15,6 +26,14 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Single job: build → commit → deploy, all on the same runner + working tree.
+    # A separate deploy-pages job used to re-checkout@v4, which fetches the SHA the
+    # run was *triggered* on — not the fresh commit `build` just pushed — so Pages
+    # always lagged one run behind. Keeping deploy inline means we upload the exact
+    # docs/ we just generated and committed.
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,19 +50,68 @@ jobs:
       - name: Update proxies
         env:
           PROXY_TIMEOUT_SEC: "8"
-          PROXY_CONCURRENCY: "200"
-          PROXY_MAX_PER_TYPE: "2000"
+          PROXY_CONCURRENCY: ${{ github.event.inputs.concurrency || '200' }}
+          PROXY_MAX_PER_TYPE: ${{ github.event.inputs.max_per_type || '2000' }}
         run: python scripts/update.py
 
+      - name: Upload summary artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: proxy-summary
+          path: |
+            proxies/summary.json
+            proxies/json/
+          if-no-files-found: warn
+          retention-days: 14
+
       - name: Commit changes (if any)
+        id: commit
         run: |
           if git diff --quiet; then
             echo "No changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "chore: daily proxy list update"
-          git push
+          # This workflow races the parallel refresh workflow (both commit auto-generated
+          # files). -X theirs resolves content conflicts by keeping our version — correct
+          # here because every file is fully rewritten each run, so a 3-way merge has no
+          # semantic value. Retry loop tolerates the race; force-with-lease is the
+          # last-resort fallback so one workflow never hard-blocks the other.
+          for i in 1 2 3; do
+            if git pull --rebase --autostash -X theirs origin main; then
+              git push && break
+            fi
+            echo "Rebase attempt $i failed; aborting and retrying..."
+            git rebase --abort 2>/dev/null || true
+            sleep 5
+            if [ "$i" -eq 3 ]; then
+              echo "Rebase exhausted retries; force-with-lease pushing our version."
+              git push --force-with-lease
+            fi
+          done
+          echo "changed=true" >> "$GITHUB_OUTPUT"
 
+      # Deploy from THIS working tree (the one we just generated and committed),
+      # not a fresh checkout that would resolve to the run-trigger SHA and lag a
+      # cycle behind. Runs unconditionally so a no-op refresh still redeploys the
+      # current docs/ (which already matches origin/main).
+      - name: Setup Pages
+        if: always()
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        if: always()
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        if: always()
+        id: deployment
+        uses: actions/deploy-pages@v4

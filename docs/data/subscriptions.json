@@ -1,0 +1,151 @@
+{
+  "updated_utc": "2026-08-30T05:30:24+00:00",
+  "counts": {
+    "http": 35,
+    "https": 18,
+    "socks4": 67,
+    "socks5": 35,
+    "all": 120,
+    "fast": 24,
+    "high_anon": 144,
+    "stable": 155
+  },
+  "categories": {
+    "all": {
+      "zh": "全部",
+      "en": "All"
+    },
+    "by_type": {
+      "zh": "按协议",
+      "en": "By protocol"
+    },
+    "by_tier": {
+      "zh": "按延迟档",
+      "en": "By latency tier"
+    },
+    "by_anon": {
+      "zh": "按匿名度",
+      "en": "By anonymity"
+    },
+    "stable": {
+      "zh": "稳定代理",
+      "en": "Stable proxies"
+    }
+  },
+  "subscriptions": [
+    {
+      "name": "Clash / Mihomo — 全部 (HTTP+SOCKS5)",
+      "name_en": "Clash/Mihomo — All (HTTP+SOCKS5)",
+      "format": "clash",
+      "category": "all",
+      "path": "clash/all.yaml",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/clash/all.yaml",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/clash/all.yaml"
+    },
+    {
+      "name": "Clash / Mihomo — 仅 HTTP",
+      "name_en": "Clash/Mihomo — HTTP only",
+      "format": "clash",
+      "category": "by_type",
+      "path": "clash/http.yaml",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/clash/http.yaml",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/clash/http.yaml"
+    },
+    {
+      "name": "Clash / Mihomo — 仅 SOCKS5",
+      "name_en": "Clash/Mihomo — SOCKS5 only",
+      "format": "clash",
+      "category": "by_type",
+      "path": "clash/socks5.yaml",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/clash/socks5.yaml",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/clash/socks5.yaml"
+    },
+    {
+      "name": "Clash — 仅快速 (fast 档)",
+      "name_en": "Clash — Fast tier only",
+      "format": "clash",
+      "category": "by_tier",
+      "path": "clash/fast.yaml",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/clash/fast.yaml",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/clash/fast.yaml"
+    },
+    {
+      "name": "Clash — 高匿 (elite)",
+      "name_en": "Clash — High-anon (elite)",
+      "format": "clash",
+      "category": "by_anon",
+      "path": "clash/high-anon.yaml",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/clash/high-anon.yaml",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/clash/high-anon.yaml"
+    },
+    {
+      "name": "Clash — 稳定 (连续多日可用)",
+      "name_en": "Clash — Stable (multi-day)",
+      "format": "clash",
+      "category": "stable",
+      "path": "clash/stable.yaml",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/clash/stable.yaml",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/clash/stable.yaml"
+    },
+    {
+      "name": "V2Ray base64 订阅 (全部)",
+      "name_en": "V2Ray base64 subscription (all)",
+      "format": "v2ray",
+      "category": "all",
+      "path": "v2ray/all.txt",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/v2ray/all.txt",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/v2ray/all.txt"
+    },
+    {
+      "name": "链接列表 — HTTP",
+      "name_en": "Link list — HTTP",
+      "format": "links",
+      "category": "by_type",
+      "path": "links/http.txt",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/links/http.txt",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/links/http.txt"
+    },
+    {
+      "name": "链接列表 — SOCKS5",
+      "name_en": "Link list — SOCKS5",
+      "format": "links",
+      "category": "by_type",
+      "path": "links/socks5.txt",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/links/socks5.txt",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/links/socks5.txt"
+    },
+    {
+      "name": "链接列表 — 全部",
+      "name_en": "Link list — All",
+      "format": "links",
+      "category": "all",
+      "path": "links/all.txt",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/links/all.txt",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/links/all.txt"
+    },
+    {
+      "name": "链接列表 — 高匿",
+      "name_en": "Link list — High-anon",
+      "format": "links",
+      "category": "by_anon",
+      "path": "links/high-anon.txt",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/links/high-anon.txt",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/links/high-anon.txt"
+    },
+    {
+      "name": "链接列表 — 稳定",
+      "name_en": "Link list — Stable",
+      "format": "links",
+      "category": "stable",
+      "path": "links/stable.txt",
+      "pages": "https://kael-odin.github.io/awesome-free-proxy-list/data/links/stable.txt",
+      "raw": "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/links/stable.txt"
+    }
+  ],
+  "import_guides": {
+    "clash_verge": "打开 Clash Verge → 订阅 → 粘贴 .yaml 的 Pages URL → 更新 → 选中配置",
+    "clash_verge_en": "Clash Verge → Profiles → paste the .yaml Pages URL → Update → select the profile",
+    "v2rayn": "V2RayN → 订阅 → 订阅设置 → 粘贴 v2ray/all.txt 的 Pages URL → 更新",
+    "surge": "Surge → 策略组 → 外部代理列表 → 粘贴 links/http.txt URL"
+  }
+}

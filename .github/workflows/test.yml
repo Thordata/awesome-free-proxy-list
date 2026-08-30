@@ -1,0 +1,100 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - "requirements.txt"
+      - ".github/workflows/test.yml"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - "requirements.txt"
+      - ".github/workflows/test.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install ruff
+      - run: ruff check scripts/ || true   # non-blocking for now; surfaces issues
+
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+      - run: pip install -r requirements.txt
+      - run: pip install pytest pyyaml
+
+      - name: Syntax check
+        run: python -m py_compile scripts/update.py scripts/geoip_lookup.py scripts/check.py scripts/test_proxies.py scripts/subscription.py
+
+      - name: Unit tests
+        run: python -m pytest tests/ -v
+
+      - name: Tiny update run (5 candidates, no network stress)
+        env:
+          PROXY_MAX_PER_TYPE: "5"
+          PROXY_CONCURRENCY: "5"
+          PROXY_TIMEOUT_SEC: "6"
+        run: python scripts/update.py
+
+      - name: Verify outputs exist
+        run: |
+          test -f proxies/all.txt
+          test -f proxies/json/all.json
+          test -f proxies/all.csv
+          test -f proxies/summary.json
+          test -f proxies/top-trusted.txt
+          test -f docs/data/summary.json
+          # Subscription endpoints
+          test -f proxies/clash/all.yaml
+          test -f proxies/v2ray/all.txt
+          test -f proxies/links/all.txt
+          test -f proxies/subscriptions.json
+          test -f docs/data/clash/all.yaml
+          # Anonymity / history outputs (may be empty in tiny runs, but must exist)
+          test -f proxies/high-anon.txt
+          test -f proxies/anonymous.txt
+          test -f proxies/transparent.txt
+          test -f proxies/stable.txt
+          test -f proxies/fast-only.txt
+          test -f proxies/history.json
+          test -f proxies/history-summary.json
+          test -f docs/data/history-summary.json
+          # summary.json must include the new enrichment keys
+          python -c "import json;d=json.load(open('proxies/summary.json'));assert 'by_anonymity' in d;assert 'history' in d;assert 'data_freshness' in d;print('summary keys OK')"
+          # JSON items must include anonymity + streak (if any proxies passed)
+          python -c "import json;d=json.load(open('proxies/json/all.json'));assert (not d) or ('anonymity' in d[0] and 'streak' in d[0]);print('json fields OK')"
+          echo "All expected outputs (incl. subscriptions + anonymity + history) present."
+
+      - name: Validate Clash YAML is parseable
+        run: |
+          pip install pyyaml
+          python - <<'PY'
+          import yaml, glob
+          for f in glob.glob("proxies/clash/*.yaml"):
+              with open(f, encoding="utf-8") as fh:
+                  d = yaml.safe_load(fh)
+              assert "proxies" in d and "proxy-groups" in d, f"{f}: missing keys"
+              assert isinstance(d["proxies"], list), f"{f}: proxies not a list"
+              print(f"OK {f}: {len(d['proxies'])} proxies, {len(d['proxy-groups'])} groups")
+          PY

@@ -7,4 +7,5 @@ __pycache__/
 .ruff_cache/
 .DS_Store
 
-
+# Local GeoIP database (downloaded on demand; do not commit ~6MB binary)
+scripts/data/

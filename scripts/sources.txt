@@ -1,10 +1,32 @@
-# One source per line:
-# <url> [type]
+# Free proxy sources. One source per line:
+#   <url> [type]
 # type: http | https | socks4 | socks5 | mixed
+#   - mixed = forward (HTTP/HTTPS) proxies that may also serve HTTPS via CONNECT
+#   - A 404/unreachable source is skipped silently; the pipeline keeps running.
+#
+# Curated 2026-07. Each source has been verified to return raw ip:port text.
 
+# --- TheSpeedX (large, multi-protocol) ---
 https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt http
 https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks4.txt socks4
 https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt socks5
 
+# --- monosans (daily-refreshed, all three protocols) ---
+https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt http
+https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks4.txt socks4
+https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks5.txt socks5
+
+# --- clarketm (curated, annotated list — we parse the ip:port lines) ---
 https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt mixed
 
+# --- roosterkid (HTTPS-capable forward proxies) ---
+https://raw.githubusercontent.com/roosterkid/openproxylist/main/HTTPS_RAW.txt https
+
+# --- hookzof (socks5) ---
+https://raw.githubusercontent.com/hookzof/socks5_list/master/proxy.txt socks5
+
+# --- ShiftyTR (mixed forward) ---
+https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/proxy.txt mixed
+
+# --- sunny9577 (scraped mixed) ---
+https://raw.githubusercontent.com/sunny9577/proxy-scrape/master/output.txt mixed
