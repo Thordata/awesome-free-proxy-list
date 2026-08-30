@@ -30,9 +30,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      # Pinned: the formatter's output changes between minor versions, and an
-      # unpinned install would fail --check on upgrades before anyone reformats.
-      - run: pip install "ruff==0.16.5"
+      # Single source of truth for the ruff pin lives in scripts/requirements-dev.txt
+      # (Dependabot bumps it there); formatter output changes between minor
+      # versions, so an unpinned install would fail --check on upgrades.
+      - run: pip install -r scripts/requirements-dev.txt
       - run: ruff check scripts/ tests/
       - run: ruff format --check scripts/ tests/
 
