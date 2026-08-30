@@ -31,7 +31,8 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install ruff
-      - run: ruff check scripts/ || true   # non-blocking for now; surfaces issues
+      - run: ruff check scripts/ tests/
+      - run: ruff format --check scripts/ tests/
 
   smoke:
     runs-on: ubuntu-latest
@@ -51,6 +52,11 @@ jobs:
         run: python -m pytest tests/ -v
 
       - name: Tiny update run (5 candidates, no network stress)
+        id: smoke
+        # Hits live proxy sources, so it flakes with the network, not the code.
+        # Logic regressions are caught by unit tests + py_compile; output
+        # assertions below still block when the run itself succeeds.
+        continue-on-error: true
         env:
           PROXY_MAX_PER_TYPE: "5"
           PROXY_CONCURRENCY: "5"
@@ -58,6 +64,7 @@ jobs:
         run: python scripts/update.py
 
       - name: Verify outputs exist
+        if: steps.smoke.outcome == 'success'
         run: |
           test -f proxies/all.txt
           test -f proxies/json/all.json

@@ -20,7 +20,9 @@ permissions:
   id-token: write
 
 concurrency:
-  group: update-proxy-list
+  # Shared with refresh.yml: both commit auto-generated data files, so runs are
+  # serialized (queued, never cancelled) instead of racing on push.
+  group: proxy-pipeline
   cancel-in-progress: false
 
 jobs:
@@ -77,11 +79,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "chore: daily proxy list update"
-          # This workflow races the parallel refresh workflow (both commit auto-generated
-          # files). -X theirs resolves content conflicts by keeping our version — correct
-          # here because every file is fully rewritten each run, so a 3-way merge has no
-          # semantic value. Retry loop tolerates the race; force-with-lease is the
-          # last-resort fallback so one workflow never hard-blocks the other.
+          # The shared proxy-pipeline concurrency group serializes the daily update
+          # and the 6h refresh, so pushes no longer race. -X theirs + the retry loop
+          # stay as belt-and-braces for a manual push landing mid-run.
           for i in 1 2 3; do
             if git pull --rebase --autostash -X theirs origin main; then
               git push && break
@@ -90,8 +90,8 @@ jobs:
             git rebase --abort 2>/dev/null || true
             sleep 5
             if [ "$i" -eq 3 ]; then
-              echo "Rebase exhausted retries; force-with-lease pushing our version."
-              git push --force-with-lease
+              echo "Rebase exhausted retries; failing the run instead of force-pushing over newer data."
+              exit 1
             fi
           done
           echo "changed=true" >> "$GITHUB_OUTPUT"

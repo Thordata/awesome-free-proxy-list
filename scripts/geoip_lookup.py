@@ -20,6 +20,7 @@ Environment variables:
 from __future__ import annotations
 
 import os
+import sys
 import urllib.request
 from pathlib import Path
 from typing import Optional
@@ -49,25 +50,101 @@ GEOIP_REFRESH_DAYS = int(os.getenv("PROXY_GEOIP_REFRESH_DAYS", "7"))
 # Keys are organization names as they appear in the GeoLite2-ASN organization
 # field (case-insensitive substring match).
 DATACENTER_ORG_KEYWORDS = (
-    "amazon", "aws", "digitalocean", "linode", "akamai", "ovh", "hetzner",
-    "google", "microsoft", "azure", "oracle", "vultr", "contabo", "leaseweb",
-    "scaleway", "choopa", "digital ocean", "m247", "datacamp", "cogent",
-    "gcore", "selectel", "kamatera", "upcloud", "hostinger", "godaddy",
-    "alibaba", "tencent", "huawei", "bandwidth", " LeaseWeb", "cogent",
-    "cloudflare", "fastly", "github", "oracle", "marhost", "aeza",
-    "path", "timeweb", "firstbyte", "datacamp", "louis",
+    "amazon",
+    "aws",
+    "digitalocean",
+    "linode",
+    "akamai",
+    "ovh",
+    "hetzner",
+    "google",
+    "microsoft",
+    "azure",
+    "oracle",
+    "vultr",
+    "contabo",
+    "leaseweb",
+    "scaleway",
+    "choopa",
+    "digital ocean",
+    "m247",
+    "datacamp",
+    "cogent",
+    "gcore",
+    "selectel",
+    "kamatera",
+    "upcloud",
+    "hostinger",
+    "godaddy",
+    "alibaba",
+    "tencent",
+    "huawei",
+    "bandwidth",
+    " LeaseWeb",
+    "cogent",
+    "cloudflare",
+    "fastly",
+    "github",
+    "oracle",
+    "marhost",
+    "aeza",
+    "path",
+    "timeweb",
+    "firstbyte",
+    "datacamp",
+    "louis",
 )
 
 # ISPs typically offering residential access (consumer / mobile ISPs).
 RESIDENTIAL_ORG_KEYWORDS = (
-    "comcast", "at&t", "verizon", "tmobile", "sprint", "vodafone", "orange",
-    "deutsche telekom", "telefonica", "british telecom", "bt ", "telstra",
-    "rogers", "bell", "chinanet", "china telecom", "china unicom",
-    "china mobile", "reliance", "airtel", "jio", "kt ", "sk broadband",
-    "ntt", "kddi", "softbank", "mtn", "etisalat", "du ", "telkomsel",
-    "pldt", "globe telecom", "ooredoo", "zain", "telmex", "claro",
-    "telekom", "proximus", "swisscom", "mobilink", "telenor", "telia",
-    "mexico", "windstream", "centurylink", "cox", "spectrum", "charter",
+    "comcast",
+    "at&t",
+    "verizon",
+    "tmobile",
+    "sprint",
+    "vodafone",
+    "orange",
+    "deutsche telekom",
+    "telefonica",
+    "british telecom",
+    "bt ",
+    "telstra",
+    "rogers",
+    "bell",
+    "chinanet",
+    "china telecom",
+    "china unicom",
+    "china mobile",
+    "reliance",
+    "airtel",
+    "jio",
+    "kt ",
+    "sk broadband",
+    "ntt",
+    "kddi",
+    "softbank",
+    "mtn",
+    "etisalat",
+    "du ",
+    "telkomsel",
+    "pldt",
+    "globe telecom",
+    "ooredoo",
+    "zain",
+    "telmex",
+    "claro",
+    "telekom",
+    "proximus",
+    "swisscom",
+    "mobilink",
+    "telenor",
+    "telia",
+    "mexico",
+    "windstream",
+    "centurylink",
+    "cox",
+    "spectrum",
+    "charter",
 )
 
 
@@ -121,6 +198,8 @@ def _download_mmdb(url: str, dest: Path) -> Optional[Path]:
         except Exception as e:
             last_err = e
             time.sleep(1.0 * (attempt + 1))
+    if last_err is not None:
+        print(f"warn: db download failed after 3 attempts: {last_err}", file=sys.stderr)
     return None
 
 

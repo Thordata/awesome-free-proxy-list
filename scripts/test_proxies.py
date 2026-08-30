@@ -69,9 +69,15 @@ async def test_one(p: dict, idx: int, total: int) -> dict:
     timeout = aiohttp.ClientTimeout(total=TIMEOUT_SEC)
     start = time.perf_counter()
     result = {
-        "idx": idx, "proxy": f"{p['ip']}:{p['port']}", "type": p.get("type", "http"),
-        "ok": False, "latency_ms": None, "exit_ip": None, "country": p.get("country", ""),
-        "country_code": p.get("country_code", ""), "error": None,
+        "idx": idx,
+        "proxy": f"{p['ip']}:{p['port']}",
+        "type": p.get("type", "http"),
+        "ok": False,
+        "latency_ms": None,
+        "exit_ip": None,
+        "country": p.get("country", ""),
+        "country_code": p.get("country_code", ""),
+        "error": None,
     }
 
     try:
@@ -104,15 +110,20 @@ def fmt_latency(ms: float | None) -> str:
 async def run(args: argparse.Namespace) -> int:
     proxies = load_proxies(args.type, country=args.country, tier=args.tier)
     if not proxies:
-        print(f"No proxies match the filter ({args.type}"
-              + (f" country={args.country}" if args.country else "")
-              + (f" tier={args.tier}" if args.tier else "") + ").")
+        print(
+            f"No proxies match the filter ({args.type}"
+            + (f" country={args.country}" if args.country else "")
+            + (f" tier={args.tier}" if args.tier else "")
+            + ")."
+        )
         return 1
 
     sample = random.sample(proxies, min(args.limit, len(proxies)))
-    print(f"Loaded {len(proxies)} '{args.type}' proxies"
-          + (f" (filtered)" if args.country or args.tier else "")
-          + f", testing {len(sample)} of them.\n")
+    print(
+        f"Loaded {len(proxies)} '{args.type}' proxies"
+        + (" (filtered)" if args.country or args.tier else "")
+        + f", testing {len(sample)} of them.\n"
+    )
 
     results = await asyncio.gather(*[test_one(p, i + 1, len(sample)) for i, p in enumerate(sample)])
 
@@ -123,8 +134,10 @@ async def run(args: argparse.Namespace) -> int:
         print("-" * 80)
         for r in results:
             status = "✅ " if r["ok"] else "❌ " + (r["error"] or "")
-            print(f"{r['idx']:>3}  {r['proxy']:22}  {r['type']:6}  "
-                  f"{fmt_latency(r['latency_ms']):9}  {(r['exit_ip'] or '—'):16}  {status}")
+            print(
+                f"{r['idx']:>3}  {r['proxy']:22}  {r['type']:6}  "
+                f"{fmt_latency(r['latency_ms']):9}  {(r['exit_ip'] or '—'):16}  {status}"
+            )
 
     ok = sum(1 for r in results if r["ok"])
     print(f"\nSummary: {ok}/{len(results)} succeeded.")
@@ -140,12 +153,20 @@ def main() -> None:
         pass
 
     parser = argparse.ArgumentParser(description="Quickly test a few proxies from the generated lists.")
-    parser.add_argument("--type", choices=["http", "https", "socks4", "socks5"], default="http",
-                        help="Which proxies file to use (default: http).")
+    parser.add_argument(
+        "--type",
+        choices=["http", "https", "socks4", "socks5"],
+        default="http",
+        help="Which proxies file to use (default: http).",
+    )
     parser.add_argument("--limit", type=int, default=5, help="How many random proxies to test (default: 5).")
     parser.add_argument("--country", default=None, help="Filter to a country code (e.g. US). Needs json/*.json.")
-    parser.add_argument("--tier", choices=["fast", "medium", "slow", "unknown"], default=None,
-                        help="Filter to a latency tier. Needs json/*.json.")
+    parser.add_argument(
+        "--tier",
+        choices=["fast", "medium", "slow", "unknown"],
+        default=None,
+        help="Filter to a latency tier. Needs json/*.json.",
+    )
     parser.add_argument("--json", action="store_true", help="Output results as JSON.")
     parser.add_argument("--latency", action="store_true", help="Alias kept for compatibility; latency is always shown.")
     args = parser.parse_args()

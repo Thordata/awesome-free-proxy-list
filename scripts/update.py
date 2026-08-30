@@ -21,13 +21,13 @@ Configuration via environment variables (all optional):
 
 import asyncio
 import csv
+import dataclasses
 import json
+import json as _json
 import os
 import re
 import sys
 import time
-import dataclasses
-import json as _json
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -36,8 +36,7 @@ from typing import Iterable, Literal
 
 import aiohttp
 from aiohttp_socks import ProxyConnector
-
-from geoip_lookup import GeoIP, GeoASN
+from geoip_lookup import GeoASN, GeoIP
 
 ProxyType = Literal["http", "https", "socks4", "socks5"]
 
@@ -284,7 +283,9 @@ async def _check_via_proxy(
         return True
 
 
-async def check_forward_proxy(proxy: Proxy, timeout_s: float, real_ip: str | None = None) -> tuple[float | None, float | None, str]:
+async def check_forward_proxy(
+    proxy: Proxy, timeout_s: float, real_ip: str | None = None
+) -> tuple[float | None, float | None, str]:
     """
     Returns (http_ms, https_ms, anonymity). Either ms can be None if that protocol
     test fails. anonymity is classified inline (reusing the live session) so coverage
@@ -358,9 +359,7 @@ async def _detect_anonymity_one(
     Rotates the probe URL list from start_idx so concurrent probes don't all hammer
     the same endpoint first (rate-limit spread).
     """
-    return await _fetch_headers_via_proxy(
-        session, proxy_url=proxy_url, real_ip=real_ip, start_idx=start_idx
-    )
+    return await _fetch_headers_via_proxy(session, proxy_url=proxy_url, real_ip=real_ip, start_idx=start_idx)
 
 
 async def detect_anonymity(
@@ -373,6 +372,7 @@ async def detect_anonymity(
     connector = aiohttp.TCPConnector(ssl=False)
 
     async with aiohttp.ClientSession(timeout=timeout, connector=connector, trust_env=False) as session:
+
         async def run_one(p: Proxy, idx: int) -> None:
             async with sem:
                 level = await _detect_anonymity_one(session, p.url, real_ip, start_idx=idx)
@@ -476,16 +476,14 @@ def to_proxies(proxy_type: ProxyType, hostports_with_source: dict[str, str]) -> 
     return out
 
 
-def rebuild_with_enrichment(
-    proxies: list[Proxy], geoip: GeoIP, geoasn: GeoASN | None = None
-) -> list[Proxy]:
+def rebuild_with_enrichment(proxies: list[Proxy], geoip: GeoIP, geoasn: GeoASN | None = None) -> list[Proxy]:
     """Return a new list of Proxy objects with country + ASN filled in (best-effort)."""
     have_geoip = geoip.available
     have_asn = geoasn is not None and geoasn.available
     out: list[Proxy] = []
     for p in proxies:
-        country, code = (geoip.lookup(p.host) if have_geoip else ("", ""))
-        asn, org, ip_type = (geoasn.lookup(p.host) if have_asn else (0, "", "unknown"))
+        country, code = geoip.lookup(p.host) if have_geoip else ("", "")
+        asn, org, ip_type = geoasn.lookup(p.host) if have_asn else (0, "", "unknown")
         out.append(
             Proxy(
                 type=p.type,
@@ -514,7 +512,22 @@ def write_json(path: Path, items: list[dict]) -> None:
 
 
 def write_csv(path: Path, items: list[dict]) -> None:
-    fieldnames = ["ip", "port", "type", "country", "country_code", "latency_ms", "tier", "anonymity", "streak", "asn", "asn_org", "ip_type", "source", "updated_utc"]
+    fieldnames = [
+        "ip",
+        "port",
+        "type",
+        "country",
+        "country_code",
+        "latency_ms",
+        "tier",
+        "anonymity",
+        "streak",
+        "asn",
+        "asn_org",
+        "ip_type",
+        "source",
+        "updated_utc",
+    ]
     with path.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -595,9 +608,7 @@ def save_history(history: dict[str, dict], today: str) -> None:
     """Persist history + write a compact `stable.txt` of proxies seen stable
     for >= STABLE_MIN_STREAK consecutive days. Also writes a small summary
     of the distribution for the dashboard."""
-    HISTORY_FILE.write_text(
-        _json.dumps(history, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8"
-    )
+    HISTORY_FILE.write_text(_json.dumps(history, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
     # Stable subset: proxies with streak >= threshold, newest-first.
     STABLE_MIN_STREAK = int(os.getenv("PROXY_STABLE_MIN_STREAK", "2"))
     stable = sorted(
@@ -683,9 +694,7 @@ async def main(refresh: bool = False) -> None:
     # during each proxy's validation (no separate probe pass that times out).
     real_ip = await get_real_ip()
 
-    forward_ok, _https_pass = await validate_forward(
-        forward_proxies, DEFAULT_TIMEOUT_SEC, CONCURRENCY, real_ip
-    )
+    forward_ok, _https_pass = await validate_forward(forward_proxies, DEFAULT_TIMEOUT_SEC, CONCURRENCY, real_ip)
     socks4_ok = await validate_socks(socks4_proxies, DEFAULT_TIMEOUT_SEC, CONCURRENCY, real_ip)
     socks5_ok = await validate_socks(socks5_proxies, DEFAULT_TIMEOUT_SEC, CONCURRENCY, real_ip)
 
@@ -704,7 +713,9 @@ async def main(refresh: bool = False) -> None:
     # since most HTTP forward proxies support HTTPS via CONNECT. Avoids empty https.txt.
     if not https_proxies and http_proxies:
         https_proxies = [
-            Proxy(type="https", host=p.host, port=p.port, latency_ms=p.latency_ms, anonymity=p.anonymity, source=p.source)
+            Proxy(
+                type="https", host=p.host, port=p.port, latency_ms=p.latency_ms, anonymity=p.anonymity, source=p.source
+            )
             for p in http_proxies
         ]
 
@@ -733,10 +744,8 @@ async def main(refresh: bool = False) -> None:
         return ps if ANON_PROBE_TOP <= 0 else ps[:ANON_PROBE_TOP]
 
     anon_pool = [
-        p for p in (
-            _slice(http_proxies) + _slice(https_proxies)
-            + _slice(socks4_proxies_ok) + _slice(socks5_proxies_ok)
-        )
+        p
+        for p in (_slice(http_proxies) + _slice(https_proxies) + _slice(socks4_proxies_ok) + _slice(socks5_proxies_ok))
         if p.anonymity == "unknown"
     ]
     anon_map: dict[str, str] = {}
@@ -757,9 +766,8 @@ async def main(refresh: bool = False) -> None:
     # --- Survival history (streak of consecutive days seen working) ---
     prev_history = load_history()
     today = updated_utc[:10]
-    working_hostports = {p.hostport for p in http_proxies + https_proxies + socks4_proxies_ok + socks5_proxies_ok}
     new_history: dict[str, dict] = {}
-    for p in (http_proxies + https_proxies + socks4_proxies_ok + socks5_proxies_ok):
+    for p in http_proxies + https_proxies + socks4_proxies_ok + socks5_proxies_ok:
         prev_streak = prev_history.get(p.hostport, {}).get("streak", 0)
         prev_last = prev_history.get(p.hostport, {}).get("last_seen", "")
         # Increment only if last seen was a previous day (not same run).
@@ -773,13 +781,9 @@ async def main(refresh: bool = False) -> None:
         }
     save_history(new_history, today)
     STABLE_MIN_STREAK = int(os.getenv("PROXY_STABLE_MIN_STREAK", "2"))
-    stable_hostports = {hp for hp, info in new_history.items() if info["streak"] >= STABLE_MIN_STREAK}
 
     def _with_streak(proxies: list[Proxy]) -> list[Proxy]:
-        return [
-            dataclasses.replace(p, streak=new_history.get(p.hostport, {}).get("streak", 0))
-            for p in proxies
-        ]
+        return [dataclasses.replace(p, streak=new_history.get(p.hostport, {}).get("streak", 0)) for p in proxies]
 
     http_proxies = _with_streak(http_proxies)
     https_proxies = _with_streak(https_proxies)
@@ -813,9 +817,7 @@ async def main(refresh: bool = False) -> None:
     # is the authority for the real candidate pool. (A normal refresh that culls half
     # the set is fine — those proxies really did die — so the threshold is near-zero.)
     if refresh:
-        candidate_total = (
-            len(forward_candidates) + len(socks4_candidates) + len(socks5_candidates)
-        )
+        candidate_total = len(forward_candidates) + len(socks4_candidates) + len(socks5_candidates)
         if candidate_total > 0 and len(all_proxies) < 10:
             print(
                 f"Refresh guard: only {len(all_proxies)}/{candidate_total} proxies "
@@ -855,10 +857,7 @@ async def main(refresh: bool = False) -> None:
     # but this set filters out the slowest, the identity-leaking, and the
     # one-day wonders. May be empty on a fresh install (streak needs ≥2 days).
     top_trusted = [
-        p.hostport for p in all_proxies
-        if p.tier == "fast"
-        and p.anonymity == "elite"
-        and p.streak >= STABLE_MIN_STREAK
+        p.hostport for p in all_proxies if p.tier == "fast" and p.anonymity == "elite" and p.streak >= STABLE_MIN_STREAK
     ]
     write_txt(OUT_DIR / "top-trusted.txt", top_trusted)
 
@@ -909,9 +908,7 @@ async def main(refresh: bool = False) -> None:
         },
         "sources": {
             "count": len(source_counts),
-            "per_source_candidates": dict(
-                sorted(source_counts.items(), key=lambda kv: -kv[1])
-            ),
+            "per_source_candidates": dict(sorted(source_counts.items(), key=lambda kv: -kv[1])),
         },
         "counts": {
             "http": {"candidates": len(forward_candidates), "working": len(http_proxies)},
@@ -919,9 +916,7 @@ async def main(refresh: bool = False) -> None:
             "socks4": {"candidates": len(socks4_candidates), "working": len(socks4_proxies_ok)},
             "socks5": {"candidates": len(socks5_candidates), "working": len(socks5_proxies_ok)},
             "all": {
-                "candidates": len(forward_candidates)
-                + len(socks4_candidates)
-                + len(socks5_candidates),
+                "candidates": len(forward_candidates) + len(socks4_candidates) + len(socks5_candidates),
                 "working": len(all_proxies),
                 "top_trusted": len(top_trusted),
             },

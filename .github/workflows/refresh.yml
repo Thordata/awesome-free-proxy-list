@@ -16,8 +16,9 @@ permissions:
   id-token: write
 
 concurrency:
-  # Separate group from update-proxy-list so the two never cancel each other.
-  group: refresh-proxy-list
+  # Shared with update.yml: both commit auto-generated data files, so runs are
+  # serialized (queued, never cancelled) instead of racing on push.
+  group: proxy-pipeline
   cancel-in-progress: false
 
 jobs:
@@ -62,10 +63,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "chore: 6h proxy refresh (re-validate existing)"
-          # This workflow races the daily update workflow (both commit auto-generated
-          # files). -X theirs keeps our version on content conflicts (files are fully
-          # rewritten each run). Retry + force-with-lease fallback so neither workflow
-          # hard-blocks the other.
+          # The shared proxy-pipeline concurrency group serializes this refresh with
+          # the daily update, so pushes no longer race. -X theirs + the retry loop
+          # stay as belt-and-braces for a manual push landing mid-run.
           for i in 1 2 3; do
             if git pull --rebase --autostash -X theirs origin main; then
               git push && break
@@ -74,8 +74,8 @@ jobs:
             git rebase --abort 2>/dev/null || true
             sleep 5
             if [ "$i" -eq 3 ]; then
-              echo "Rebase exhausted retries; force-with-lease pushing our version."
-              git push --force-with-lease
+              echo "Rebase exhausted retries; failing the run instead of force-pushing over newer data."
+              exit 1
             fi
           done
           echo "changed=true" >> "$GITHUB_OUTPUT"

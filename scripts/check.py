@@ -54,7 +54,9 @@ def build_url(host: str, port: int, ptype: str) -> str:
     return f"socks5://{host}:{port}"
 
 
-async def fetch_via(session: aiohttp.ClientSession, url: str, *, proxy_url: str | None = None) -> tuple[bool, float | None, str | None, str | None]:
+async def fetch_via(
+    session: aiohttp.ClientSession, url: str, *, proxy_url: str | None = None
+) -> tuple[bool, float | None, str | None, str | None]:
     """GET url through the session. Returns (ok, latency_ms, body_text, error)."""
     start = time.perf_counter()
     try:
@@ -123,24 +125,35 @@ async def check(host: str, port: int, ptype: str, geoip: GeoIP) -> dict:
         verdict = "limited (HTTP only, no HTTPS/CONNECT)"
 
     return {
-        "proxy": f"{host}:{port}", "type": ptype, "url": url,
+        "proxy": f"{host}:{port}",
+        "type": ptype,
+        "url": url,
         "http": {"ok": http_ok, "latency_ms": round(http_ms, 1) if http_ms else None, "error": http_err},
         "https": {"ok": https_ok, "latency_ms": round(https_ms, 1) if https_ms else None, "error": https_err},
-        "your_ip": my_ip, "exit_ip": exit_ip,
-        "country": country, "country_code": country_code,
-        "anonymous": anonymous, "verdict": verdict,
+        "your_ip": my_ip,
+        "exit_ip": exit_ip,
+        "country": country,
+        "country_code": country_code,
+        "anonymous": anonymous,
+        "verdict": verdict,
     }
 
 
 def print_report(r: dict) -> None:
     print(f"\n  Proxy:   {r['proxy']}  ({r['type']})")
     print(f"  URL:     {r['url']}")
-    print(f"  HTTP:    {'✅ ' + str(r['http']['latency_ms']) + 'ms' if r['http']['ok'] else '❌ ' + (r['http']['error'] or 'failed')}")
-    print(f"  HTTPS:   {'✅ ' + str(r['https']['latency_ms']) + 'ms' if r['https']['ok'] else '❌ ' + (r['https']['error'] or 'failed')}")
+    print(
+        f"  HTTP:    {'✅ ' + str(r['http']['latency_ms']) + 'ms' if r['http']['ok'] else '❌ ' + (r['http']['error'] or 'failed')}"
+    )
+    print(
+        f"  HTTPS:   {'✅ ' + str(r['https']['latency_ms']) + 'ms' if r['https']['ok'] else '❌ ' + (r['https']['error'] or 'failed')}"
+    )
     print(f"  Your IP: {r['your_ip'] or 'unknown'}")
-    print(f"  Exit IP: {r['exit_ip'] or 'unknown'}"
-          + (f"   🇺 {r['country']} ({r['country_code']})" if r['country_code'] else ""))
-    anon = "🟢 yes" if r['anonymous'] else ("🔴 no" if r['exit_ip'] else "⚪ unknown")
+    print(
+        f"  Exit IP: {r['exit_ip'] or 'unknown'}"
+        + (f"   🇺 {r['country']} ({r['country_code']})" if r["country_code"] else "")
+    )
+    anon = "🟢 yes" if r["anonymous"] else ("🔴 no" if r["exit_ip"] else "⚪ unknown")
     print(f"  Anonymous (exit ≠ your IP): {anon}")
     print(f"  Verdict: {r['verdict']}\n")
 
@@ -155,8 +168,9 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(description="Deep-dive diagnostics for a single proxy.")
     parser.add_argument("target", help="ip:port of the proxy to check.")
-    parser.add_argument("--type", choices=["http", "https", "socks4", "socks5"], default="http",
-                        help="Proxy type (default: http).")
+    parser.add_argument(
+        "--type", choices=["http", "https", "socks4", "socks5"], default="http", help="Proxy type (default: http)."
+    )
     parser.add_argument("--json", action="store_true", help="Output JSON only.")
     args = parser.parse_args()
 

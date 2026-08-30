@@ -13,11 +13,10 @@ import pytest
 SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 sys.path.insert(0, str(SCRIPTS))
 
-import update  # noqa: E402
 import subscription  # noqa: E402
-from update import Proxy, classify_anonymity, tier_of  # noqa: E402
 from geoip_lookup import classify_ip_type  # noqa: E402
 from subscription import flag_emoji  # noqa: E402
+from update import Proxy, classify_anonymity, tier_of  # noqa: E402
 
 
 # ---------- tier_of ----------
@@ -128,9 +127,7 @@ class TestYamlDump:
         assert "- DIRECT" in out or '- "DIRECT"' in out
 
     def test_list_of_dicts_block_style(self):
-        out = subscription._yaml_dump({
-            "proxies": [{"name": "p1", "type": "http", "server": "1.1.1.1", "port": 80}]
-        })
+        out = subscription._yaml_dump({"proxies": [{"name": "p1", "type": "http", "server": "1.1.1.1", "port": 80}]})
         assert "- name: " in out
         assert "type: http" in out
         assert "server: 1.1.1.1" in out
@@ -171,8 +168,15 @@ class TestYamlDump:
 # ---------- build_links / build_v2ray_sub ----------
 class TestSubscriptionBuilders:
     def _proxy(self, **kw):
-        defaults = {"type": "http", "host": "1.2.3.4", "port": 8080, "latency_ms": 100,
-                    "country": "United States", "country_code": "US", "source": "test"}
+        defaults = {
+            "type": "http",
+            "host": "1.2.3.4",
+            "port": 8080,
+            "latency_ms": 100,
+            "country": "United States",
+            "country_code": "US",
+            "source": "test",
+        }
         defaults.update(kw)
         return Proxy(**defaults)
 
@@ -194,8 +198,10 @@ class TestSubscriptionBuilders:
         assert out.count("1.2.3.4:8080") == 1
 
     def test_build_v2ray_base64_decodes(self):
-        proxies = [self._proxy(type="http", host="1.2.3.4", port=8080),
-                   self._proxy(type="socks5", host="5.6.7.8", port=1080)]
+        proxies = [
+            self._proxy(type="http", host="1.2.3.4", port=8080),
+            self._proxy(type="socks5", host="5.6.7.8", port=1080),
+        ]
         b64 = subscription.build_v2ray_sub(proxies)
         decoded = base64.b64decode(b64).decode("utf-8")
         assert "http://1.2.3.4:8080" in decoded
@@ -213,14 +219,28 @@ class TestClassifyIpType:
         assert classify_ip_type("") == "unknown"
 
     def test_datacenter_cloud_providers(self):
-        for org in ["Amazon.com Inc.", "Google LLC", "Microsoft Corporation",
-                    "DigitalOcean LLC", "Cloudflare, Inc.", "OVH SAS", "Hetzner Online GmbH",
-                    "Alibaba (US) Technology Co., Ltd.", "Tencent Building", "Huawei Cloud"]:
+        for org in [
+            "Amazon.com Inc.",
+            "Google LLC",
+            "Microsoft Corporation",
+            "DigitalOcean LLC",
+            "Cloudflare, Inc.",
+            "OVH SAS",
+            "Hetzner Online GmbH",
+            "Alibaba (US) Technology Co., Ltd.",
+            "Tencent Building",
+            "Huawei Cloud",
+        ]:
             assert classify_ip_type(org) == "datacenter", f"{org!r} should be datacenter"
 
     def test_residential_isps(self):
-        for org in ["Comcast Cable Communications", "AT&T Services Inc.",
-                    "China Telecom Group", "Vodafone Group", "Verizon Business"]:
+        for org in [
+            "Comcast Cable Communications",
+            "AT&T Services Inc.",
+            "China Telecom Group",
+            "Vodafone Group",
+            "Verizon Business",
+        ]:
             assert classify_ip_type(org) == "residential", f"{org!r} should be residential"
 
     def test_unknown_for_unlisted_org(self):
