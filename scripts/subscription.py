@@ -21,6 +21,9 @@ from __future__ import annotations
 
 import base64
 import json
+import os
+import re
+import subprocess
 from collections import defaultdict
 from pathlib import Path
 
@@ -32,6 +35,37 @@ JSON_DIR = OUT_DIR / "json"
 CLASH_DIR = OUT_DIR / "clash"
 V2RAY_DIR = OUT_DIR / "v2ray"
 LINKS_DIR = OUT_DIR / "links"
+
+
+def _detect_repo() -> tuple[str, str]:
+    """Resolve (owner, repo) for URLs baked into generated files.
+
+    GITHUB_REPOSITORY is set automatically inside Actions; locally we parse the
+    checkout's origin remote. The fallback keeps runs correct on the upstream
+    repo even where remote introspection fails.
+    """
+    slug = os.environ.get("GITHUB_REPOSITORY", "")
+    if "/" not in slug:
+        try:
+            url = subprocess.run(
+                ["git", "remote", "get-url", "origin"],
+                capture_output=True,
+                text=True,
+                timeout=5,
+                check=True,
+            ).stdout.strip()
+            m = re.search(r"github\.com[/:](.+?)(?:\.git)?/?$", url)
+            slug = m.group(1) if m else ""
+        except Exception:
+            slug = ""
+    owner, _, name = (slug or "Thordata/awesome-free-proxy-list").partition("/")
+    return owner, name
+
+
+OWNER, REPO_NAME = _detect_repo()
+REPO_SLUG = f"{OWNER}/{REPO_NAME}"
+PAGES_DATA_BASE = f"https://{OWNER.lower()}.github.io/{REPO_NAME}/data"
+RAW_PROXIES_BASE = f"https://raw.githubusercontent.com/{REPO_SLUG}/main/proxies"
 
 
 def flag_emoji(cc: str) -> str:
@@ -71,7 +105,11 @@ def _yaml_dump(obj) -> str:
     def esc(s: str) -> str:
         if s == "":
             return '""'
-        if any(c in s for c in NEEDS_QUOTE) or s[0] in "- " or s.lower() in ("true", "false", "null", "yes", "no", "on", "off"):
+        if (
+            any(c in s for c in NEEDS_QUOTE)
+            or s[0] in "- "
+            or s.lower() in ("true", "false", "null", "yes", "no", "on", "off")
+        ):
             return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
         return s
 
@@ -180,8 +218,13 @@ def build_clash_config(proxies: list[Proxy], *, title: str, updated_utc: str) ->
 
     groups: list[dict] = [
         {"name": "🚀 PROXY", "type": "select", "proxies": ["♻️ AUTO", "DIRECT"] + names[:200]},
-        {"name": "♻️ AUTO", "type": "url-test", "proxies": names[:200],
-         "url": "http://www.gstatic.com/generate_204", "interval": 300},
+        {
+            "name": "♻️ AUTO",
+            "type": "url-test",
+            "proxies": names[:200],
+            "url": "http://www.gstatic.com/generate_204",
+            "interval": 300,
+        },
     ]
     for t, ns in by_type.items():
         if ns:
@@ -211,12 +254,7 @@ def build_clash_config(proxies: list[Proxy], *, title: str, updated_utc: str) ->
             "MATCH,🚀 PROXY",
         ],
     }
-    header = (
-        f"# {title}\n"
-        f"# Generated: {updated_utc}\n"
-        f"# Proxies: {len(unique)}\n"
-        f"# Source: kael-odin/awesome-free-proxy-list\n\n"
-    )
+    header = f"# {title}\n" f"# Generated: {updated_utc}\n" f"# Proxies: {len(unique)}\n" f"# Source: {REPO_SLUG}\n\n"
     return header + _yaml_dump(config)
 
 
@@ -263,48 +301,120 @@ def build_manifest(updated_utc: str, proxy_counts: dict, categories: dict) -> di
     `categories` maps a category key (e.g. "fast", "us", "high-anon") to a human
     label, so the SPA can render grouped subscription cards.
     """
-    base = "https://kael-odin.github.io/awesome-free-proxy-list/data"
-    raw_base = "https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies"
+    base = PAGES_DATA_BASE
+    raw_base = RAW_PROXIES_BASE
     files = [
         # --- Clash configs ---
-        {"name": "Clash / Mihomo — 全部 (HTTP+SOCKS5)", "name_en": "Clash/Mihomo — All (HTTP+SOCKS5)",
-         "format": "clash", "category": "all", "path": "clash/all.yaml",
-         "pages": f"{base}/clash/all.yaml", "raw": f"{raw_base}/clash/all.yaml"},
-        {"name": "Clash / Mihomo — 仅 HTTP", "name_en": "Clash/Mihomo — HTTP only",
-         "format": "clash", "category": "by_type", "path": "clash/http.yaml",
-         "pages": f"{base}/clash/http.yaml", "raw": f"{raw_base}/clash/http.yaml"},
-        {"name": "Clash / Mihomo — 仅 SOCKS5", "name_en": "Clash/Mihomo — SOCKS5 only",
-         "format": "clash", "category": "by_type", "path": "clash/socks5.yaml",
-         "pages": f"{base}/clash/socks5.yaml", "raw": f"{raw_base}/clash/socks5.yaml"},
-        {"name": "Clash — 仅快速 (fast 档)", "name_en": "Clash — Fast tier only",
-         "format": "clash", "category": "by_tier", "path": "clash/fast.yaml",
-         "pages": f"{base}/clash/fast.yaml", "raw": f"{raw_base}/clash/fast.yaml"},
-        {"name": "Clash — 高匿 (elite)", "name_en": "Clash — High-anon (elite)",
-         "format": "clash", "category": "by_anon", "path": "clash/high-anon.yaml",
-         "pages": f"{base}/clash/high-anon.yaml", "raw": f"{raw_base}/clash/high-anon.yaml"},
-        {"name": "Clash — 稳定 (连续多日可用)", "name_en": "Clash — Stable (multi-day)",
-         "format": "clash", "category": "stable", "path": "clash/stable.yaml",
-         "pages": f"{base}/clash/stable.yaml", "raw": f"{raw_base}/clash/stable.yaml"},
+        {
+            "name": "Clash / Mihomo — 全部 (HTTP+SOCKS5)",
+            "name_en": "Clash/Mihomo — All (HTTP+SOCKS5)",
+            "format": "clash",
+            "category": "all",
+            "path": "clash/all.yaml",
+            "pages": f"{base}/clash/all.yaml",
+            "raw": f"{raw_base}/clash/all.yaml",
+        },
+        {
+            "name": "Clash / Mihomo — 仅 HTTP",
+            "name_en": "Clash/Mihomo — HTTP only",
+            "format": "clash",
+            "category": "by_type",
+            "path": "clash/http.yaml",
+            "pages": f"{base}/clash/http.yaml",
+            "raw": f"{raw_base}/clash/http.yaml",
+        },
+        {
+            "name": "Clash / Mihomo — 仅 SOCKS5",
+            "name_en": "Clash/Mihomo — SOCKS5 only",
+            "format": "clash",
+            "category": "by_type",
+            "path": "clash/socks5.yaml",
+            "pages": f"{base}/clash/socks5.yaml",
+            "raw": f"{raw_base}/clash/socks5.yaml",
+        },
+        {
+            "name": "Clash — 仅快速 (fast 档)",
+            "name_en": "Clash — Fast tier only",
+            "format": "clash",
+            "category": "by_tier",
+            "path": "clash/fast.yaml",
+            "pages": f"{base}/clash/fast.yaml",
+            "raw": f"{raw_base}/clash/fast.yaml",
+        },
+        {
+            "name": "Clash — 高匿 (elite)",
+            "name_en": "Clash — High-anon (elite)",
+            "format": "clash",
+            "category": "by_anon",
+            "path": "clash/high-anon.yaml",
+            "pages": f"{base}/clash/high-anon.yaml",
+            "raw": f"{raw_base}/clash/high-anon.yaml",
+        },
+        {
+            "name": "Clash — 稳定 (连续多日可用)",
+            "name_en": "Clash — Stable (multi-day)",
+            "format": "clash",
+            "category": "stable",
+            "path": "clash/stable.yaml",
+            "pages": f"{base}/clash/stable.yaml",
+            "raw": f"{raw_base}/clash/stable.yaml",
+        },
         # --- V2Ray ---
-        {"name": "V2Ray base64 订阅 (全部)", "name_en": "V2Ray base64 subscription (all)",
-         "format": "v2ray", "category": "all", "path": "v2ray/all.txt",
-         "pages": f"{base}/v2ray/all.txt", "raw": f"{raw_base}/v2ray/all.txt"},
+        {
+            "name": "V2Ray base64 订阅 (全部)",
+            "name_en": "V2Ray base64 subscription (all)",
+            "format": "v2ray",
+            "category": "all",
+            "path": "v2ray/all.txt",
+            "pages": f"{base}/v2ray/all.txt",
+            "raw": f"{raw_base}/v2ray/all.txt",
+        },
         # --- Link lists ---
-        {"name": "链接列表 — HTTP", "name_en": "Link list — HTTP",
-         "format": "links", "category": "by_type", "path": "links/http.txt",
-         "pages": f"{base}/links/http.txt", "raw": f"{raw_base}/links/http.txt"},
-        {"name": "链接列表 — SOCKS5", "name_en": "Link list — SOCKS5",
-         "format": "links", "category": "by_type", "path": "links/socks5.txt",
-         "pages": f"{base}/links/socks5.txt", "raw": f"{raw_base}/links/socks5.txt"},
-        {"name": "链接列表 — 全部", "name_en": "Link list — All",
-         "format": "links", "category": "all", "path": "links/all.txt",
-         "pages": f"{base}/links/all.txt", "raw": f"{raw_base}/links/all.txt"},
-        {"name": "链接列表 — 高匿", "name_en": "Link list — High-anon",
-         "format": "links", "category": "by_anon", "path": "links/high-anon.txt",
-         "pages": f"{base}/links/high-anon.txt", "raw": f"{raw_base}/links/high-anon.txt"},
-        {"name": "链接列表 — 稳定", "name_en": "Link list — Stable",
-         "format": "links", "category": "stable", "path": "links/stable.txt",
-         "pages": f"{base}/links/stable.txt", "raw": f"{raw_base}/links/stable.txt"},
+        {
+            "name": "链接列表 — HTTP",
+            "name_en": "Link list — HTTP",
+            "format": "links",
+            "category": "by_type",
+            "path": "links/http.txt",
+            "pages": f"{base}/links/http.txt",
+            "raw": f"{raw_base}/links/http.txt",
+        },
+        {
+            "name": "链接列表 — SOCKS5",
+            "name_en": "Link list — SOCKS5",
+            "format": "links",
+            "category": "by_type",
+            "path": "links/socks5.txt",
+            "pages": f"{base}/links/socks5.txt",
+            "raw": f"{raw_base}/links/socks5.txt",
+        },
+        {
+            "name": "链接列表 — 全部",
+            "name_en": "Link list — All",
+            "format": "links",
+            "category": "all",
+            "path": "links/all.txt",
+            "pages": f"{base}/links/all.txt",
+            "raw": f"{raw_base}/links/all.txt",
+        },
+        {
+            "name": "链接列表 — 高匿",
+            "name_en": "Link list — High-anon",
+            "format": "links",
+            "category": "by_anon",
+            "path": "links/high-anon.txt",
+            "pages": f"{base}/links/high-anon.txt",
+            "raw": f"{raw_base}/links/high-anon.txt",
+        },
+        {
+            "name": "链接列表 — 稳定",
+            "name_en": "Link list — Stable",
+            "format": "links",
+            "category": "stable",
+            "path": "links/stable.txt",
+            "pages": f"{base}/links/stable.txt",
+            "raw": f"{raw_base}/links/stable.txt",
+        },
     ]
     return {
         "updated_utc": updated_utc,
@@ -363,7 +473,9 @@ def generate_all(
         (CLASH_DIR / "fast.yaml").unlink(missing_ok=True)
     if high_anon_proxies:
         (CLASH_DIR / "high-anon.yaml").write_text(
-            build_clash_config(high_anon_proxies, title="Free Proxy List — High-anonymity (elite)", updated_utc=updated_utc),
+            build_clash_config(
+                high_anon_proxies, title="Free Proxy List — High-anonymity (elite)", updated_utc=updated_utc
+            ),
             encoding="utf-8",
         )
     else:
@@ -416,8 +528,12 @@ if __name__ == "__main__":
             return []
         return [
             Proxy(
-                type=x["type"], host=x["ip"], port=x["port"], latency_ms=x.get("latency_ms"),
-                country=x.get("country", ""), country_code=x.get("country_code", ""),
+                type=x["type"],
+                host=x["ip"],
+                port=x["port"],
+                latency_ms=x.get("latency_ms"),
+                country=x.get("country", ""),
+                country_code=x.get("country_code", ""),
                 source=x.get("source", ""),
                 anonymity=x.get("anonymity", "unknown"),
                 streak=x.get("streak", 0),
@@ -426,6 +542,7 @@ if __name__ == "__main__":
         ]
 
     import sys
+
     from update import utc_now_iso
 
     m = generate_all(load("http"), load("https"), load("socks4"), load("socks5"), load("all"), utc_now_iso())

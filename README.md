@@ -2,14 +2,14 @@
 
 <img src="assets/readme/hero.svg" alt="awesome-free-proxy-list — daily-verified free proxies with country, latency tier, anonymity, streak and IP-type metadata, plus Clash/V2Ray subscriptions and a live dashboard" width="100%">
 
-[![Update](https://github.com/kael-odin/awesome-free-proxy-list/actions/workflows/update.yml/badge.svg)](https://github.com/kael-odin/awesome-free-proxy-list/actions/workflows/update.yml)
-[![Refresh](https://github.com/kael-odin/awesome-free-proxy-list/actions/workflows/refresh.yml/badge.svg)](https://github.com/kael-odin/awesome-free-proxy-list/actions/workflows/refresh.yml)
+[![Update](https://github.com/Thordata/awesome-free-proxy-list/actions/workflows/update.yml/badge.svg)](https://github.com/Thordata/awesome-free-proxy-list/actions/workflows/update.yml)
+[![Refresh](https://github.com/Thordata/awesome-free-proxy-list/actions/workflows/refresh.yml/badge.svg)](https://github.com/Thordata/awesome-free-proxy-list/actions/workflows/refresh.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Proxies](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/summary.json&query=$.counts.all.working&label=working&color=brightgreen)](proxies/summary.json)
-[![Last Update](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/summary.json&query=$.updated_utc&label=updated&color=blue)](proxies/summary.json)
-[![GitHub stars](https://img.shields.io/github/stars/kael-odin/awesome-free-proxy-list?style=social)](https://github.com/kael-odin/awesome-free-proxy-list/stargazers)
+[![Proxies](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/proxies/summary.json&query=$.counts.all.working&label=working&color=brightgreen)](proxies/summary.json)
+[![Last Update](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/proxies/summary.json&query=$.updated_utc&label=updated&color=blue)](proxies/summary.json)
+[![GitHub stars](https://img.shields.io/github/stars/Thordata/awesome-free-proxy-list?style=social)](https://github.com/Thordata/awesome-free-proxy-list/stargazers)
 
-🌐 [在线仪表盘 / Live Dashboard](https://kael-odin.github.io/awesome-free-proxy-list/) · 🔗 [Clash 订阅](https://kael-odin.github.io/awesome-free-proxy-list/data/clash/all.yaml) · 📦 [全部代理 all.txt](proxies/all.txt) · 📊 [统计 summary.json](proxies/summary.json)
+🌐 [在线仪表盘 / Live Dashboard](https://thordata.github.io/awesome-free-proxy-list/) · 🔗 [Clash 订阅](https://thordata.github.io/awesome-free-proxy-list/data/clash/all.yaml) · 📦 [全部代理 all.txt](proxies/all.txt) · 📊 [统计 summary.json](proxies/summary.json)
 
 </div>
 
@@ -19,7 +19,7 @@
 
 ```bash
 # first successful action — grab the working list, sorted by latency
-curl -s https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/all.txt | head
+curl -s https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/proxies/all.txt | head
 ```
 
 ## 📊 Live stats
@@ -126,7 +126,7 @@ console.log(data);
 
 ### Live dashboard
 
-Prefer not to download? Open the **[live dashboard](https://kael-odin.github.io/awesome-free-proxy-list/)** — search IP / country / port, filter by type · country · latency tier · anonymity · IP-type, sort, copy or download the current result set. Dark mode + EN/中 toggle.
+Prefer not to download? Open the **[live dashboard](https://thordata.github.io/awesome-free-proxy-list/)** — search IP / country / port, filter by type · country · latency tier · anonymity · IP-type, sort, copy or download the current result set. Dark mode + EN/中 toggle.
 
 ### 🔗 One-click import (Clash Verge / V2RayN / Surge)
 
@@ -134,10 +134,10 @@ Prebuilt subscription files — paste the link, no manual entry:
 
 | Client | Subscription link | Format |
 |---|---|---|
-| **Clash Verge / Mihomo** | `https://kael-odin.github.io/awesome-free-proxy-list/data/clash/all.yaml` | Clash YAML (HTTP+SOCKS5) |
-| Clash Verge (HTTP only) | `https://kael-odin.github.io/awesome-free-proxy-list/data/clash/http.yaml` | Clash YAML |
-| **V2RayN / V2Ray** | `https://kael-odin.github.io/awesome-free-proxy-list/data/v2ray/all.txt` | base64 subscription |
-| Surge / generic links | `https://kael-odin.github.io/awesome-free-proxy-list/data/links/http.txt` | `http://ip:port` list |
+| **Clash Verge / Mihomo** | `https://thordata.github.io/awesome-free-proxy-list/data/clash/all.yaml` | Clash YAML (HTTP+SOCKS5) |
+| Clash Verge (HTTP only) | `https://thordata.github.io/awesome-free-proxy-list/data/clash/http.yaml` | Clash YAML |
+| **V2RayN / V2Ray** | `https://thordata.github.io/awesome-free-proxy-list/data/v2ray/all.txt` | base64 subscription |
+| Surge / generic links | `https://thordata.github.io/awesome-free-proxy-list/data/links/http.txt` | `http://ip:port` list |
 
 **Import steps**:
 1. **Clash Verge** — open → Profiles (Subscriptions) → paste the Clash YAML link → update → select that profile in the Proxies page → pick the **🚀 PROXY** or **♻️ AUTO** group (AUTO auto-speed-tests for the fastest node).
@@ -149,7 +149,7 @@ Prebuilt subscription files — paste the link, no manual entry:
 ## 🖥️ Run locally
 
 ```bash
-git clone https://github.com/kael-odin/awesome-free-proxy-list.git
+git clone https://github.com/Thordata/awesome-free-proxy-list.git
 cd awesome-free-proxy-list
 python -m venv .venv
 source .venv/Scripts/activate   # Windows Git Bash  # Linux/macOS: source .venv/bin/activate
@@ -248,7 +248,7 @@ PRs welcome — new sources, validation-logic improvements, dashboard enhancemen
 
 ## 📄 License
 
-[MIT](LICENSE) © kael-odin
+[MIT](LICENSE) © Thordata
 
 ---
 
@@ -277,10 +277,10 @@ A **free proxy list** that is **automatically verified daily + every 6h** via Gi
 
 ```bash
 # All working proxies (sorted by latency, deduped)
-curl -s https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/all.txt | head
+curl -s https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/proxies/all.txt | head
 
 # Structured JSON (country + latency + tier + source)
-curl -s https://raw.githubusercontent.com/kael-odin/awesome-free-proxy-list/main/proxies/json/all.json | head
+curl -s https://raw.githubusercontent.com/Thordata/awesome-free-proxy-list/main/proxies/json/all.json | head
 ```
 
 ```python
@@ -292,12 +292,12 @@ print(requests.get("https://httpbin.org/ip", proxies=proxies, timeout=10).text)
 
 ### Outputs
 
-Plain `txt` (one `host:port` per line), `json` (structured with country/latency/tier), `csv`, per-country split, and fastest subsets — see the table in the Chinese section above. The [live dashboard](https://kael-odin.github.io/awesome-free-proxy-list/) lets you search, filter, copy and download without leaving the browser.
+Plain `txt` (one `host:port` per line), `json` (structured with country/latency/tier), `csv`, per-country split, and fastest subsets — see the table in the Chinese section above. The [live dashboard](https://thordata.github.io/awesome-free-proxy-list/) lets you search, filter, copy and download without leaving the browser.
 
 ### Run locally
 
 ```bash
-git clone https://github.com/kael-odin/awesome-free-proxy-list.git
+git clone https://github.com/Thordata/awesome-free-proxy-list.git
 cd awesome-free-proxy-list
 python -m venv .venv && source .venv/bin/activate   # Windows: source .venv/Scripts/activate
 pip install -r requirements.txt
@@ -308,4 +308,4 @@ python scripts/update.py
 
 Free proxies are unstable and may be abused. **Do not use for sensitive traffic.** Use at your own risk. This repo only aggregates public sources; it does not operate any proxy server.
 
-License: [MIT](LICENSE) © kael-odin
+License: [MIT](LICENSE) © Thordata

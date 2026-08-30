@@ -14,7 +14,7 @@
 ## 🚀 本地开发流程
 
 ```bash
-git clone https://github.com/kael-odin/awesome-free-proxy-list.git
+git clone https://github.com/Thordata/awesome-free-proxy-list.git
 cd awesome-free-proxy-list
 git checkout -b my-feature
 
@@ -69,7 +69,7 @@ Thanks for your interest in contributing! The simplest support is ⭐ Starring t
 ### Local dev
 
 ```bash
-git clone https://github.com/kael-odin/awesome-free-proxy-list.git
+git clone https://github.com/Thordata/awesome-free-proxy-list.git
 cd awesome-free-proxy-list && git checkout -b my-feature
 python -m venv .venv && source .venv/bin/activate   # Windows: source .venv/Scripts/activate
 pip install -r requirements.txt
