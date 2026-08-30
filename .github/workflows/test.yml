@@ -30,7 +30,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - run: pip install ruff
+      # Pinned: the formatter's output changes between minor versions, and an
+      # unpinned install would fail --check on upgrades before anyone reformats.
+      - run: pip install "ruff==0.16.5"
       - run: ruff check scripts/ tests/
       - run: ruff format --check scripts/ tests/
 

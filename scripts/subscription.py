@@ -254,7 +254,7 @@ def build_clash_config(proxies: list[Proxy], *, title: str, updated_utc: str) ->
             "MATCH,🚀 PROXY",
         ],
     }
-    header = f"# {title}\n" f"# Generated: {updated_utc}\n" f"# Proxies: {len(unique)}\n" f"# Source: {REPO_SLUG}\n\n"
+    header = f"# {title}\n# Generated: {updated_utc}\n# Proxies: {len(unique)}\n# Source: {REPO_SLUG}\n\n"
     return header + _yaml_dump(config)
 
 
