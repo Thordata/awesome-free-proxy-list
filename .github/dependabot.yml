@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: weekly
+    # Ranged constraints (e.g. aiohttp>=3.9,<4) + auto-merge-free PRs keep the
+    # daily workflow pinned to patched releases without churn.
+    groups:
+      python-deps:
+        patterns:
+          - "*"
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns:
+          - "*"

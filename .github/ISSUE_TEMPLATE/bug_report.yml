@@ -1,0 +1,45 @@
+name: Bug report / 问题反馈
+description: Report a problem with the scripts, dashboard, or generated data / 报告脚本、仪表盘或数据的问题
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Before filing / 提交前必读**
+
+        - "某代理连不上 / proxy X is dead" is **not a bug** — free proxies live for minutes to hours. Check the `updated` timestamp on `proxies/summary.json` first.
+        - "代理偷跑流量 / proxy injected content" is **not a bug** — see SECURITY.md and the README risk disclosure.
+        - This repo does not provide a proxy service; it only aggregates public data.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area / 范围
+      options:
+        - Script (scripts/update.py / check.py / subscription.py / geoip_lookup.py)
+        - Dashboard (docs/, GitHub Pages)
+        - Generated data format (proxies/, docs/data/)
+        - GitHub Actions workflow
+        - Other / 其他
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit SHA
+      description: `git rev-parse --short HEAD` or the SHA shown on the failing workflow run
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: Include the exact command and its output (e.g. `python scripts/check.py 1.2.3.4:8080`)
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual / 期望与实际
+    validations:
+      required: true
