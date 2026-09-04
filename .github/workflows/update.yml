@@ -77,24 +77,42 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          MSG="chore: daily proxy list update"
           git add -A
-          git commit -m "chore: daily proxy list update"
-          # The shared proxy-pipeline concurrency group serializes the daily update
-          # and the 6h refresh, so pushes no longer race. -X theirs + the retry loop
-          # stay as belt-and-braces for a manual push landing mid-run.
+          git commit -m "$MSG"
+          OURS=$(git rev-parse HEAD)
           for i in 1 2 3; do
-            if git pull --rebase --autostash -X theirs origin main; then
-              git push && break
+            if git pull --rebase --autostash -X theirs origin main && git push; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
             fi
-            echo "Rebase attempt $i failed; aborting and retrying..."
+            echo "Rebase attempt $i failed; recovering..."
             git rebase --abort 2>/dev/null || true
+            # -X theirs only settles content conflicts. write_by_country() deletes
+            # and regenerates by-country/*.txt, so a country that died between two
+            # runs gives one commit a delete and the other a modify — a
+            # modify/delete conflict the strategy option cannot resolve, which
+            # makes retrying the same rebase futile. This is the authoritative
+            # full scrape, so recover deterministically instead of dropping it:
+            # restart from origin/main and replay this run's complete generated
+            # dataset (proxies/ + docs/data/) as a fresh commit. A clean tree
+            # replay never conflicts. README.md is deliberately not replayed to
+            # avoid clobbering concurrent human edits; its stats block
+            # self-heals on the next run.
             sleep 5
-            if [ "$i" -eq 3 ]; then
-              echo "Rebase exhausted retries; failing the run instead of force-pushing over newer data."
-              exit 1
+            git fetch origin main
+            git reset --hard origin/main
+            git rm -rq --ignore-unmatch proxies docs/data
+            git checkout "$OURS" -- proxies
+            git checkout "$OURS" -- docs/data || true
+            git commit -m "$MSG" || echo "Nothing to replay (origin already matches)."
+            if git push; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
             fi
           done
-          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "Push failed 3 times; failing the run instead of force-pushing over newer data."
+          exit 1
 
       # Deploy from THIS working tree (the one we just generated and committed),
       # not a fresh checkout that would resolve to the run-trigger SHA and lag a

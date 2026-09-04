@@ -63,22 +63,37 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git commit -m "chore: 6h proxy refresh (re-validate existing)"
-          # The shared proxy-pipeline concurrency group serializes this refresh with
-          # the daily update, so pushes no longer race. -X theirs + the retry loop
-          # stay as belt-and-braces for a manual push landing mid-run.
+          # The shared proxy-pipeline concurrency group is supposed to serialize
+          # this refresh with the daily update, but runs still overlap now and
+          # then (scheduler race). A plain rebase then dies on modify/delete
+          # conflicts that -X theirs cannot settle: write_by_country() deletes
+          # and regenerates by-country/*.txt, so a country that died between the
+          # two runs is "deleted by one commit, modified by the other" — git
+          # stops no matter which strategy option is set, so retrying the same
+          # rebase 3x always fails (this used to break ~1 run a day). If the
+          # rebase fails while origin/main moved, DISCARD this refresh and adopt
+          # origin/main: a concurrent full update is a strictly richer dataset
+          # (fresh scrape vs this partial re-validation), and replaying our
+          # snapshot over it would delete proxies we never tested. Losing ~7
+          # minutes of freshness costs nothing; the next cycle re-refreshes.
           for i in 1 2 3; do
-            if git pull --rebase --autostash -X theirs origin main; then
-              git push && break
+            if git pull --rebase --autostash -X theirs origin main && git push; then
+              echo "changed=true" >> "$GITHUB_OUTPUT"
+              exit 0
             fi
-            echo "Rebase attempt $i failed; aborting and retrying..."
             git rebase --abort 2>/dev/null || true
             sleep 5
-            if [ "$i" -eq 3 ]; then
-              echo "Rebase exhausted retries; failing the run instead of force-pushing over newer data."
-              exit 1
+            git fetch origin main
+            if [ "$(git rev-parse origin/main)" != "$(git rev-parse HEAD~1)" ]; then
+              git reset --hard origin/main
+              echo "Rebase hit an unresolvable deleted-vs-modified conflict with a newer full update; kept origin/main and skipped this refresh."
+              echo "changed=false" >> "$GITHUB_OUTPUT"
+              exit 0
             fi
+            echo "Push attempt $i failed (origin unchanged); retrying..."
           done
-          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "Push failed 3 times; failing the run instead of force-pushing over newer data."
+          exit 1
 
       # Deploy from THIS working tree (the one we just generated and committed),
       # not a fresh checkout that would resolve to the run-trigger SHA and lag a
