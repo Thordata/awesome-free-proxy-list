@@ -1,8 +1,8 @@
 {
   "by_anonymity": {
     "all": {
-      "elite": 173,
-      "unknown": 18
+      "elite": 161,
+      "unknown": 15
     },
     "note": "elite=high-anon(no proxy headers); anonymous=headers but hides real IP; transparent=leaks real IP; unknown=not probed (only top-N per type probed to bound runtime)",
     "probed_top_n": 0
@@ -12,54 +12,54 @@
       "BD": 3,
       "CN": 18,
       "DE": 10,
-      "FR": 9,
+      "FI": 2,
+      "FR": 7,
       "HK": 11,
-      "ID": 3,
+      "ID": 2,
       "IN": 4,
       "JP": 3,
+      "KH": 2,
       "KR": 3,
-      "NL": 3,
-      "RU": 7,
-      "SC": 3,
-      "SG": 13,
-      "US": 72,
+      "RU": 6,
+      "SG": 10,
+      "US": 71,
       "VN": 5
     }
   },
   "by_ip_type": {
     "all": {
-      "datacenter": 64,
+      "datacenter": 59,
       "residential": 29,
-      "unknown": 98
+      "unknown": 88
     },
     "asn_db_available": true,
     "note": "datacenter=ASN org matches cloud/VPS/hosting keywords; residential=consumer/mobile ISP keywords; unknown=ASN unavailable or not in keyword tables. Inference, not ground truth."
   },
   "by_tier": {
     "all": {
-      "fast": 37,
-      "medium": 85,
-      "slow": 69
+      "fast": 30,
+      "medium": 87,
+      "slow": 59
     },
     "http": {
       "fast": 26,
-      "medium": 22,
-      "slow": 22
+      "medium": 28,
+      "slow": 13
     },
     "https": {
       "fast": 6,
-      "medium": 21,
+      "medium": 19,
       "slow": 14
     },
     "socks4": {
-      "fast": 9,
-      "medium": 36,
-      "slow": 12
+      "fast": 1,
+      "medium": 40,
+      "slow": 15
     },
     "socks5": {
-      "fast": 6,
-      "medium": 40,
-      "slow": 49
+      "fast": 5,
+      "medium": 33,
+      "slow": 45
     }
   },
   "config": {
@@ -77,41 +77,41 @@
   },
   "counts": {
     "all": {
-      "candidates": 279,
-      "top_trusted": 16,
-      "working": 191
+      "candidates": 222,
+      "top_trusted": 13,
+      "working": 176
     },
     "http": {
-      "candidates": 83,
-      "working": 70
+      "candidates": 70,
+      "working": 67
     },
     "https": {
-      "candidates": 83,
-      "working": 41
+      "candidates": 70,
+      "working": 39
     },
     "socks4": {
-      "candidates": 61,
-      "working": 57
+      "candidates": 57,
+      "working": 56
     },
     "socks5": {
-      "candidates": 135,
-      "working": 95
+      "candidates": 95,
+      "working": 83
     }
   },
   "data_freshness": {
     "update_schedule": "daily at 00:15 UTC (workflow_dispatch to force)",
-    "updated_utc": "2026-09-04T12:40:39+00:00",
+    "updated_utc": "2026-09-04T18:31:56+00:00",
     "warning": "Free proxies expire in minutes-to-hours; verify before use."
   },
   "history": {
     "by_streak": {
-      "1": 99,
+      "1": 88,
       "11": 2,
       "13": 2,
       "14": 1,
       "15": 3,
       "16": 3,
-      "2": 42,
+      "2": 38,
       "20": 1,
       "21": 1,
       "28": 1,
@@ -129,16 +129,16 @@
       "6": 10,
       "9": 3
     },
-    "stable": 92,
-    "total": 191
+    "stable": 88,
+    "total": 176
   },
   "sources": {
     "count": 4,
     "per_source_candidates": {
-      "http": 83,
-      "https": 52,
-      "socks4": 61,
-      "socks5": 135
+      "http": 70,
+      "https": 41,
+      "socks4": 57,
+      "socks5": 95
     }
   },
   "top_fastest": [
@@ -150,13 +150,13 @@
       "country_code": "US",
       "ip": "170.114.46.0",
       "ip_type": "datacenter",
-      "latency_ms": 105.9,
+      "latency_ms": 29.5,
       "port": 80,
       "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
       "streak": 1,
       "tier": "fast",
       "type": "http",
-      "updated_utc": "2026-09-04T12:40:39+00:00"
+      "updated_utc": "2026-09-04T18:31:56+00:00"
     },
     {
       "anonymity": "unknown",
@@ -166,77 +166,29 @@
       "country_code": "US",
       "ip": "159.112.235.16",
       "ip_type": "datacenter",
-      "latency_ms": 113.3,
+      "latency_ms": 34.0,
       "port": 80,
       "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
       "streak": 1,
       "tier": "fast",
       "type": "http",
-      "updated_utc": "2026-09-04T12:40:39+00:00"
+      "updated_utc": "2026-09-04T18:31:56+00:00"
     },
     {
       "anonymity": "elite",
-      "asn": 63023,
-      "asn_org": "GTHost",
+      "asn": 14061,
+      "asn_org": "DigitalOcean, LLC",
       "country": "United States",
       "country_code": "US",
-      "ip": "140.99.255.67",
-      "ip_type": "unknown",
-      "latency_ms": 118.0,
-      "port": 8181,
+      "ip": "159.65.245.255",
+      "ip_type": "datacenter",
+      "latency_ms": 41.2,
+      "port": 80,
       "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-      "streak": 1,
+      "streak": 6,
       "tier": "fast",
       "type": "http",
-      "updated_utc": "2026-09-04T12:40:39+00:00"
-    },
-    {
-      "anonymity": "elite",
-      "asn": 46844,
-      "asn_org": "Sharktech",
-      "country": "United States",
-      "country_code": "US",
-      "ip": "107.167.18.122",
-      "ip_type": "unknown",
-      "latency_ms": 122.6,
-      "port": 443,
-      "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-      "streak": 1,
-      "tier": "fast",
-      "type": "http",
-      "updated_utc": "2026-09-04T12:40:39+00:00"
-    },
-    {
-      "anonymity": "elite",
-      "asn": 63023,
-      "asn_org": "GTHost",
-      "country": "United States",
-      "country_code": "US",
-      "ip": "140.99.255.67",
-      "ip_type": "unknown",
-      "latency_ms": 122.9,
-      "port": 3128,
-      "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-      "streak": 3,
-      "tier": "fast",
-      "type": "http",
-      "updated_utc": "2026-09-04T12:40:39+00:00"
-    },
-    {
-      "anonymity": "elite",
-      "asn": 63023,
-      "asn_org": "GTHost",
-      "country": "United States",
-      "country_code": "US",
-      "ip": "140.99.255.67",
-      "ip_type": "unknown",
-      "latency_ms": 125.6,
-      "port": 8080,
-      "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-      "streak": 1,
-      "tier": "fast",
-      "type": "http",
-      "updated_utc": "2026-09-04T12:40:39+00:00"
+      "updated_utc": "2026-09-04T18:31:56+00:00"
     },
     {
       "anonymity": "elite",
@@ -246,45 +198,61 @@
       "country_code": "US",
       "ip": "142.93.202.130",
       "ip_type": "datacenter",
-      "latency_ms": 148.1,
+      "latency_ms": 48.4,
       "port": 3128,
       "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
       "streak": 2,
       "tier": "fast",
       "type": "http",
-      "updated_utc": "2026-09-04T12:40:39+00:00"
+      "updated_utc": "2026-09-04T18:31:56+00:00"
     },
     {
       "anonymity": "elite",
-      "asn": 14061,
-      "asn_org": "DigitalOcean, LLC",
+      "asn": 14618,
+      "asn_org": "Amazon.com, Inc.",
       "country": "United States",
       "country_code": "US",
-      "ip": "137.184.33.38",
+      "ip": "3.84.72.152",
       "ip_type": "datacenter",
-      "latency_ms": 153.4,
-      "port": 3128,
-      "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-      "streak": 1,
+      "latency_ms": 118.4,
+      "port": 5555,
+      "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
+      "streak": 2,
       "tier": "fast",
-      "type": "http",
-      "updated_utc": "2026-09-04T12:40:39+00:00"
+      "type": "socks5",
+      "updated_utc": "2026-09-04T18:31:56+00:00"
     },
     {
       "anonymity": "elite",
-      "asn": 135377,
-      "asn_org": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "country": "United States",
-      "country_code": "US",
-      "ip": "165.154.162.73",
+      "asn": 215540,
+      "asn_org": "Global Connectivity Solutions Llp",
+      "country": "Russia",
+      "country_code": "RU",
+      "ip": "147.45.60.139",
       "ip_type": "unknown",
-      "latency_ms": 236.8,
-      "port": 8888,
+      "latency_ms": 188.4,
+      "port": 1082,
+      "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
+      "streak": 2,
+      "tier": "fast",
+      "type": "socks5",
+      "updated_utc": "2026-09-04T18:31:56+00:00"
+    },
+    {
+      "anonymity": "unknown",
+      "asn": 24940,
+      "asn_org": "Hetzner Online GmbH",
+      "country": "Germany",
+      "country_code": "DE",
+      "ip": "116.203.27.109",
+      "ip_type": "datacenter",
+      "latency_ms": 202.5,
+      "port": 80,
       "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
       "streak": 2,
       "tier": "fast",
       "type": "http",
-      "updated_utc": "2026-09-04T12:40:39+00:00"
+      "updated_utc": "2026-09-04T18:31:56+00:00"
     },
     {
       "anonymity": "elite",
@@ -294,14 +262,46 @@
       "country_code": "FR",
       "ip": "109.199.119.160",
       "ip_type": "datacenter",
-      "latency_ms": 290.2,
+      "latency_ms": 202.6,
       "port": 80,
       "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
       "streak": 6,
       "tier": "fast",
       "type": "http",
-      "updated_utc": "2026-09-04T12:40:39+00:00"
+      "updated_utc": "2026-09-04T18:31:56+00:00"
+    },
+    {
+      "anonymity": "elite",
+      "asn": 215540,
+      "asn_org": "Global Connectivity Solutions Llp",
+      "country": "Russia",
+      "country_code": "RU",
+      "ip": "147.45.60.124",
+      "ip_type": "unknown",
+      "latency_ms": 208.4,
+      "port": 1082,
+      "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/socks5.txt",
+      "streak": 2,
+      "tier": "fast",
+      "type": "socks5",
+      "updated_utc": "2026-09-04T18:31:56+00:00"
+    },
+    {
+      "anonymity": "elite",
+      "asn": 51436,
+      "asn_org": "IDEALAN Sp. z o.o.",
+      "country": "Poland",
+      "country_code": "PL",
+      "ip": "178.212.144.7",
+      "ip_type": "unknown",
+      "latency_ms": 220.6,
+      "port": 80,
+      "source": "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
+      "streak": 50,
+      "tier": "fast",
+      "type": "http",
+      "updated_utc": "2026-09-04T18:31:56+00:00"
     }
   ],
-  "updated_utc": "2026-09-04T12:40:39+00:00"
+  "updated_utc": "2026-09-04T18:31:56+00:00"
 }
