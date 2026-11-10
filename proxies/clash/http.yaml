@@ -1,6 +1,6 @@
 # Free Proxy List — HTTP
-# Generated: 2026-11-10T00:35:02+00:00
-# Proxies: 235
+# Generated: 2026-11-10T06:32:01+00:00
+# Proxies: 117
 # Source: Thordata/awesome-free-proxy-list
 
 mixed-port: 7890
@@ -9,6 +9,51 @@ mode: rule
 log-level: warning
 external-controller: "127.0.0.1:9090"
 proxies:
+  - name: "🇺🇸 HTTP 137.66.1.45:80 F"
+    type: http
+    server: 137.66.1.45
+    port: 80
+    udp: false
+  - name: "🇺🇸 HTTP 198.199.86.11:3128 F"
+    type: http
+    server: 198.199.86.11
+    port: 3128
+    udp: false
+  - name: "🇺🇸 HTTP 159.65.230.46:8888 F"
+    type: http
+    server: 159.65.230.46
+    port: 8888
+    udp: false
+  - name: "🇺🇸 HTTP 142.93.202.130:3128 F"
+    type: http
+    server: 142.93.202.130
+    port: 3128
+    udp: false
+  - name: "🇺🇸 HTTP 174.138.119.88:80 F"
+    type: http
+    server: 174.138.119.88
+    port: 80
+    udp: false
+  - name: "🇺🇸 HTTP 143.246.138.227:80 F"
+    type: http
+    server: 143.246.138.227
+    port: 80
+    udp: false
+  - name: "🇨🇦 HTTP 159.203.61.169:3128 F"
+    type: http
+    server: 159.203.61.169
+    port: 3128
+    udp: false
+  - name: "🇺🇸 HTTP 159.65.221.25:80 F"
+    type: http
+    server: 159.65.221.25
+    port: 80
+    udp: false
+  - name: "🇨🇦 HTTP 184.75.221.82:3118 F"
+    type: http
+    server: 184.75.221.82
+    port: 3118
+    udp: false
   - name: "🇺🇸 HTTP 191.101.1.116:80 F"
     type: http
     server: 191.101.1.116
@@ -19,44 +64,9 @@ proxies:
     server: 138.68.60.8
     port: 3128
     udp: false
-  - name: "🇺🇸 HTTP 165.154.162.73:8888 F"
+  - name: "🇺🇸 HTTP 172.239.170.24:3128 F"
     type: http
-    server: 165.154.162.73
-    port: 8888
-    udp: false
-  - name: "🇺🇸 HTTP 159.65.230.46:8888 F"
-    type: http
-    server: 159.65.230.46
-    port: 8888
-    udp: false
-  - name: "🇺🇸 HTTP 159.65.221.25:80 F"
-    type: http
-    server: 159.65.221.25
-    port: 80
-    udp: false
-  - name: "🇺🇸 HTTP 174.138.119.88:80 F"
-    type: http
-    server: 174.138.119.88
-    port: 80
-    udp: false
-  - name: "🇺🇸 HTTP 142.93.202.130:3128 F"
-    type: http
-    server: 142.93.202.130
-    port: 3128
-    udp: false
-  - name: "🇺🇸 HTTP 198.199.86.11:3128 F"
-    type: http
-    server: 198.199.86.11
-    port: 3128
-    udp: false
-  - name: "🇺🇸 HTTP 137.66.1.45:80 F"
-    type: http
-    server: 137.66.1.45
-    port: 80
-    udp: false
-  - name: "🇨🇦 HTTP 159.203.61.169:3128 F"
-    type: http
-    server: 159.203.61.169
+    server: 172.239.170.24
     port: 3128
     udp: false
   - name: "🇩🇪 HTTP 128.140.113.110:8081 F"
@@ -64,14 +74,9 @@ proxies:
     server: 128.140.113.110
     port: 8081
     udp: false
-  - name: "🇭🇰 HTTP 16.163.88.228:80 F"
+  - name: "🇳🇱 HTTP 195.26.224.135:80 F"
     type: http
-    server: 16.163.88.228
-    port: 80
-    udp: false
-  - name: "🇺🇸 HTTP 143.246.138.227:80 F"
-    type: http
-    server: 143.246.138.227
+    server: 195.26.224.135
     port: 80
     udp: false
   - name: "🇬🇧 HTTP 134.209.29.120:3128 F"
@@ -84,24 +89,14 @@ proxies:
     server: 104.194.146.9
     port: 80
     udp: false
-  - name: "🇳🇱 HTTP 195.26.224.135:80 F"
-    type: http
-    server: 195.26.224.135
-    port: 80
-    udp: false
-  - name: "🇫🇷 HTTP 163.172.167.48:80 F"
-    type: http
-    server: 163.172.167.48
-    port: 80
-    udp: false
-  - name: "🇸🇬 HTTP 165.154.236.214:80 F"
-    type: http
-    server: 165.154.236.214
-    port: 80
-    udp: false
   - name: "🇩🇰 HTTP 194.150.110.134:80 F"
     type: http
     server: 194.150.110.134
+    port: 80
+    udp: false
+  - name: "🇭🇰 HTTP 16.163.88.228:80 F"
+    type: http
+    server: 16.163.88.228
     port: 80
     udp: false
   - name: "🇩🇪 HTTP 161.35.70.249:80 F"
@@ -109,39 +104,19 @@ proxies:
     server: 161.35.70.249
     port: 80
     udp: false
-  - name: "🇨🇳 HTTP 115.239.234.43:7302 F"
-    type: http
-    server: 115.239.234.43
-    port: 7302
-    udp: false
   - name: "🇩🇪 HTTP 103.237.102.191:11111 F"
     type: http
     server: 103.237.102.191
     port: 11111
-    udp: false
-  - name: "🇯🇵 HTTP 139.162.78.109:3128 F"
-    type: http
-    server: 139.162.78.109
-    port: 3128
     udp: false
   - name: "🇩🇪 HTTP 116.202.108.111:3128 F"
     type: http
     server: 116.202.108.111
     port: 3128
     udp: false
-  - name: "🇮🇩 HTTP 103.156.17.83:8080 F"
-    type: http
-    server: 103.156.17.83
-    port: 8080
-    udp: false
   - name: "🇪🇸 HTTP 195.114.209.50:80 F"
     type: http
     server: 195.114.209.50
-    port: 80
-    udp: false
-  - name: "🇨🇱 HTTP 152.230.215.123:80 F"
-    type: http
-    server: 152.230.215.123
     port: 80
     udp: false
   - name: "🇮🇶 HTTP 185.135.69.34:80 F"
@@ -149,49 +124,79 @@ proxies:
     server: 185.135.69.34
     port: 80
     udp: false
-  - name: "🇨🇭 HTTP 165.225.66.43:11588 F"
+  - name: "🇸🇬 HTTP 165.154.236.214:80 F"
     type: http
-    server: 165.225.66.43
-    port: 11588
+    server: 165.154.236.214
+    port: 80
     udp: false
-  - name: "🇭🇰 HTTP 176.111.37.216:39811 F"
+  - name: "🇭🇰 HTTP 176.111.37.5:39811 F"
     type: http
-    server: 176.111.37.216
+    server: 176.111.37.5
     port: 39811
+    udp: false
+  - name: "🇮🇩 HTTP 103.156.17.83:8080 F"
+    type: http
+    server: 103.156.17.83
+    port: 8080
+    udp: false
+  - name: "🇯🇵 HTTP 139.162.78.109:3128 F"
+    type: http
+    server: 139.162.78.109
+    port: 3128
     udp: false
   - name: "🇫🇷 HTTP 202.133.88.173:80 F"
     type: http
     server: 202.133.88.173
     port: 80
     udp: false
-  - name: "🇰🇷 HTTP 183.110.216.128:8090 M"
+  - name: "🇨🇳 HTTP 115.239.234.43:7302 F"
     type: http
-    server: 183.110.216.128
-    port: 8090
+    server: 115.239.234.43
+    port: 7302
     udp: false
-  - name: "🇸🇬 HTTP 128.199.202.122:8080 M"
+  - name: "🇨🇭 HTTP 165.225.66.40:11588 M"
     type: http
-    server: 128.199.202.122
-    port: 8080
-    udp: false
-  - name: "🇸🇬 HTTP 134.185.85.16:3128 M"
-    type: http
-    server: 134.185.85.16
-    port: 3128
+    server: 165.225.66.40
+    port: 11588
     udp: false
   - name: "🇸🇦 HTTP 130.110.103.245:3128 M"
     type: http
     server: 130.110.103.245
     port: 3128
     udp: false
-  - name: "🇺🇿 HTTP 195.158.30.249:3128 M"
+  - name: "🇦🇺 HTTP 114.111.151.41:80 M"
     type: http
-    server: 195.158.30.249
-    port: 3128
+    server: 114.111.151.41
+    port: 80
     udp: false
-  - name: "🇮🇳 HTTP 15.207.138.141:3128 M"
+  - name: "🇰🇷 HTTP 183.110.216.159:8090 M"
     type: http
-    server: 15.207.138.141
+    server: 183.110.216.159
+    port: 8090
+    udp: false
+  - name: "🇦🇷 HTTP 170.155.2.119:80 M"
+    type: http
+    server: 170.155.2.119
+    port: 80
+    udp: false
+  - name: "🇸🇬 HTTP 128.199.202.122:8080 M"
+    type: http
+    server: 128.199.202.122
+    port: 8080
+    udp: false
+  - name: "🇨🇭 HTTP 165.225.66.43:11588 M"
+    type: http
+    server: 165.225.66.43
+    port: 11588
+    udp: false
+  - name: "🇮🇩 HTTP 103.65.237.92:5678 M"
+    type: http
+    server: 103.65.237.92
+    port: 5678
+    udp: false
+  - name: "🇻🇳 HTTP 103.28.37.131:3128 M"
+    type: http
+    server: 103.28.37.131
     port: 3128
     udp: false
   - name: "🇮🇳 HTTP 139.59.1.14:8080 M"
@@ -204,179 +209,44 @@ proxies:
     server: 102.244.78.61
     port: 8085
     udp: false
-  - name: "🇨🇲 HTTP 102.244.78.61:8083 M"
-    type: http
-    server: 102.244.78.61
-    port: 8083
-    udp: false
   - name: "🇨🇲 HTTP 102.244.78.61:8090 M"
     type: http
     server: 102.244.78.61
     port: 8090
     udp: false
-  - name: "🇨🇲 HTTP 102.244.78.61:8082 M"
+  - name: "🇨🇲 HTTP 102.244.78.61:8083 M"
     type: http
     server: 102.244.78.61
-    port: 8082
-    udp: false
-  - name: "🇭🇰 HTTP 176.111.37.5:39811 M"
-    type: http
-    server: 176.111.37.5
-    port: 39811
-    udp: false
-  - name: "🇷🇺 HTTP 178.141.246.92:10808 M"
-    type: http
-    server: 178.141.246.92
-    port: 10808
-    udp: false
-  - name: "🇻🇳 HTTP 103.28.37.131:3128 M"
-    type: http
-    server: 103.28.37.131
-    port: 3128
-    udp: false
-  - name: "🇰🇪 HTTP 102.0.20.92:8080 M"
-    type: http
-    server: 102.0.20.92
-    port: 8080
-    udp: false
-  - name: "🇮🇷 HTTP 193.176.242.186:80 M"
-    type: http
-    server: 193.176.242.186
-    port: 80
-    udp: false
-  - name: "🇨🇭 HTTP 165.225.66.40:11588 M"
-    type: http
-    server: 165.225.66.40
-    port: 11588
-    udp: false
-  - name: "🇿🇼 HTTP 197.221.249.198:80 M"
-    type: http
-    server: 197.221.249.198
-    port: 80
-    udp: false
-  - name: "🇿🇼 HTTP 197.221.240.247:80 M"
-    type: http
-    server: 197.221.240.247
-    port: 80
-    udp: false
-  - name: "🇿🇼 HTTP 197.221.240.246:80 M"
-    type: http
-    server: 197.221.240.246
-    port: 80
-    udp: false
-  - name: "🇿🇼 HTTP 197.221.249.197:80 M"
-    type: http
-    server: 197.221.249.197
-    port: 80
-    udp: false
-  - name: "🇿🇼 HTTP 197.221.249.199:80 M"
-    type: http
-    server: 197.221.249.199
-    port: 80
-    udp: false
-  - name: "🇿🇼 HTTP 197.221.249.196:80 M"
-    type: http
-    server: 197.221.249.196
-    port: 80
-    udp: false
-  - name: "🇪🇬 HTTP 197.164.101.14:1976 M"
-    type: http
-    server: 197.164.101.14
-    port: 1976
-    udp: false
-  - name: "🇿🇼 HTTP 197.221.240.182:80 M"
-    type: http
-    server: 197.221.240.182
-    port: 80
-    udp: false
-  - name: "🇺🇸 HTTP 172.239.170.24:3128 M"
-    type: http
-    server: 172.239.170.24
-    port: 3128
+    port: 8083
     udp: false
   - name: "🇬🇭 HTTP 156.38.112.11:80 M"
     type: http
     server: 156.38.112.11
     port: 80
     udp: false
-  - name: "🇮🇩 HTTP 103.65.237.92:5678 M"
+  - name: "🇨🇲 HTTP 102.244.78.61:8082 M"
     type: http
-    server: 103.65.237.92
-    port: 5678
+    server: 102.244.78.61
+    port: 8082
     udp: false
-  - name: "🇻🇳 HTTP 103.82.20.76:8080 M"
+  - name: "🇹🇼 HTTP 164.52.11.194:18080 M"
     type: http
-    server: 103.82.20.76
-    port: 8080
+    server: 164.52.11.194
+    port: 18080
     udp: false
-  - name: "🇨🇦 HTTP 184.75.221.82:3118 M"
+  - name: "🇪🇬 HTTP 197.164.101.13:1981 M"
     type: http
-    server: 184.75.221.82
-    port: 3118
+    server: 197.164.101.13
+    port: 1981
     udp: false
-  - name: "🇳🇱 HTTP 146.103.123.157:80 M"
+  - name: "🇮🇷 HTTP 193.176.242.186:80 M"
     type: http
-    server: 146.103.123.157
+    server: 193.176.242.186
     port: 80
     udp: false
-  - name: "🇿🇼 HTTP 197.221.240.178:80 M"
+  - name: "🇿🇼 HTTP 197.221.234.253:80 M"
     type: http
-    server: 197.221.240.178
-    port: 80
-    udp: false
-  - name: "🇸🇳 HTTP 154.65.39.8:80 M"
-    type: http
-    server: 154.65.39.8
-    port: 80
-    udp: false
-  - name: "🇺🇸 HTTP 167.99.236.14:80 M"
-    type: http
-    server: 167.99.236.14
-    port: 80
-    udp: false
-  - name: "🇨🇴 HTTP 200.116.198.222:9812 M"
-    type: http
-    server: 200.116.198.222
-    port: 9812
-    udp: false
-  - name: "🇺🇸 HTTP 167.99.3.26:5001 M"
-    type: http
-    server: 167.99.3.26
-    port: 5001
-    udp: false
-  - name: "🇺🇸 HTTP 152.53.81.29:8888 M"
-    type: http
-    server: 152.53.81.29
-    port: 8888
-    udp: false
-  - name: "🇰🇷 HTTP 183.110.216.128:8091 M"
-    type: http
-    server: 183.110.216.128
-    port: 8091
-    udp: false
-  - name: "🇮🇩 HTTP 103.174.122.4:3128 M"
-    type: http
-    server: 103.174.122.4
-    port: 3128
-    udp: false
-  - name: "🇸🇪 HTTP 193.181.35.115:8118 M"
-    type: http
-    server: 193.181.35.115
-    port: 8118
-    udp: false
-  - name: "🇿🇼 HTTP 197.221.240.176:80 M"
-    type: http
-    server: 197.221.240.176
-    port: 80
-    udp: false
-  - name: "🇿🇼 HTTP 197.221.235.122:80 M"
-    type: http
-    server: 197.221.235.122
-    port: 80
-    udp: false
-  - name: "🇿🇼 HTTP 197.221.234.149:80 M"
-    type: http
-    server: 197.221.234.149
+    server: 197.221.234.253
     port: 80
     udp: false
   - name: "🇿🇼 HTTP 197.221.234.252:80 M"
@@ -384,14 +254,29 @@ proxies:
     server: 197.221.234.252
     port: 80
     udp: false
-  - name: "🇻🇳 HTTP 123.58.199.232:8168 M"
+  - name: "🇿🇼 HTTP 197.221.235.122:80 M"
     type: http
-    server: 123.58.199.232
-    port: 8168
+    server: 197.221.235.122
+    port: 80
     udp: false
-  - name: "🇿🇼 HTTP 197.221.234.253:80 M"
+  - name: "🇮🇳 HTTP 151.185.58.17:80 M"
     type: http
-    server: 197.221.234.253
+    server: 151.185.58.17
+    port: 80
+    udp: false
+  - name: "🇿🇼 HTTP 197.221.240.176:80 M"
+    type: http
+    server: 197.221.240.176
+    port: 80
+    udp: false
+  - name: "🇿🇼 HTTP 197.221.234.149:80 M"
+    type: http
+    server: 197.221.234.149
+    port: 80
+    udp: false
+  - name: "🇿🇼 HTTP 197.221.249.199:80 M"
+    type: http
+    server: 197.221.249.199
     port: 80
     udp: false
   - name: "🇿🇼 HTTP 197.221.237.248:80 M"
@@ -399,320 +284,85 @@ proxies:
     server: 197.221.237.248
     port: 80
     udp: false
-  - name: "🇮🇩 HTTP 103.143.105.138:8080 M"
+  - name: "🇿🇼 HTTP 197.221.240.246:80 M"
     type: http
-    server: 103.143.105.138
-    port: 8080
-    udp: false
-  - name: "🇻🇪 HTTP 161.22.32.31:8080 M"
-    type: http
-    server: 161.22.32.31
-    port: 8080
-    udp: false
-  - name: "🇵🇦 HTTP 181.119.124.101:999 M"
-    type: http
-    server: 181.119.124.101
-    port: 999
-    udp: false
-  - name: "🇵🇰 HTTP 103.158.236.132:8080 S"
-    type: http
-    server: 103.158.236.132
-    port: 8080
-    udp: false
-  - name: "🇺🇸 HTTP 143.198.135.176:80 S"
-    type: http
-    server: 143.198.135.176
+    server: 197.221.240.246
     port: 80
     udp: false
-  - name: "🇨🇴 HTTP 181.78.172.141:999 S"
+  - name: "🇿🇼 HTTP 197.221.240.247:80 M"
     type: http
-    server: 181.78.172.141
-    port: 999
+    server: 197.221.240.247
+    port: 80
     udp: false
-  - name: "🇧🇷 HTTP 201.28.86.18:61804 S"
+  - name: "🇿🇼 HTTP 197.221.240.182:80 M"
+    type: http
+    server: 197.221.240.182
+    port: 80
+    udp: false
+  - name: "🇺🇸 HTTP 167.99.236.14:80 M"
+    type: http
+    server: 167.99.236.14
+    port: 80
+    udp: false
+  - name: "🇸🇳 HTTP 154.65.39.8:80 M"
+    type: http
+    server: 154.65.39.8
+    port: 80
+    udp: false
+  - name: "🇿🇼 HTTP 197.221.249.197:80 M"
+    type: http
+    server: 197.221.249.197
+    port: 80
+    udp: false
+  - name: "🇿🇼 HTTP 197.221.240.178:80 M"
+    type: http
+    server: 197.221.240.178
+    port: 80
+    udp: false
+  - name: "🇿🇼 HTTP 197.221.249.198:80 M"
+    type: http
+    server: 197.221.249.198
+    port: 80
+    udp: false
+  - name: "🇿🇼 HTTP 197.221.249.196:80 M"
+    type: http
+    server: 197.221.249.196
+    port: 80
+    udp: false
+  - name: "🇧🇷 HTTP 201.28.86.18:61804 M"
     type: http
     server: 201.28.86.18
     port: 61804
     udp: false
-  - name: "🇮🇩 HTTP 149.129.226.9:104 S"
+  - name: "🇭🇰 HTTP 176.111.37.216:39811 M"
     type: http
-    server: 149.129.226.9
-    port: 104
+    server: 176.111.37.216
+    port: 39811
     udp: false
-  - name: "🇮🇩 HTTP 149.129.255.179:119 S"
+  - name: "🇨🇭 HTTP 185.85.111.18:80 M"
     type: http
-    server: 149.129.255.179
-    port: 119
+    server: 185.85.111.18
+    port: 80
     udp: false
-  - name: "🇮🇩 HTTP 149.129.255.179:10443 S"
+  - name: "🇳🇱 HTTP 146.103.123.157:80 S"
     type: http
-    server: 149.129.255.179
-    port: 10443
-    udp: false
-  - name: "🇨🇳 HTTP 121.43.109.88:8047 S"
-    type: http
-    server: 121.43.109.88
-    port: 8047
-    udp: false
-  - name: "🇮🇩 HTTP 149.129.226.9:9090 S"
-    type: http
-    server: 149.129.226.9
-    port: 9090
+    server: 146.103.123.157
+    port: 80
     udp: false
   - name: "🇮🇩 HTTP 149.129.226.9:80 S"
     type: http
     server: 149.129.226.9
     port: 80
     udp: false
-  - name: "🇮🇩 HTTP 149.129.255.179:5060 S"
-    type: http
-    server: 149.129.255.179
-    port: 5060
-    udp: false
-  - name: "🇨🇳 HTTP 106.14.91.83:4000 S"
-    type: http
-    server: 106.14.91.83
-    port: 4000
-    udp: false
-  - name: "🇮🇩 HTTP 149.129.255.179:6588 S"
-    type: http
-    server: 149.129.255.179
-    port: 6588
-    udp: false
-  - name: "🇮🇩 HTTP 149.129.226.9:8443 S"
+  - name: "🇮🇩 HTTP 149.129.226.9:104 S"
     type: http
     server: 149.129.226.9
-    port: 8443
+    port: 104
     udp: false
-  - name: "🇨🇳 HTTP 139.224.186.221:7878 S"
+  - name: "🇮🇩 HTTP 149.129.226.9:9090 S"
     type: http
-    server: 139.224.186.221
-    port: 7878
-    udp: false
-  - name: "🇨🇳 HTTP 120.25.189.254:8008 S"
-    type: http
-    server: 120.25.189.254
-    port: 8008
-    udp: false
-  - name: "🇨🇳 HTTP 120.26.52.35:8081 S"
-    type: http
-    server: 120.26.52.35
-    port: 8081
-    udp: false
-  - name: "🇲🇽 HTTP 189.51.168.165:999 S"
-    type: http
-    server: 189.51.168.165
-    port: 999
-    udp: false
-  - name: "🇻🇪 HTTP 200.59.191.27:999 S"
-    type: http
-    server: 200.59.191.27
-    port: 999
-    udp: false
-  - name: "🇹🇭 HTTP 110.238.113.119:19 S"
-    type: http
-    server: 110.238.113.119
-    port: 19
-    udp: false
-  - name: "🇨🇳 HTTP 114.215.127.92:80 S"
-    type: http
-    server: 114.215.127.92
-    port: 80
-    udp: false
-  - name: "🇮🇩 HTTP 103.178.41.46:9291 S"
-    type: http
-    server: 103.178.41.46
-    port: 9291
-    udp: false
-  - name: "🇹🇼 HTTP 164.52.11.194:18080 S"
-    type: http
-    server: 164.52.11.194
-    port: 18080
-    udp: false
-  - name: "🇬🇷 HTTP 150.140.148.235:80 S"
-    type: http
-    server: 150.140.148.235
-    port: 80
-    udp: false
-  - name: "🇺🇸 HTTP 108.170.12.14:80 S"
-    type: http
-    server: 108.170.12.14
-    port: 80
-    udp: false
-  - name: "🇻🇪 HTTP 13.143.240.243:999 S"
-    type: http
-    server: 13.143.240.243
-    port: 999
-    udp: false
-  - name: "🇧🇷 HTTP 138.185.190.149:8080 S"
-    type: http
-    server: 138.185.190.149
-    port: 8080
-    udp: false
-  - name: "🇮🇩 HTTP 103.165.155.55:1111 S"
-    type: http
-    server: 103.165.155.55
-    port: 1111
-    udp: false
-  - name: "🇮🇩 HTTP 160.22.198.21:8082 S"
-    type: http
-    server: 160.22.198.21
-    port: 8082
-    udp: false
-  - name: "🇨🇾 HTTP 185.203.6.219:3128 S"
-    type: http
-    server: 185.203.6.219
-    port: 3128
-    udp: false
-  - name: "🇮🇩 HTTP 103.166.213.249:8080 S"
-    type: http
-    server: 103.166.213.249
-    port: 8080
-    udp: false
-  - name: "🇵🇭 HTTP 126.209.107.122:5050 S"
-    type: http
-    server: 126.209.107.122
-    port: 5050
-    udp: false
-  - name: "🇮🇩 HTTP 103.46.11.160:8080 S"
-    type: http
-    server: 103.46.11.160
-    port: 8080
-    udp: false
-  - name: "🇮🇩 HTTP 103.166.33.56:8080 S"
-    type: http
-    server: 103.166.33.56
-    port: 8080
-    udp: false
-  - name: "🇪🇨 HTTP 179.60.189.81:999 S"
-    type: http
-    server: 179.60.189.81
-    port: 999
-    udp: false
-  - name: "🇵🇾 HTTP 201.222.50.218:80 S"
-    type: http
-    server: 201.222.50.218
-    port: 80
-    udp: false
-  - name: "🇮🇩 HTTP 117.18.16.47:1111 S"
-    type: http
-    server: 117.18.16.47
-    port: 1111
-    udp: false
-  - name: "🇧🇷 HTTP 179.48.25.1:8095 S"
-    type: http
-    server: 179.48.25.1
-    port: 8095
-    udp: false
-  - name: "🇿🇦 HTTP 20.33.10.132:443 S"
-    type: http
-    server: 20.33.10.132
-    port: 443
-    udp: false
-  - name: "🇧🇩 HTTP 103.79.183.109:8080 S"
-    type: http
-    server: 103.79.183.109
-    port: 8080
-    udp: false
-  - name: "🇺🇸 HTTP 138.68.235.51:80 S"
-    type: http
-    server: 138.68.235.51
-    port: 80
-    udp: false
-  - name: "🇪🇨 HTTP 177.234.217.83:999 S"
-    type: http
-    server: 177.234.217.83
-    port: 999
-    udp: false
-  - name: "🇯🇵 HTTP 160.248.7.177:80 S"
-    type: http
-    server: 160.248.7.177
-    port: 80
-    udp: false
-  - name: "🇺🇿 HTTP 195.158.8.123:3128 S"
-    type: http
-    server: 195.158.8.123
-    port: 3128
-    udp: false
-  - name: "🇮🇳 HTTP 103.214.189.41:80 S"
-    type: http
-    server: 103.214.189.41
-    port: 80
-    udp: false
-  - name: "🇨🇱 HTTP 200.39.139.65:999 S"
-    type: http
-    server: 200.39.139.65
-    port: 999
-    udp: false
-  - name: "🇮🇹 HTTP 2.193.71.141:8080 S"
-    type: http
-    server: 2.193.71.141
-    port: 8080
-    udp: false
-  - name: "🇮🇳 HTTP 202.62.67.209:53281 S"
-    type: http
-    server: 202.62.67.209
-    port: 53281
-    udp: false
-  - name: "🇮🇩 HTTP 103.130.129.231:10001 S"
-    type: http
-    server: 103.130.129.231
-    port: 10001
-    udp: false
-  - name: "🇺🇸 HTTP 104.218.199.8:16062 S"
-    type: http
-    server: 104.218.199.8
-    port: 16062
-    udp: false
-  - name: "🇻🇳 HTTP 103.182.22.54:8000 S"
-    type: http
-    server: 103.182.22.54
-    port: 8000
-    udp: false
-  - name: "🇪🇨 HTTP 177.234.217.85:999 S"
-    type: http
-    server: 177.234.217.85
-    port: 999
-    udp: false
-  - name: "🇮🇩 HTTP 119.82.242.200:8080 S"
-    type: http
-    server: 119.82.242.200
-    port: 8080
-    udp: false
-  - name: "🇮🇩 HTTP 103.195.65.199:8080 S"
-    type: http
-    server: 103.195.65.199
-    port: 8080
-    udp: false
-  - name: "🇺🇸 HTTP 116.204.166.203:8080 S"
-    type: http
-    server: 116.204.166.203
-    port: 8080
-    udp: false
-  - name: "🇮🇩 HTTP 144.79.37.148:8080 S"
-    type: http
-    server: 144.79.37.148
-    port: 8080
-    udp: false
-  - name: "🇮🇩 HTTP 103.132.53.28:8080 S"
-    type: http
-    server: 103.132.53.28
-    port: 8080
-    udp: false
-  - name: "🇮🇩 HTTP 103.149.239.42:8080 S"
-    type: http
-    server: 103.149.239.42
-    port: 8080
-    udp: false
-  - name: "🇺🇸 HTTP 116.204.166.200:8080 S"
-    type: http
-    server: 116.204.166.200
-    port: 8080
-    udp: false
-  - name: "🇬🇹 HTTP 167.250.222.233:999 S"
-    type: http
-    server: 167.250.222.233
-    port: 999
+    server: 149.129.226.9
+    port: 9090
     udp: false
   - name: "🇨🇳 HTTP 106.14.104.220:9098 S"
     type: http
@@ -724,59 +374,74 @@ proxies:
     server: 106.14.104.220
     port: 8008
     udp: false
-  - name: "🇮🇳 HTTP 182.78.42.112:83 S"
+  - name: "🇮🇩 HTTP 149.129.226.9:8443 S"
     type: http
-    server: 182.78.42.112
-    port: 83
+    server: 149.129.226.9
+    port: 8443
     udp: false
-  - name: "🇹🇷 HTTP 185.146.138.159:8080 S"
+  - name: "🇨🇳 HTTP 139.224.186.221:7878 S"
     type: http
-    server: 185.146.138.159
-    port: 8080
+    server: 139.224.186.221
+    port: 7878
     udp: false
-  - name: "🇵🇭 HTTP 124.105.196.148:8081 S"
+  - name: "🇮🇩 HTTP 149.129.255.179:6588 S"
     type: http
-    server: 124.105.196.148
+    server: 149.129.255.179
+    port: 6588
+    udp: false
+  - name: "🇮🇩 HTTP 149.129.255.179:5060 S"
+    type: http
+    server: 149.129.255.179
+    port: 5060
+    udp: false
+  - name: "🇮🇩 HTTP 149.129.255.179:10443 S"
+    type: http
+    server: 149.129.255.179
+    port: 10443
+    udp: false
+  - name: "🇮🇩 HTTP 149.129.255.179:119 S"
+    type: http
+    server: 149.129.255.179
+    port: 119
+    udp: false
+  - name: "🇨🇳 HTTP 106.14.91.83:4000 S"
+    type: http
+    server: 106.14.91.83
+    port: 4000
+    udp: false
+  - name: "🇨🇳 HTTP 121.43.109.88:8047 S"
+    type: http
+    server: 121.43.109.88
+    port: 8047
+    udp: false
+  - name: "🇨🇳 HTTP 120.25.189.254:8008 S"
+    type: http
+    server: 120.25.189.254
+    port: 8008
+    udp: false
+  - name: "🇹🇭 HTTP 110.238.113.119:19 S"
+    type: http
+    server: 110.238.113.119
+    port: 19
+    udp: false
+  - name: "🇨🇳 HTTP 120.26.52.35:8081 S"
+    type: http
+    server: 120.26.52.35
     port: 8081
     udp: false
-  - name: "🇬🇹 HTTP 190.115.15.100:8080 S"
+  - name: "🇮🇩 HTTP 103.8.59.12:8080 S"
     type: http
-    server: 190.115.15.100
+    server: 103.8.59.12
     port: 8080
     udp: false
-  - name: "🇮🇩 HTTP 115.178.55.221:8080 S"
+  - name: "🇨🇳 HTTP 114.215.127.92:80 S"
     type: http
-    server: 115.178.55.221
-    port: 8080
-    udp: false
-  - name: "🇩🇴 HTTP 154.59.207.8:999 S"
-    type: http
-    server: 154.59.207.8
-    port: 999
-    udp: false
-  - name: "🇮🇩 HTTP 103.14.111.188:8080 S"
-    type: http
-    server: 103.14.111.188
-    port: 8080
-    udp: false
-  - name: "🇦🇺 HTTP 114.111.151.41:80 S"
-    type: http
-    server: 114.111.151.41
+    server: 114.215.127.92
     port: 80
     udp: false
-  - name: "🇮🇩 HTTP 103.152.21.35:3128 S"
+  - name: "🇪🇨 HTTP 177.234.217.235:999 S"
     type: http
-    server: 103.152.21.35
-    port: 3128
-    udp: false
-  - name: "🇮🇩 HTTP 103.154.73.14:8080 S"
-    type: http
-    server: 103.154.73.14
-    port: 8080
-    udp: false
-  - name: "🇦🇷 HTTP 190.123.83.137:999 S"
-    type: http
-    server: 190.123.83.137
+    server: 177.234.217.235
     port: 999
     udp: false
   - name: "🇪🇨 HTTP 177.234.217.93:999 S"
@@ -784,239 +449,89 @@ proxies:
     server: 177.234.217.93
     port: 999
     udp: false
-  - name: "🇬🇹 HTTP 200.119.141.114:999 S"
+  - name: "🇬🇹 HTTP 190.115.15.100:8080 S"
     type: http
-    server: 200.119.141.114
-    port: 999
-    udp: false
-  - name: "🇮🇳 HTTP 122.160.30.99:80 S"
-    type: http
-    server: 122.160.30.99
-    port: 80
-    udp: false
-  - name: "🇨🇴 HTTP 181.78.80.125:999 S"
-    type: http
-    server: 181.78.80.125
-    port: 999
-    udp: false
-  - name: "🇮🇩 HTTP 154.19.39.50:80 S"
-    type: http
-    server: 154.19.39.50
-    port: 80
-    udp: false
-  - name: "🇨🇴 HTTP 186.194.160.122:999 S"
-    type: http
-    server: 186.194.160.122
-    port: 999
-    udp: false
-  - name: "🇫🇷 HTTP 188.165.199.207:80 S"
-    type: http
-    server: 188.165.199.207
-    port: 80
-    udp: false
-  - name: "🇲🇽 HTTP 148.230.212.70:8080 S"
-    type: http
-    server: 148.230.212.70
+    server: 190.115.15.100
     port: 8080
     udp: false
-  - name: "🇹🇭 HTTP 1.20.101.25:80 S"
+  - name: "🇺🇸 HTTP 165.154.162.73:8888 S"
     type: http
-    server: 1.20.101.25
-    port: 80
-    udp: false
-  - name: "🇪🇬 HTTP 154.236.179.229:1976 S"
-    type: http
-    server: 154.236.179.229
-    port: 1976
-    udp: false
-  - name: "🇮🇳 HTTP 151.185.58.17:80 S"
-    type: http
-    server: 151.185.58.17
-    port: 80
+    server: 165.154.162.73
+    port: 8888
     udp: false
   - name: "🇦🇷 HTTP 187.102.219.34:999 S"
     type: http
     server: 187.102.219.34
     port: 999
     udp: false
-  - name: "🇻🇳 HTTP 14.225.240.23:8562 S"
+  - name: "🇫🇷 HTTP 176.191.124.3:80 S"
     type: http
-    server: 14.225.240.23
-    port: 8562
-    udp: false
-  - name: "🇧🇩 HTTP 202.5.47.228:8080 S"
-    type: http
-    server: 202.5.47.228
-    port: 8080
-    udp: false
-  - name: "🇮🇩 HTTP 103.82.246.129:8181 S"
-    type: http
-    server: 103.82.246.129
-    port: 8181
-    udp: false
-  - name: "🇧🇷 HTTP 170.81.131.70:3128 S"
-    type: http
-    server: 170.81.131.70
-    port: 3128
-    udp: false
-  - name: "🇺🇸 HTTP 198.111.166.184:80 S"
-    type: http
-    server: 198.111.166.184
+    server: 176.191.124.3
     port: 80
-    udp: false
-  - name: "🇱🇾 HTTP 154.73.28.89:8080 S"
-    type: http
-    server: 154.73.28.89
-    port: 8080
-    udp: false
-  - name: "🇰🇭 HTTP 111.118.149.40:8080 S"
-    type: http
-    server: 111.118.149.40
-    port: 8080
-    udp: false
-  - name: "🇵🇱 HTTP 148.253.212.68:8080 S"
-    type: http
-    server: 148.253.212.68
-    port: 8080
-    udp: false
-  - name: "🇮🇳 HTTP 103.209.88.72:8080 S"
-    type: http
-    server: 103.209.88.72
-    port: 8080
-    udp: false
-  - name: "🇰🇷 HTTP 183.110.216.159:8090 S"
-    type: http
-    server: 183.110.216.159
-    port: 8090
-    udp: false
-  - name: "🇧🇩 HTTP 103.92.218.121:9514 S"
-    type: http
-    server: 103.92.218.121
-    port: 9514
-    udp: false
-  - name: "🇩🇪 HTTP 165.232.67.22:3128 S"
-    type: http
-    server: 165.232.67.22
-    port: 3128
-    udp: false
-  - name: "🇪🇬 HTTP 197.164.101.13:1981 S"
-    type: http
-    server: 197.164.101.13
-    port: 1981
-    udp: false
-  - name: "🇮🇩 HTTP 124.158.186.254:8080 S"
-    type: http
-    server: 124.158.186.254
-    port: 8080
-    udp: false
-  - name: "🇭🇳 HTTP 179.49.113.230:999 S"
-    type: http
-    server: 179.49.113.230
-    port: 999
-    udp: false
-  - name: "🇪🇨 HTTP 177.234.217.235:999 S"
-    type: http
-    server: 177.234.217.235
-    port: 999
-    udp: false
-  - name: "🇮🇩 HTTP 103.166.159.93:8080 S"
-    type: http
-    server: 103.166.159.93
-    port: 8080
     udp: false
   - name: "🇿🇦 HTTP 196.223.129.21:80 S"
     type: http
     server: 196.223.129.21
     port: 80
     udp: false
-  - name: "🇮🇩 HTTP 103.180.118.109:8090 S"
+  - name: "🇲🇽 HTTP 177.124.87.106:999 S"
     type: http
-    server: 103.180.118.109
-    port: 8090
-    udp: false
-  - name: "🇮🇩 HTTP 103.227.187.3:6090 S"
-    type: http
-    server: 103.227.187.3
-    port: 6090
-    udp: false
-  - name: "🇮🇩 HTTP 160.19.146.72:2022 S"
-    type: http
-    server: 160.19.146.72
-    port: 2022
-    udp: false
-  - name: "🇨🇴 HTTP 181.129.147.163:8080 S"
-    type: http
-    server: 181.129.147.163
-    port: 8080
-    udp: false
-  - name: "🇮🇩 HTTP 103.144.102.82:8080 S"
-    type: http
-    server: 103.144.102.82
-    port: 8080
-    udp: false
-  - name: "🇦🇷 HTTP 170.155.2.119:80 S"
-    type: http
-    server: 170.155.2.119
-    port: 80
-    udp: false
-  - name: "🇭🇳 HTTP 181.115.67.3:999 S"
-    type: http
-    server: 181.115.67.3
+    server: 177.124.87.106
     port: 999
     udp: false
-  - name: "🇺🇸 HTTP 116.204.166.40:8080 S"
+  - name: "🇮🇩 HTTP 157.20.35.40:9090 S"
     type: http
-    server: 116.204.166.40
-    port: 8080
+    server: 157.20.35.40
+    port: 9090
     udp: false
-  - name: "🇧🇷 HTTP 177.20.167.139:8080 S"
+  - name: "🇦🇷 HTTP 190.123.83.137:999 S"
     type: http
-    server: 177.20.167.139
-    port: 8080
-    udp: false
-  - name: "🇵🇱 HTTP 201.4.65.103:8080 S"
-    type: http
-    server: 201.4.65.103
-    port: 8080
-    udp: false
-  - name: "🇺🇸 HTTP 104.225.220.233:80 S"
-    type: http
-    server: 104.225.220.233
-    port: 80
-    udp: false
-  - name: "🇨🇴 HTTP 190.2.209.59:999 S"
-    type: http
-    server: 190.2.209.59
+    server: 190.123.83.137
     port: 999
     udp: false
-  - name: "🇱🇾 HTTP 102.68.128.211:8080 S"
+  - name: "🇪🇬 HTTP 197.164.101.14:1976 S"
     type: http
-    server: 102.68.128.211
-    port: 8080
+    server: 197.164.101.14
+    port: 1976
     udp: false
-  - name: "🇮🇩 HTTP 103.154.178.106:8080 S"
+  - name: "🇮🇳 HTTP 122.160.30.99:80 S"
     type: http
-    server: 103.154.178.106
-    port: 8080
+    server: 122.160.30.99
+    port: 80
     udp: false
-  - name: "🇮🇩 HTTP 182.253.109.182:8080 S"
+  - name: "🇲🇽 HTTP 189.51.168.165:999 S"
     type: http
-    server: 182.253.109.182
-    port: 8080
+    server: 189.51.168.165
+    port: 999
     udp: false
-  - name: "🇻🇳 HTTP 115.73.178.252:3128 S"
+  - name: "🇻🇳 HTTP 123.58.199.232:8168 S"
     type: http
-    server: 115.73.178.252
+    server: 123.58.199.232
+    port: 8168
+    udp: false
+  - name: "🇺🇿 HTTP 195.158.8.123:3128 S"
+    type: http
+    server: 195.158.8.123
     port: 3128
     udp: false
-  - name: "🇻🇳 HTTP 118.69.186.75:1452 S"
+  - name: "🇫🇷 HTTP 188.165.199.207:80 S"
     type: http
-    server: 118.69.186.75
-    port: 1452
+    server: 188.165.199.207
+    port: 80
     udp: false
-  - name: "🇮🇩 HTTP 160.191.180.121:8080 S"
+  - name: "🇪🇨 HTTP 181.78.195.136:999 S"
     type: http
-    server: 160.191.180.121
+    server: 181.78.195.136
+    port: 999
+    udp: false
+  - name: "🇺🇸 HTTP 143.198.135.176:80 S"
+    type: http
+    server: 143.198.135.176
+    port: 80
+    udp: false
+  - name: "🇺🇸 HTTP 116.204.166.132:8080 S"
+    type: http
+    server: 116.204.166.132
     port: 8080
     udp: false
   - name: "🇨🇴 HTTP 200.10.31.42:8081 S"
@@ -1024,164 +539,59 @@ proxies:
     server: 200.10.31.42
     port: 8081
     udp: false
-  - name: "🇮🇩 HTTP 157.20.35.40:9090 S"
+  - name: "🇺🇸 HTTP 138.68.235.51:80 S"
     type: http
-    server: 157.20.35.40
-    port: 9090
-    udp: false
-  - name: "🇩🇴 HTTP 154.88.136.50:999 S"
-    type: http
-    server: 154.88.136.50
-    port: 999
-    udp: false
-  - name: "🇲🇽 HTTP 201.165.164.22:999 S"
-    type: http
-    server: 201.165.164.22
-    port: 999
-    udp: false
-  - name: "🇮🇩 HTTP 154.18.255.112:1080 S"
-    type: http
-    server: 154.18.255.112
-    port: 1080
-    udp: false
-  - name: "🇮🇩 HTTP 103.155.196.182:8080 S"
-    type: http
-    server: 103.155.196.182
-    port: 8080
-    udp: false
-  - name: "🇹🇭 HTTP 1.10.185.111:443 S"
-    type: http
-    server: 1.10.185.111
-    port: 443
-    udp: false
-  - name: "🇪🇨 HTTP 181.78.195.136:999 S"
-    type: http
-    server: 181.78.195.136
-    port: 999
-    udp: false
-  - name: "🇻🇪 HTTP 170.244.91.137:999 S"
-    type: http
-    server: 170.244.91.137
-    port: 999
-    udp: false
-  - name: "🇵🇭 HTTP 180.191.2.166:8081 S"
-    type: http
-    server: 180.191.2.166
-    port: 8081
-    udp: false
-  - name: "🇧🇾 HTTP 178.124.91.62:8080 S"
-    type: http
-    server: 178.124.91.62
-    port: 8080
-    udp: false
-  - name: "🇱🇦 HTTP 103.137.91.250:8080 S"
-    type: http
-    server: 103.137.91.250
-    port: 8080
-    udp: false
-  - name: "🇻🇳 HTTP 14.170.154.193:19132 S"
-    type: http
-    server: 14.170.154.193
-    port: 19132
-    udp: false
-  - name: "🇱🇾 HTTP 160.19.103.182:8080 S"
-    type: http
-    server: 160.19.103.182
-    port: 8080
-    udp: false
-  - name: "🇮🇩 HTTP 119.82.240.78:3128 S"
-    type: http
-    server: 119.82.240.78
-    port: 3128
-    udp: false
-  - name: "🇮🇩 HTTP 103.188.33.74:8085 S"
-    type: http
-    server: 103.188.33.74
-    port: 8085
-    udp: false
-  - name: "🇲🇽 HTTP 177.124.87.106:999 S"
-    type: http
-    server: 177.124.87.106
-    port: 999
-    udp: false
-  - name: "🇮🇩 HTTP 103.46.186.126:8080 S"
-    type: http
-    server: 103.46.186.126
-    port: 8080
-    udp: false
-  - name: "🇻🇳 HTTP 116.101.54.121:8080 S"
-    type: http
-    server: 116.101.54.121
-    port: 8080
-    udp: false
-  - name: "🇵🇪 HTTP 179.43.96.178:8080 S"
-    type: http
-    server: 179.43.96.178
-    port: 8080
-    udp: false
-  - name: "🇹🇭 HTTP 1.4.141.66:80 S"
-    type: http
-    server: 1.4.141.66
+    server: 138.68.235.51
     port: 80
     udp: false
-  - name: "🇰🇭 HTTP 103.11.218.223:8787 S"
+  - name: "🇹🇷 HTTP 185.146.138.159:8080 S"
     type: http
-    server: 103.11.218.223
-    port: 8787
-    udp: false
-  - name: "🇮🇩 HTTP 103.188.173.101:1080 S"
-    type: http
-    server: 103.188.173.101
-    port: 1080
-    udp: false
-  - name: "🇨🇭 HTTP 185.85.111.18:80 S"
-    type: http
-    server: 185.85.111.18
-    port: 80
-    udp: false
-  - name: "🇮🇩 HTTP 103.165.155.210:2016 S"
-    type: http
-    server: 103.165.155.210
-    port: 2016
-    udp: false
-  - name: "🇫🇷 HTTP 176.191.124.3:80 S"
-    type: http
-    server: 176.191.124.3
-    port: 80
-    udp: false
-  - name: "🇮🇩 HTTP 103.8.59.12:8080 S"
-    type: http
-    server: 103.8.59.12
+    server: 185.146.138.159
     port: 8080
     udp: false
-  - name: "🇮🇳 HTTP 103.130.70.253:83 S"
+  - name: "🇺🇸 HTTP 152.53.81.29:8888 S"
     type: http
-    server: 103.130.70.253
-    port: 83
+    server: 152.53.81.29
+    port: 8888
     udp: false
-  - name: "🇱🇾 HTTP 154.73.28.79:8080 S"
+  - name: "🇵🇾 HTTP 201.222.50.218:80 S"
     type: http
-    server: 154.73.28.79
+    server: 201.222.50.218
+    port: 80
+    udp: false
+  - name: "🇺🇸 HTTP 198.111.166.184:80 S"
+    type: http
+    server: 198.111.166.184
+    port: 80
+    udp: false
+  - name: "🇨🇴 HTTP 200.116.198.222:9812 S"
+    type: http
+    server: 200.116.198.222
+    port: 9812
+    udp: false
+  - name: "🇻🇪 HTTP 161.22.32.31:8080 S"
+    type: http
+    server: 161.22.32.31
     port: 8080
+    udp: false
+  - name: "🇧🇩 HTTP 103.79.183.109:8080 S"
+    type: http
+    server: 103.79.183.109
+    port: 8080
+    udp: false
+  - name: "🇰🇷 HTTP 183.110.216.128:8091 S"
+    type: http
+    server: 183.110.216.128
+    port: 8091
     udp: false
   - name: "🇮🇩 HTTP 103.68.213.51:7789 S"
     type: http
     server: 103.68.213.51
     port: 7789
     udp: false
-  - name: "🇮🇩 HTTP 202.179.188.6:8080 S"
+  - name: "🇧🇩 HTTP 202.5.47.228:8080 S"
     type: http
-    server: 202.179.188.6
-    port: 8080
-    udp: false
-  - name: "🇮🇩 HTTP 103.190.62.137:3125 S"
-    type: http
-    server: 103.190.62.137
-    port: 3125
-    udp: false
-  - name: "🇺🇸 HTTP 116.204.166.132:8080 S"
-    type: http
-    server: 116.204.166.132
+    server: 202.5.47.228
     port: 8080
     udp: false
 proxy-groups:
@@ -1190,768 +600,456 @@ proxy-groups:
     proxies:
       - ♻️ AUTO
       - DIRECT
+      - "🇺🇸 HTTP 137.66.1.45:80 F"
+      - "🇺🇸 HTTP 198.199.86.11:3128 F"
+      - "🇺🇸 HTTP 159.65.230.46:8888 F"
+      - "🇺🇸 HTTP 142.93.202.130:3128 F"
+      - "🇺🇸 HTTP 174.138.119.88:80 F"
+      - "🇺🇸 HTTP 143.246.138.227:80 F"
+      - "🇨🇦 HTTP 159.203.61.169:3128 F"
+      - "🇺🇸 HTTP 159.65.221.25:80 F"
+      - "🇨🇦 HTTP 184.75.221.82:3118 F"
       - "🇺🇸 HTTP 191.101.1.116:80 F"
       - "🇺🇸 HTTP 138.68.60.8:3128 F"
-      - "🇺🇸 HTTP 165.154.162.73:8888 F"
-      - "🇺🇸 HTTP 159.65.230.46:8888 F"
-      - "🇺🇸 HTTP 159.65.221.25:80 F"
-      - "🇺🇸 HTTP 174.138.119.88:80 F"
-      - "🇺🇸 HTTP 142.93.202.130:3128 F"
-      - "🇺🇸 HTTP 198.199.86.11:3128 F"
-      - "🇺🇸 HTTP 137.66.1.45:80 F"
-      - "🇨🇦 HTTP 159.203.61.169:3128 F"
+      - "🇺🇸 HTTP 172.239.170.24:3128 F"
       - "🇩🇪 HTTP 128.140.113.110:8081 F"
-      - "🇭🇰 HTTP 16.163.88.228:80 F"
-      - "🇺🇸 HTTP 143.246.138.227:80 F"
+      - "🇳🇱 HTTP 195.26.224.135:80 F"
       - "🇬🇧 HTTP 134.209.29.120:3128 F"
       - "🇬🇧 HTTP 104.194.146.9:80 F"
-      - "🇳🇱 HTTP 195.26.224.135:80 F"
-      - "🇫🇷 HTTP 163.172.167.48:80 F"
-      - "🇸🇬 HTTP 165.154.236.214:80 F"
       - "🇩🇰 HTTP 194.150.110.134:80 F"
+      - "🇭🇰 HTTP 16.163.88.228:80 F"
       - "🇩🇪 HTTP 161.35.70.249:80 F"
-      - "🇨🇳 HTTP 115.239.234.43:7302 F"
       - "🇩🇪 HTTP 103.237.102.191:11111 F"
-      - "🇯🇵 HTTP 139.162.78.109:3128 F"
       - "🇩🇪 HTTP 116.202.108.111:3128 F"
-      - "🇮🇩 HTTP 103.156.17.83:8080 F"
       - "🇪🇸 HTTP 195.114.209.50:80 F"
-      - "🇨🇱 HTTP 152.230.215.123:80 F"
       - "🇮🇶 HTTP 185.135.69.34:80 F"
-      - "🇨🇭 HTTP 165.225.66.43:11588 F"
-      - "🇭🇰 HTTP 176.111.37.216:39811 F"
+      - "🇸🇬 HTTP 165.154.236.214:80 F"
+      - "🇭🇰 HTTP 176.111.37.5:39811 F"
+      - "🇮🇩 HTTP 103.156.17.83:8080 F"
+      - "🇯🇵 HTTP 139.162.78.109:3128 F"
       - "🇫🇷 HTTP 202.133.88.173:80 F"
-      - "🇰🇷 HTTP 183.110.216.128:8090 M"
-      - "🇸🇬 HTTP 128.199.202.122:8080 M"
-      - "🇸🇬 HTTP 134.185.85.16:3128 M"
+      - "🇨🇳 HTTP 115.239.234.43:7302 F"
+      - "🇨🇭 HTTP 165.225.66.40:11588 M"
       - "🇸🇦 HTTP 130.110.103.245:3128 M"
-      - "🇺🇿 HTTP 195.158.30.249:3128 M"
-      - "🇮🇳 HTTP 15.207.138.141:3128 M"
+      - "🇦🇺 HTTP 114.111.151.41:80 M"
+      - "🇰🇷 HTTP 183.110.216.159:8090 M"
+      - "🇦🇷 HTTP 170.155.2.119:80 M"
+      - "🇸🇬 HTTP 128.199.202.122:8080 M"
+      - "🇨🇭 HTTP 165.225.66.43:11588 M"
+      - "🇮🇩 HTTP 103.65.237.92:5678 M"
+      - "🇻🇳 HTTP 103.28.37.131:3128 M"
       - "🇮🇳 HTTP 139.59.1.14:8080 M"
       - "🇨🇲 HTTP 102.244.78.61:8085 M"
-      - "🇨🇲 HTTP 102.244.78.61:8083 M"
       - "🇨🇲 HTTP 102.244.78.61:8090 M"
-      - "🇨🇲 HTTP 102.244.78.61:8082 M"
-      - "🇭🇰 HTTP 176.111.37.5:39811 M"
-      - "🇷🇺 HTTP 178.141.246.92:10808 M"
-      - "🇻🇳 HTTP 103.28.37.131:3128 M"
-      - "🇰🇪 HTTP 102.0.20.92:8080 M"
-      - "🇮🇷 HTTP 193.176.242.186:80 M"
-      - "🇨🇭 HTTP 165.225.66.40:11588 M"
-      - "🇿🇼 HTTP 197.221.249.198:80 M"
-      - "🇿🇼 HTTP 197.221.240.247:80 M"
-      - "🇿🇼 HTTP 197.221.240.246:80 M"
-      - "🇿🇼 HTTP 197.221.249.197:80 M"
-      - "🇿🇼 HTTP 197.221.249.199:80 M"
-      - "🇿🇼 HTTP 197.221.249.196:80 M"
-      - "🇪🇬 HTTP 197.164.101.14:1976 M"
-      - "🇿🇼 HTTP 197.221.240.182:80 M"
-      - "🇺🇸 HTTP 172.239.170.24:3128 M"
+      - "🇨🇲 HTTP 102.244.78.61:8083 M"
       - "🇬🇭 HTTP 156.38.112.11:80 M"
-      - "🇮🇩 HTTP 103.65.237.92:5678 M"
-      - "🇻🇳 HTTP 103.82.20.76:8080 M"
-      - "🇨🇦 HTTP 184.75.221.82:3118 M"
-      - "🇳🇱 HTTP 146.103.123.157:80 M"
-      - "🇿🇼 HTTP 197.221.240.178:80 M"
-      - "🇸🇳 HTTP 154.65.39.8:80 M"
-      - "🇺🇸 HTTP 167.99.236.14:80 M"
-      - "🇨🇴 HTTP 200.116.198.222:9812 M"
-      - "🇺🇸 HTTP 167.99.3.26:5001 M"
-      - "🇺🇸 HTTP 152.53.81.29:8888 M"
-      - "🇰🇷 HTTP 183.110.216.128:8091 M"
-      - "🇮🇩 HTTP 103.174.122.4:3128 M"
-      - "🇸🇪 HTTP 193.181.35.115:8118 M"
-      - "🇿🇼 HTTP 197.221.240.176:80 M"
-      - "🇿🇼 HTTP 197.221.235.122:80 M"
-      - "🇿🇼 HTTP 197.221.234.149:80 M"
-      - "🇿🇼 HTTP 197.221.234.252:80 M"
-      - "🇻🇳 HTTP 123.58.199.232:8168 M"
+      - "🇨🇲 HTTP 102.244.78.61:8082 M"
+      - "🇹🇼 HTTP 164.52.11.194:18080 M"
+      - "🇪🇬 HTTP 197.164.101.13:1981 M"
+      - "🇮🇷 HTTP 193.176.242.186:80 M"
       - "🇿🇼 HTTP 197.221.234.253:80 M"
+      - "🇿🇼 HTTP 197.221.234.252:80 M"
+      - "🇿🇼 HTTP 197.221.235.122:80 M"
+      - "🇮🇳 HTTP 151.185.58.17:80 M"
+      - "🇿🇼 HTTP 197.221.240.176:80 M"
+      - "🇿🇼 HTTP 197.221.234.149:80 M"
+      - "🇿🇼 HTTP 197.221.249.199:80 M"
       - "🇿🇼 HTTP 197.221.237.248:80 M"
-      - "🇮🇩 HTTP 103.143.105.138:8080 M"
-      - "🇻🇪 HTTP 161.22.32.31:8080 M"
-      - "🇵🇦 HTTP 181.119.124.101:999 M"
-      - "🇵🇰 HTTP 103.158.236.132:8080 S"
-      - "🇺🇸 HTTP 143.198.135.176:80 S"
-      - "🇨🇴 HTTP 181.78.172.141:999 S"
-      - "🇧🇷 HTTP 201.28.86.18:61804 S"
-      - "🇮🇩 HTTP 149.129.226.9:104 S"
-      - "🇮🇩 HTTP 149.129.255.179:119 S"
-      - "🇮🇩 HTTP 149.129.255.179:10443 S"
-      - "🇨🇳 HTTP 121.43.109.88:8047 S"
-      - "🇮🇩 HTTP 149.129.226.9:9090 S"
+      - "🇿🇼 HTTP 197.221.240.246:80 M"
+      - "🇿🇼 HTTP 197.221.240.247:80 M"
+      - "🇿🇼 HTTP 197.221.240.182:80 M"
+      - "🇺🇸 HTTP 167.99.236.14:80 M"
+      - "🇸🇳 HTTP 154.65.39.8:80 M"
+      - "🇿🇼 HTTP 197.221.249.197:80 M"
+      - "🇿🇼 HTTP 197.221.240.178:80 M"
+      - "🇿🇼 HTTP 197.221.249.198:80 M"
+      - "🇿🇼 HTTP 197.221.249.196:80 M"
+      - "🇧🇷 HTTP 201.28.86.18:61804 M"
+      - "🇭🇰 HTTP 176.111.37.216:39811 M"
+      - "🇨🇭 HTTP 185.85.111.18:80 M"
+      - "🇳🇱 HTTP 146.103.123.157:80 S"
       - "🇮🇩 HTTP 149.129.226.9:80 S"
-      - "🇮🇩 HTTP 149.129.255.179:5060 S"
-      - "🇨🇳 HTTP 106.14.91.83:4000 S"
-      - "🇮🇩 HTTP 149.129.255.179:6588 S"
-      - "🇮🇩 HTTP 149.129.226.9:8443 S"
-      - "🇨🇳 HTTP 139.224.186.221:7878 S"
-      - "🇨🇳 HTTP 120.25.189.254:8008 S"
-      - "🇨🇳 HTTP 120.26.52.35:8081 S"
-      - "🇲🇽 HTTP 189.51.168.165:999 S"
-      - "🇻🇪 HTTP 200.59.191.27:999 S"
-      - "🇹🇭 HTTP 110.238.113.119:19 S"
-      - "🇨🇳 HTTP 114.215.127.92:80 S"
-      - "🇮🇩 HTTP 103.178.41.46:9291 S"
-      - "🇹🇼 HTTP 164.52.11.194:18080 S"
-      - "🇬🇷 HTTP 150.140.148.235:80 S"
-      - "🇺🇸 HTTP 108.170.12.14:80 S"
-      - "🇻🇪 HTTP 13.143.240.243:999 S"
-      - "🇧🇷 HTTP 138.185.190.149:8080 S"
-      - "🇮🇩 HTTP 103.165.155.55:1111 S"
-      - "🇮🇩 HTTP 160.22.198.21:8082 S"
-      - "🇨🇾 HTTP 185.203.6.219:3128 S"
-      - "🇮🇩 HTTP 103.166.213.249:8080 S"
-      - "🇵🇭 HTTP 126.209.107.122:5050 S"
-      - "🇮🇩 HTTP 103.46.11.160:8080 S"
-      - "🇮🇩 HTTP 103.166.33.56:8080 S"
-      - "🇪🇨 HTTP 179.60.189.81:999 S"
-      - "🇵🇾 HTTP 201.222.50.218:80 S"
-      - "🇮🇩 HTTP 117.18.16.47:1111 S"
-      - "🇧🇷 HTTP 179.48.25.1:8095 S"
-      - "🇿🇦 HTTP 20.33.10.132:443 S"
-      - "🇧🇩 HTTP 103.79.183.109:8080 S"
-      - "🇺🇸 HTTP 138.68.235.51:80 S"
-      - "🇪🇨 HTTP 177.234.217.83:999 S"
-      - "🇯🇵 HTTP 160.248.7.177:80 S"
-      - "🇺🇿 HTTP 195.158.8.123:3128 S"
-      - "🇮🇳 HTTP 103.214.189.41:80 S"
-      - "🇨🇱 HTTP 200.39.139.65:999 S"
-      - "🇮🇹 HTTP 2.193.71.141:8080 S"
-      - "🇮🇳 HTTP 202.62.67.209:53281 S"
-      - "🇮🇩 HTTP 103.130.129.231:10001 S"
-      - "🇺🇸 HTTP 104.218.199.8:16062 S"
-      - "🇻🇳 HTTP 103.182.22.54:8000 S"
-      - "🇪🇨 HTTP 177.234.217.85:999 S"
-      - "🇮🇩 HTTP 119.82.242.200:8080 S"
-      - "🇮🇩 HTTP 103.195.65.199:8080 S"
-      - "🇺🇸 HTTP 116.204.166.203:8080 S"
-      - "🇮🇩 HTTP 144.79.37.148:8080 S"
-      - "🇮🇩 HTTP 103.132.53.28:8080 S"
-      - "🇮🇩 HTTP 103.149.239.42:8080 S"
-      - "🇺🇸 HTTP 116.204.166.200:8080 S"
-      - "🇬🇹 HTTP 167.250.222.233:999 S"
+      - "🇮🇩 HTTP 149.129.226.9:104 S"
+      - "🇮🇩 HTTP 149.129.226.9:9090 S"
       - "🇨🇳 HTTP 106.14.104.220:9098 S"
       - "🇨🇳 HTTP 106.14.104.220:8008 S"
-      - "🇮🇳 HTTP 182.78.42.112:83 S"
-      - "🇹🇷 HTTP 185.146.138.159:8080 S"
-      - "🇵🇭 HTTP 124.105.196.148:8081 S"
-      - "🇬🇹 HTTP 190.115.15.100:8080 S"
-      - "🇮🇩 HTTP 115.178.55.221:8080 S"
-      - "🇩🇴 HTTP 154.59.207.8:999 S"
-      - "🇮🇩 HTTP 103.14.111.188:8080 S"
-      - "🇦🇺 HTTP 114.111.151.41:80 S"
-      - "🇮🇩 HTTP 103.152.21.35:3128 S"
-      - "🇮🇩 HTTP 103.154.73.14:8080 S"
-      - "🇦🇷 HTTP 190.123.83.137:999 S"
-      - "🇪🇨 HTTP 177.234.217.93:999 S"
-      - "🇬🇹 HTTP 200.119.141.114:999 S"
-      - "🇮🇳 HTTP 122.160.30.99:80 S"
-      - "🇨🇴 HTTP 181.78.80.125:999 S"
-      - "🇮🇩 HTTP 154.19.39.50:80 S"
-      - "🇨🇴 HTTP 186.194.160.122:999 S"
-      - "🇫🇷 HTTP 188.165.199.207:80 S"
-      - "🇲🇽 HTTP 148.230.212.70:8080 S"
-      - "🇹🇭 HTTP 1.20.101.25:80 S"
-      - "🇪🇬 HTTP 154.236.179.229:1976 S"
-      - "🇮🇳 HTTP 151.185.58.17:80 S"
-      - "🇦🇷 HTTP 187.102.219.34:999 S"
-      - "🇻🇳 HTTP 14.225.240.23:8562 S"
-      - "🇧🇩 HTTP 202.5.47.228:8080 S"
-      - "🇮🇩 HTTP 103.82.246.129:8181 S"
-      - "🇧🇷 HTTP 170.81.131.70:3128 S"
-      - "🇺🇸 HTTP 198.111.166.184:80 S"
-      - "🇱🇾 HTTP 154.73.28.89:8080 S"
-      - "🇰🇭 HTTP 111.118.149.40:8080 S"
-      - "🇵🇱 HTTP 148.253.212.68:8080 S"
-      - "🇮🇳 HTTP 103.209.88.72:8080 S"
-      - "🇰🇷 HTTP 183.110.216.159:8090 S"
-      - "🇧🇩 HTTP 103.92.218.121:9514 S"
-      - "🇩🇪 HTTP 165.232.67.22:3128 S"
-      - "🇪🇬 HTTP 197.164.101.13:1981 S"
-      - "🇮🇩 HTTP 124.158.186.254:8080 S"
-      - "🇭🇳 HTTP 179.49.113.230:999 S"
+      - "🇮🇩 HTTP 149.129.226.9:8443 S"
+      - "🇨🇳 HTTP 139.224.186.221:7878 S"
+      - "🇮🇩 HTTP 149.129.255.179:6588 S"
+      - "🇮🇩 HTTP 149.129.255.179:5060 S"
+      - "🇮🇩 HTTP 149.129.255.179:10443 S"
+      - "🇮🇩 HTTP 149.129.255.179:119 S"
+      - "🇨🇳 HTTP 106.14.91.83:4000 S"
+      - "🇨🇳 HTTP 121.43.109.88:8047 S"
+      - "🇨🇳 HTTP 120.25.189.254:8008 S"
+      - "🇹🇭 HTTP 110.238.113.119:19 S"
+      - "🇨🇳 HTTP 120.26.52.35:8081 S"
+      - "🇮🇩 HTTP 103.8.59.12:8080 S"
+      - "🇨🇳 HTTP 114.215.127.92:80 S"
       - "🇪🇨 HTTP 177.234.217.235:999 S"
-      - "🇮🇩 HTTP 103.166.159.93:8080 S"
+      - "🇪🇨 HTTP 177.234.217.93:999 S"
+      - "🇬🇹 HTTP 190.115.15.100:8080 S"
+      - "🇺🇸 HTTP 165.154.162.73:8888 S"
+      - "🇦🇷 HTTP 187.102.219.34:999 S"
+      - "🇫🇷 HTTP 176.191.124.3:80 S"
       - "🇿🇦 HTTP 196.223.129.21:80 S"
-      - "🇮🇩 HTTP 103.180.118.109:8090 S"
-      - "🇮🇩 HTTP 103.227.187.3:6090 S"
-      - "🇮🇩 HTTP 160.19.146.72:2022 S"
-      - "🇨🇴 HTTP 181.129.147.163:8080 S"
-      - "🇮🇩 HTTP 103.144.102.82:8080 S"
-      - "🇦🇷 HTTP 170.155.2.119:80 S"
-      - "🇭🇳 HTTP 181.115.67.3:999 S"
-      - "🇺🇸 HTTP 116.204.166.40:8080 S"
-      - "🇧🇷 HTTP 177.20.167.139:8080 S"
-      - "🇵🇱 HTTP 201.4.65.103:8080 S"
-      - "🇺🇸 HTTP 104.225.220.233:80 S"
-      - "🇨🇴 HTTP 190.2.209.59:999 S"
-      - "🇱🇾 HTTP 102.68.128.211:8080 S"
-      - "🇮🇩 HTTP 103.154.178.106:8080 S"
-      - "🇮🇩 HTTP 182.253.109.182:8080 S"
-      - "🇻🇳 HTTP 115.73.178.252:3128 S"
+      - "🇲🇽 HTTP 177.124.87.106:999 S"
+      - "🇮🇩 HTTP 157.20.35.40:9090 S"
+      - "🇦🇷 HTTP 190.123.83.137:999 S"
+      - "🇪🇬 HTTP 197.164.101.14:1976 S"
+      - "🇮🇳 HTTP 122.160.30.99:80 S"
+      - "🇲🇽 HTTP 189.51.168.165:999 S"
+      - "🇻🇳 HTTP 123.58.199.232:8168 S"
+      - "🇺🇿 HTTP 195.158.8.123:3128 S"
+      - "🇫🇷 HTTP 188.165.199.207:80 S"
+      - "🇪🇨 HTTP 181.78.195.136:999 S"
+      - "🇺🇸 HTTP 143.198.135.176:80 S"
+      - "🇺🇸 HTTP 116.204.166.132:8080 S"
+      - "🇨🇴 HTTP 200.10.31.42:8081 S"
+      - "🇺🇸 HTTP 138.68.235.51:80 S"
+      - "🇹🇷 HTTP 185.146.138.159:8080 S"
+      - "🇺🇸 HTTP 152.53.81.29:8888 S"
+      - "🇵🇾 HTTP 201.222.50.218:80 S"
+      - "🇺🇸 HTTP 198.111.166.184:80 S"
+      - "🇨🇴 HTTP 200.116.198.222:9812 S"
+      - "🇻🇪 HTTP 161.22.32.31:8080 S"
+      - "🇧🇩 HTTP 103.79.183.109:8080 S"
+      - "🇰🇷 HTTP 183.110.216.128:8091 S"
+      - "🇮🇩 HTTP 103.68.213.51:7789 S"
+      - "🇧🇩 HTTP 202.5.47.228:8080 S"
   - name: ♻️ AUTO
     type: url-test
     proxies:
+      - "🇺🇸 HTTP 137.66.1.45:80 F"
+      - "🇺🇸 HTTP 198.199.86.11:3128 F"
+      - "🇺🇸 HTTP 159.65.230.46:8888 F"
+      - "🇺🇸 HTTP 142.93.202.130:3128 F"
+      - "🇺🇸 HTTP 174.138.119.88:80 F"
+      - "🇺🇸 HTTP 143.246.138.227:80 F"
+      - "🇨🇦 HTTP 159.203.61.169:3128 F"
+      - "🇺🇸 HTTP 159.65.221.25:80 F"
+      - "🇨🇦 HTTP 184.75.221.82:3118 F"
       - "🇺🇸 HTTP 191.101.1.116:80 F"
       - "🇺🇸 HTTP 138.68.60.8:3128 F"
-      - "🇺🇸 HTTP 165.154.162.73:8888 F"
-      - "🇺🇸 HTTP 159.65.230.46:8888 F"
-      - "🇺🇸 HTTP 159.65.221.25:80 F"
-      - "🇺🇸 HTTP 174.138.119.88:80 F"
-      - "🇺🇸 HTTP 142.93.202.130:3128 F"
-      - "🇺🇸 HTTP 198.199.86.11:3128 F"
-      - "🇺🇸 HTTP 137.66.1.45:80 F"
-      - "🇨🇦 HTTP 159.203.61.169:3128 F"
+      - "🇺🇸 HTTP 172.239.170.24:3128 F"
       - "🇩🇪 HTTP 128.140.113.110:8081 F"
-      - "🇭🇰 HTTP 16.163.88.228:80 F"
-      - "🇺🇸 HTTP 143.246.138.227:80 F"
+      - "🇳🇱 HTTP 195.26.224.135:80 F"
       - "🇬🇧 HTTP 134.209.29.120:3128 F"
       - "🇬🇧 HTTP 104.194.146.9:80 F"
-      - "🇳🇱 HTTP 195.26.224.135:80 F"
-      - "🇫🇷 HTTP 163.172.167.48:80 F"
-      - "🇸🇬 HTTP 165.154.236.214:80 F"
       - "🇩🇰 HTTP 194.150.110.134:80 F"
+      - "🇭🇰 HTTP 16.163.88.228:80 F"
       - "🇩🇪 HTTP 161.35.70.249:80 F"
-      - "🇨🇳 HTTP 115.239.234.43:7302 F"
       - "🇩🇪 HTTP 103.237.102.191:11111 F"
-      - "🇯🇵 HTTP 139.162.78.109:3128 F"
       - "🇩🇪 HTTP 116.202.108.111:3128 F"
-      - "🇮🇩 HTTP 103.156.17.83:8080 F"
       - "🇪🇸 HTTP 195.114.209.50:80 F"
-      - "🇨🇱 HTTP 152.230.215.123:80 F"
       - "🇮🇶 HTTP 185.135.69.34:80 F"
-      - "🇨🇭 HTTP 165.225.66.43:11588 F"
-      - "🇭🇰 HTTP 176.111.37.216:39811 F"
+      - "🇸🇬 HTTP 165.154.236.214:80 F"
+      - "🇭🇰 HTTP 176.111.37.5:39811 F"
+      - "🇮🇩 HTTP 103.156.17.83:8080 F"
+      - "🇯🇵 HTTP 139.162.78.109:3128 F"
       - "🇫🇷 HTTP 202.133.88.173:80 F"
-      - "🇰🇷 HTTP 183.110.216.128:8090 M"
-      - "🇸🇬 HTTP 128.199.202.122:8080 M"
-      - "🇸🇬 HTTP 134.185.85.16:3128 M"
+      - "🇨🇳 HTTP 115.239.234.43:7302 F"
+      - "🇨🇭 HTTP 165.225.66.40:11588 M"
       - "🇸🇦 HTTP 130.110.103.245:3128 M"
-      - "🇺🇿 HTTP 195.158.30.249:3128 M"
-      - "🇮🇳 HTTP 15.207.138.141:3128 M"
+      - "🇦🇺 HTTP 114.111.151.41:80 M"
+      - "🇰🇷 HTTP 183.110.216.159:8090 M"
+      - "🇦🇷 HTTP 170.155.2.119:80 M"
+      - "🇸🇬 HTTP 128.199.202.122:8080 M"
+      - "🇨🇭 HTTP 165.225.66.43:11588 M"
+      - "🇮🇩 HTTP 103.65.237.92:5678 M"
+      - "🇻🇳 HTTP 103.28.37.131:3128 M"
       - "🇮🇳 HTTP 139.59.1.14:8080 M"
       - "🇨🇲 HTTP 102.244.78.61:8085 M"
-      - "🇨🇲 HTTP 102.244.78.61:8083 M"
       - "🇨🇲 HTTP 102.244.78.61:8090 M"
-      - "🇨🇲 HTTP 102.244.78.61:8082 M"
-      - "🇭🇰 HTTP 176.111.37.5:39811 M"
-      - "🇷🇺 HTTP 178.141.246.92:10808 M"
-      - "🇻🇳 HTTP 103.28.37.131:3128 M"
-      - "🇰🇪 HTTP 102.0.20.92:8080 M"
-      - "🇮🇷 HTTP 193.176.242.186:80 M"
-      - "🇨🇭 HTTP 165.225.66.40:11588 M"
-      - "🇿🇼 HTTP 197.221.249.198:80 M"
-      - "🇿🇼 HTTP 197.221.240.247:80 M"
-      - "🇿🇼 HTTP 197.221.240.246:80 M"
-      - "🇿🇼 HTTP 197.221.249.197:80 M"
-      - "🇿🇼 HTTP 197.221.249.199:80 M"
-      - "🇿🇼 HTTP 197.221.249.196:80 M"
-      - "🇪🇬 HTTP 197.164.101.14:1976 M"
-      - "🇿🇼 HTTP 197.221.240.182:80 M"
-      - "🇺🇸 HTTP 172.239.170.24:3128 M"
+      - "🇨🇲 HTTP 102.244.78.61:8083 M"
       - "🇬🇭 HTTP 156.38.112.11:80 M"
-      - "🇮🇩 HTTP 103.65.237.92:5678 M"
-      - "🇻🇳 HTTP 103.82.20.76:8080 M"
-      - "🇨🇦 HTTP 184.75.221.82:3118 M"
-      - "🇳🇱 HTTP 146.103.123.157:80 M"
-      - "🇿🇼 HTTP 197.221.240.178:80 M"
-      - "🇸🇳 HTTP 154.65.39.8:80 M"
-      - "🇺🇸 HTTP 167.99.236.14:80 M"
-      - "🇨🇴 HTTP 200.116.198.222:9812 M"
-      - "🇺🇸 HTTP 167.99.3.26:5001 M"
-      - "🇺🇸 HTTP 152.53.81.29:8888 M"
-      - "🇰🇷 HTTP 183.110.216.128:8091 M"
-      - "🇮🇩 HTTP 103.174.122.4:3128 M"
-      - "🇸🇪 HTTP 193.181.35.115:8118 M"
-      - "🇿🇼 HTTP 197.221.240.176:80 M"
-      - "🇿🇼 HTTP 197.221.235.122:80 M"
-      - "🇿🇼 HTTP 197.221.234.149:80 M"
-      - "🇿🇼 HTTP 197.221.234.252:80 M"
-      - "🇻🇳 HTTP 123.58.199.232:8168 M"
+      - "🇨🇲 HTTP 102.244.78.61:8082 M"
+      - "🇹🇼 HTTP 164.52.11.194:18080 M"
+      - "🇪🇬 HTTP 197.164.101.13:1981 M"
+      - "🇮🇷 HTTP 193.176.242.186:80 M"
       - "🇿🇼 HTTP 197.221.234.253:80 M"
+      - "🇿🇼 HTTP 197.221.234.252:80 M"
+      - "🇿🇼 HTTP 197.221.235.122:80 M"
+      - "🇮🇳 HTTP 151.185.58.17:80 M"
+      - "🇿🇼 HTTP 197.221.240.176:80 M"
+      - "🇿🇼 HTTP 197.221.234.149:80 M"
+      - "🇿🇼 HTTP 197.221.249.199:80 M"
       - "🇿🇼 HTTP 197.221.237.248:80 M"
-      - "🇮🇩 HTTP 103.143.105.138:8080 M"
-      - "🇻🇪 HTTP 161.22.32.31:8080 M"
-      - "🇵🇦 HTTP 181.119.124.101:999 M"
-      - "🇵🇰 HTTP 103.158.236.132:8080 S"
-      - "🇺🇸 HTTP 143.198.135.176:80 S"
-      - "🇨🇴 HTTP 181.78.172.141:999 S"
-      - "🇧🇷 HTTP 201.28.86.18:61804 S"
-      - "🇮🇩 HTTP 149.129.226.9:104 S"
-      - "🇮🇩 HTTP 149.129.255.179:119 S"
-      - "🇮🇩 HTTP 149.129.255.179:10443 S"
-      - "🇨🇳 HTTP 121.43.109.88:8047 S"
-      - "🇮🇩 HTTP 149.129.226.9:9090 S"
+      - "🇿🇼 HTTP 197.221.240.246:80 M"
+      - "🇿🇼 HTTP 197.221.240.247:80 M"
+      - "🇿🇼 HTTP 197.221.240.182:80 M"
+      - "🇺🇸 HTTP 167.99.236.14:80 M"
+      - "🇸🇳 HTTP 154.65.39.8:80 M"
+      - "🇿🇼 HTTP 197.221.249.197:80 M"
+      - "🇿🇼 HTTP 197.221.240.178:80 M"
+      - "🇿🇼 HTTP 197.221.249.198:80 M"
+      - "🇿🇼 HTTP 197.221.249.196:80 M"
+      - "🇧🇷 HTTP 201.28.86.18:61804 M"
+      - "🇭🇰 HTTP 176.111.37.216:39811 M"
+      - "🇨🇭 HTTP 185.85.111.18:80 M"
+      - "🇳🇱 HTTP 146.103.123.157:80 S"
       - "🇮🇩 HTTP 149.129.226.9:80 S"
-      - "🇮🇩 HTTP 149.129.255.179:5060 S"
-      - "🇨🇳 HTTP 106.14.91.83:4000 S"
-      - "🇮🇩 HTTP 149.129.255.179:6588 S"
-      - "🇮🇩 HTTP 149.129.226.9:8443 S"
-      - "🇨🇳 HTTP 139.224.186.221:7878 S"
-      - "🇨🇳 HTTP 120.25.189.254:8008 S"
-      - "🇨🇳 HTTP 120.26.52.35:8081 S"
-      - "🇲🇽 HTTP 189.51.168.165:999 S"
-      - "🇻🇪 HTTP 200.59.191.27:999 S"
-      - "🇹🇭 HTTP 110.238.113.119:19 S"
-      - "🇨🇳 HTTP 114.215.127.92:80 S"
-      - "🇮🇩 HTTP 103.178.41.46:9291 S"
-      - "🇹🇼 HTTP 164.52.11.194:18080 S"
-      - "🇬🇷 HTTP 150.140.148.235:80 S"
-      - "🇺🇸 HTTP 108.170.12.14:80 S"
-      - "🇻🇪 HTTP 13.143.240.243:999 S"
-      - "🇧🇷 HTTP 138.185.190.149:8080 S"
-      - "🇮🇩 HTTP 103.165.155.55:1111 S"
-      - "🇮🇩 HTTP 160.22.198.21:8082 S"
-      - "🇨🇾 HTTP 185.203.6.219:3128 S"
-      - "🇮🇩 HTTP 103.166.213.249:8080 S"
-      - "🇵🇭 HTTP 126.209.107.122:5050 S"
-      - "🇮🇩 HTTP 103.46.11.160:8080 S"
-      - "🇮🇩 HTTP 103.166.33.56:8080 S"
-      - "🇪🇨 HTTP 179.60.189.81:999 S"
-      - "🇵🇾 HTTP 201.222.50.218:80 S"
-      - "🇮🇩 HTTP 117.18.16.47:1111 S"
-      - "🇧🇷 HTTP 179.48.25.1:8095 S"
-      - "🇿🇦 HTTP 20.33.10.132:443 S"
-      - "🇧🇩 HTTP 103.79.183.109:8080 S"
-      - "🇺🇸 HTTP 138.68.235.51:80 S"
-      - "🇪🇨 HTTP 177.234.217.83:999 S"
-      - "🇯🇵 HTTP 160.248.7.177:80 S"
-      - "🇺🇿 HTTP 195.158.8.123:3128 S"
-      - "🇮🇳 HTTP 103.214.189.41:80 S"
-      - "🇨🇱 HTTP 200.39.139.65:999 S"
-      - "🇮🇹 HTTP 2.193.71.141:8080 S"
-      - "🇮🇳 HTTP 202.62.67.209:53281 S"
-      - "🇮🇩 HTTP 103.130.129.231:10001 S"
-      - "🇺🇸 HTTP 104.218.199.8:16062 S"
-      - "🇻🇳 HTTP 103.182.22.54:8000 S"
-      - "🇪🇨 HTTP 177.234.217.85:999 S"
-      - "🇮🇩 HTTP 119.82.242.200:8080 S"
-      - "🇮🇩 HTTP 103.195.65.199:8080 S"
-      - "🇺🇸 HTTP 116.204.166.203:8080 S"
-      - "🇮🇩 HTTP 144.79.37.148:8080 S"
-      - "🇮🇩 HTTP 103.132.53.28:8080 S"
-      - "🇮🇩 HTTP 103.149.239.42:8080 S"
-      - "🇺🇸 HTTP 116.204.166.200:8080 S"
-      - "🇬🇹 HTTP 167.250.222.233:999 S"
+      - "🇮🇩 HTTP 149.129.226.9:104 S"
+      - "🇮🇩 HTTP 149.129.226.9:9090 S"
       - "🇨🇳 HTTP 106.14.104.220:9098 S"
       - "🇨🇳 HTTP 106.14.104.220:8008 S"
-      - "🇮🇳 HTTP 182.78.42.112:83 S"
-      - "🇹🇷 HTTP 185.146.138.159:8080 S"
-      - "🇵🇭 HTTP 124.105.196.148:8081 S"
-      - "🇬🇹 HTTP 190.115.15.100:8080 S"
-      - "🇮🇩 HTTP 115.178.55.221:8080 S"
-      - "🇩🇴 HTTP 154.59.207.8:999 S"
-      - "🇮🇩 HTTP 103.14.111.188:8080 S"
-      - "🇦🇺 HTTP 114.111.151.41:80 S"
-      - "🇮🇩 HTTP 103.152.21.35:3128 S"
-      - "🇮🇩 HTTP 103.154.73.14:8080 S"
-      - "🇦🇷 HTTP 190.123.83.137:999 S"
-      - "🇪🇨 HTTP 177.234.217.93:999 S"
-      - "🇬🇹 HTTP 200.119.141.114:999 S"
-      - "🇮🇳 HTTP 122.160.30.99:80 S"
-      - "🇨🇴 HTTP 181.78.80.125:999 S"
-      - "🇮🇩 HTTP 154.19.39.50:80 S"
-      - "🇨🇴 HTTP 186.194.160.122:999 S"
-      - "🇫🇷 HTTP 188.165.199.207:80 S"
-      - "🇲🇽 HTTP 148.230.212.70:8080 S"
-      - "🇹🇭 HTTP 1.20.101.25:80 S"
-      - "🇪🇬 HTTP 154.236.179.229:1976 S"
-      - "🇮🇳 HTTP 151.185.58.17:80 S"
-      - "🇦🇷 HTTP 187.102.219.34:999 S"
-      - "🇻🇳 HTTP 14.225.240.23:8562 S"
-      - "🇧🇩 HTTP 202.5.47.228:8080 S"
-      - "🇮🇩 HTTP 103.82.246.129:8181 S"
-      - "🇧🇷 HTTP 170.81.131.70:3128 S"
-      - "🇺🇸 HTTP 198.111.166.184:80 S"
-      - "🇱🇾 HTTP 154.73.28.89:8080 S"
-      - "🇰🇭 HTTP 111.118.149.40:8080 S"
-      - "🇵🇱 HTTP 148.253.212.68:8080 S"
-      - "🇮🇳 HTTP 103.209.88.72:8080 S"
-      - "🇰🇷 HTTP 183.110.216.159:8090 S"
-      - "🇧🇩 HTTP 103.92.218.121:9514 S"
-      - "🇩🇪 HTTP 165.232.67.22:3128 S"
-      - "🇪🇬 HTTP 197.164.101.13:1981 S"
-      - "🇮🇩 HTTP 124.158.186.254:8080 S"
-      - "🇭🇳 HTTP 179.49.113.230:999 S"
+      - "🇮🇩 HTTP 149.129.226.9:8443 S"
+      - "🇨🇳 HTTP 139.224.186.221:7878 S"
+      - "🇮🇩 HTTP 149.129.255.179:6588 S"
+      - "🇮🇩 HTTP 149.129.255.179:5060 S"
+      - "🇮🇩 HTTP 149.129.255.179:10443 S"
+      - "🇮🇩 HTTP 149.129.255.179:119 S"
+      - "🇨🇳 HTTP 106.14.91.83:4000 S"
+      - "🇨🇳 HTTP 121.43.109.88:8047 S"
+      - "🇨🇳 HTTP 120.25.189.254:8008 S"
+      - "🇹🇭 HTTP 110.238.113.119:19 S"
+      - "🇨🇳 HTTP 120.26.52.35:8081 S"
+      - "🇮🇩 HTTP 103.8.59.12:8080 S"
+      - "🇨🇳 HTTP 114.215.127.92:80 S"
       - "🇪🇨 HTTP 177.234.217.235:999 S"
-      - "🇮🇩 HTTP 103.166.159.93:8080 S"
+      - "🇪🇨 HTTP 177.234.217.93:999 S"
+      - "🇬🇹 HTTP 190.115.15.100:8080 S"
+      - "🇺🇸 HTTP 165.154.162.73:8888 S"
+      - "🇦🇷 HTTP 187.102.219.34:999 S"
+      - "🇫🇷 HTTP 176.191.124.3:80 S"
       - "🇿🇦 HTTP 196.223.129.21:80 S"
-      - "🇮🇩 HTTP 103.180.118.109:8090 S"
-      - "🇮🇩 HTTP 103.227.187.3:6090 S"
-      - "🇮🇩 HTTP 160.19.146.72:2022 S"
-      - "🇨🇴 HTTP 181.129.147.163:8080 S"
-      - "🇮🇩 HTTP 103.144.102.82:8080 S"
-      - "🇦🇷 HTTP 170.155.2.119:80 S"
-      - "🇭🇳 HTTP 181.115.67.3:999 S"
-      - "🇺🇸 HTTP 116.204.166.40:8080 S"
-      - "🇧🇷 HTTP 177.20.167.139:8080 S"
-      - "🇵🇱 HTTP 201.4.65.103:8080 S"
-      - "🇺🇸 HTTP 104.225.220.233:80 S"
-      - "🇨🇴 HTTP 190.2.209.59:999 S"
-      - "🇱🇾 HTTP 102.68.128.211:8080 S"
-      - "🇮🇩 HTTP 103.154.178.106:8080 S"
-      - "🇮🇩 HTTP 182.253.109.182:8080 S"
-      - "🇻🇳 HTTP 115.73.178.252:3128 S"
+      - "🇲🇽 HTTP 177.124.87.106:999 S"
+      - "🇮🇩 HTTP 157.20.35.40:9090 S"
+      - "🇦🇷 HTTP 190.123.83.137:999 S"
+      - "🇪🇬 HTTP 197.164.101.14:1976 S"
+      - "🇮🇳 HTTP 122.160.30.99:80 S"
+      - "🇲🇽 HTTP 189.51.168.165:999 S"
+      - "🇻🇳 HTTP 123.58.199.232:8168 S"
+      - "🇺🇿 HTTP 195.158.8.123:3128 S"
+      - "🇫🇷 HTTP 188.165.199.207:80 S"
+      - "🇪🇨 HTTP 181.78.195.136:999 S"
+      - "🇺🇸 HTTP 143.198.135.176:80 S"
+      - "🇺🇸 HTTP 116.204.166.132:8080 S"
+      - "🇨🇴 HTTP 200.10.31.42:8081 S"
+      - "🇺🇸 HTTP 138.68.235.51:80 S"
+      - "🇹🇷 HTTP 185.146.138.159:8080 S"
+      - "🇺🇸 HTTP 152.53.81.29:8888 S"
+      - "🇵🇾 HTTP 201.222.50.218:80 S"
+      - "🇺🇸 HTTP 198.111.166.184:80 S"
+      - "🇨🇴 HTTP 200.116.198.222:9812 S"
+      - "🇻🇪 HTTP 161.22.32.31:8080 S"
+      - "🇧🇩 HTTP 103.79.183.109:8080 S"
+      - "🇰🇷 HTTP 183.110.216.128:8091 S"
+      - "🇮🇩 HTTP 103.68.213.51:7789 S"
+      - "🇧🇩 HTTP 202.5.47.228:8080 S"
     url: "http://www.gstatic.com/generate_204"
     interval: 300
   - name: 📦 HTTP
     type: select
     proxies:
+      - "🇺🇸 HTTP 137.66.1.45:80 F"
+      - "🇺🇸 HTTP 198.199.86.11:3128 F"
+      - "🇺🇸 HTTP 159.65.230.46:8888 F"
+      - "🇺🇸 HTTP 142.93.202.130:3128 F"
+      - "🇺🇸 HTTP 174.138.119.88:80 F"
+      - "🇺🇸 HTTP 143.246.138.227:80 F"
+      - "🇨🇦 HTTP 159.203.61.169:3128 F"
+      - "🇺🇸 HTTP 159.65.221.25:80 F"
+      - "🇨🇦 HTTP 184.75.221.82:3118 F"
       - "🇺🇸 HTTP 191.101.1.116:80 F"
       - "🇺🇸 HTTP 138.68.60.8:3128 F"
-      - "🇺🇸 HTTP 165.154.162.73:8888 F"
-      - "🇺🇸 HTTP 159.65.230.46:8888 F"
-      - "🇺🇸 HTTP 159.65.221.25:80 F"
-      - "🇺🇸 HTTP 174.138.119.88:80 F"
-      - "🇺🇸 HTTP 142.93.202.130:3128 F"
-      - "🇺🇸 HTTP 198.199.86.11:3128 F"
-      - "🇺🇸 HTTP 137.66.1.45:80 F"
-      - "🇨🇦 HTTP 159.203.61.169:3128 F"
+      - "🇺🇸 HTTP 172.239.170.24:3128 F"
       - "🇩🇪 HTTP 128.140.113.110:8081 F"
-      - "🇭🇰 HTTP 16.163.88.228:80 F"
-      - "🇺🇸 HTTP 143.246.138.227:80 F"
+      - "🇳🇱 HTTP 195.26.224.135:80 F"
       - "🇬🇧 HTTP 134.209.29.120:3128 F"
       - "🇬🇧 HTTP 104.194.146.9:80 F"
-      - "🇳🇱 HTTP 195.26.224.135:80 F"
-      - "🇫🇷 HTTP 163.172.167.48:80 F"
-      - "🇸🇬 HTTP 165.154.236.214:80 F"
       - "🇩🇰 HTTP 194.150.110.134:80 F"
+      - "🇭🇰 HTTP 16.163.88.228:80 F"
       - "🇩🇪 HTTP 161.35.70.249:80 F"
-      - "🇨🇳 HTTP 115.239.234.43:7302 F"
       - "🇩🇪 HTTP 103.237.102.191:11111 F"
-      - "🇯🇵 HTTP 139.162.78.109:3128 F"
       - "🇩🇪 HTTP 116.202.108.111:3128 F"
-      - "🇮🇩 HTTP 103.156.17.83:8080 F"
       - "🇪🇸 HTTP 195.114.209.50:80 F"
-      - "🇨🇱 HTTP 152.230.215.123:80 F"
       - "🇮🇶 HTTP 185.135.69.34:80 F"
-      - "🇨🇭 HTTP 165.225.66.43:11588 F"
-      - "🇭🇰 HTTP 176.111.37.216:39811 F"
+      - "🇸🇬 HTTP 165.154.236.214:80 F"
+      - "🇭🇰 HTTP 176.111.37.5:39811 F"
+      - "🇮🇩 HTTP 103.156.17.83:8080 F"
+      - "🇯🇵 HTTP 139.162.78.109:3128 F"
       - "🇫🇷 HTTP 202.133.88.173:80 F"
-      - "🇰🇷 HTTP 183.110.216.128:8090 M"
-      - "🇸🇬 HTTP 128.199.202.122:8080 M"
-      - "🇸🇬 HTTP 134.185.85.16:3128 M"
+      - "🇨🇳 HTTP 115.239.234.43:7302 F"
+      - "🇨🇭 HTTP 165.225.66.40:11588 M"
       - "🇸🇦 HTTP 130.110.103.245:3128 M"
-      - "🇺🇿 HTTP 195.158.30.249:3128 M"
-      - "🇮🇳 HTTP 15.207.138.141:3128 M"
+      - "🇦🇺 HTTP 114.111.151.41:80 M"
+      - "🇰🇷 HTTP 183.110.216.159:8090 M"
+      - "🇦🇷 HTTP 170.155.2.119:80 M"
+      - "🇸🇬 HTTP 128.199.202.122:8080 M"
+      - "🇨🇭 HTTP 165.225.66.43:11588 M"
+      - "🇮🇩 HTTP 103.65.237.92:5678 M"
+      - "🇻🇳 HTTP 103.28.37.131:3128 M"
       - "🇮🇳 HTTP 139.59.1.14:8080 M"
       - "🇨🇲 HTTP 102.244.78.61:8085 M"
-      - "🇨🇲 HTTP 102.244.78.61:8083 M"
       - "🇨🇲 HTTP 102.244.78.61:8090 M"
-      - "🇨🇲 HTTP 102.244.78.61:8082 M"
-      - "🇭🇰 HTTP 176.111.37.5:39811 M"
-      - "🇷🇺 HTTP 178.141.246.92:10808 M"
-      - "🇻🇳 HTTP 103.28.37.131:3128 M"
-      - "🇰🇪 HTTP 102.0.20.92:8080 M"
-      - "🇮🇷 HTTP 193.176.242.186:80 M"
-      - "🇨🇭 HTTP 165.225.66.40:11588 M"
-      - "🇿🇼 HTTP 197.221.249.198:80 M"
-      - "🇿🇼 HTTP 197.221.240.247:80 M"
-      - "🇿🇼 HTTP 197.221.240.246:80 M"
-      - "🇿🇼 HTTP 197.221.249.197:80 M"
-      - "🇿🇼 HTTP 197.221.249.199:80 M"
-      - "🇿🇼 HTTP 197.221.249.196:80 M"
-      - "🇪🇬 HTTP 197.164.101.14:1976 M"
-      - "🇿🇼 HTTP 197.221.240.182:80 M"
-      - "🇺🇸 HTTP 172.239.170.24:3128 M"
+      - "🇨🇲 HTTP 102.244.78.61:8083 M"
       - "🇬🇭 HTTP 156.38.112.11:80 M"
-      - "🇮🇩 HTTP 103.65.237.92:5678 M"
-      - "🇻🇳 HTTP 103.82.20.76:8080 M"
-      - "🇨🇦 HTTP 184.75.221.82:3118 M"
-      - "🇳🇱 HTTP 146.103.123.157:80 M"
-      - "🇿🇼 HTTP 197.221.240.178:80 M"
-      - "🇸🇳 HTTP 154.65.39.8:80 M"
-      - "🇺🇸 HTTP 167.99.236.14:80 M"
-      - "🇨🇴 HTTP 200.116.198.222:9812 M"
-      - "🇺🇸 HTTP 167.99.3.26:5001 M"
-      - "🇺🇸 HTTP 152.53.81.29:8888 M"
-      - "🇰🇷 HTTP 183.110.216.128:8091 M"
-      - "🇮🇩 HTTP 103.174.122.4:3128 M"
-      - "🇸🇪 HTTP 193.181.35.115:8118 M"
-      - "🇿🇼 HTTP 197.221.240.176:80 M"
-      - "🇿🇼 HTTP 197.221.235.122:80 M"
-      - "🇿🇼 HTTP 197.221.234.149:80 M"
-      - "🇿🇼 HTTP 197.221.234.252:80 M"
-      - "🇻🇳 HTTP 123.58.199.232:8168 M"
+      - "🇨🇲 HTTP 102.244.78.61:8082 M"
+      - "🇹🇼 HTTP 164.52.11.194:18080 M"
+      - "🇪🇬 HTTP 197.164.101.13:1981 M"
+      - "🇮🇷 HTTP 193.176.242.186:80 M"
       - "🇿🇼 HTTP 197.221.234.253:80 M"
+      - "🇿🇼 HTTP 197.221.234.252:80 M"
+      - "🇿🇼 HTTP 197.221.235.122:80 M"
+      - "🇮🇳 HTTP 151.185.58.17:80 M"
+      - "🇿🇼 HTTP 197.221.240.176:80 M"
+      - "🇿🇼 HTTP 197.221.234.149:80 M"
+      - "🇿🇼 HTTP 197.221.249.199:80 M"
       - "🇿🇼 HTTP 197.221.237.248:80 M"
-      - "🇮🇩 HTTP 103.143.105.138:8080 M"
-      - "🇻🇪 HTTP 161.22.32.31:8080 M"
-      - "🇵🇦 HTTP 181.119.124.101:999 M"
-      - "🇵🇰 HTTP 103.158.236.132:8080 S"
-      - "🇺🇸 HTTP 143.198.135.176:80 S"
-      - "🇨🇴 HTTP 181.78.172.141:999 S"
-      - "🇧🇷 HTTP 201.28.86.18:61804 S"
-      - "🇮🇩 HTTP 149.129.226.9:104 S"
-      - "🇮🇩 HTTP 149.129.255.179:119 S"
-      - "🇮🇩 HTTP 149.129.255.179:10443 S"
-      - "🇨🇳 HTTP 121.43.109.88:8047 S"
-      - "🇮🇩 HTTP 149.129.226.9:9090 S"
+      - "🇿🇼 HTTP 197.221.240.246:80 M"
+      - "🇿🇼 HTTP 197.221.240.247:80 M"
+      - "🇿🇼 HTTP 197.221.240.182:80 M"
+      - "🇺🇸 HTTP 167.99.236.14:80 M"
+      - "🇸🇳 HTTP 154.65.39.8:80 M"
+      - "🇿🇼 HTTP 197.221.249.197:80 M"
+      - "🇿🇼 HTTP 197.221.240.178:80 M"
+      - "🇿🇼 HTTP 197.221.249.198:80 M"
+      - "🇿🇼 HTTP 197.221.249.196:80 M"
+      - "🇧🇷 HTTP 201.28.86.18:61804 M"
+      - "🇭🇰 HTTP 176.111.37.216:39811 M"
+      - "🇨🇭 HTTP 185.85.111.18:80 M"
+      - "🇳🇱 HTTP 146.103.123.157:80 S"
       - "🇮🇩 HTTP 149.129.226.9:80 S"
-      - "🇮🇩 HTTP 149.129.255.179:5060 S"
-      - "🇨🇳 HTTP 106.14.91.83:4000 S"
-      - "🇮🇩 HTTP 149.129.255.179:6588 S"
-      - "🇮🇩 HTTP 149.129.226.9:8443 S"
-      - "🇨🇳 HTTP 139.224.186.221:7878 S"
-      - "🇨🇳 HTTP 120.25.189.254:8008 S"
-      - "🇨🇳 HTTP 120.26.52.35:8081 S"
-      - "🇲🇽 HTTP 189.51.168.165:999 S"
-      - "🇻🇪 HTTP 200.59.191.27:999 S"
-      - "🇹🇭 HTTP 110.238.113.119:19 S"
-      - "🇨🇳 HTTP 114.215.127.92:80 S"
-      - "🇮🇩 HTTP 103.178.41.46:9291 S"
-      - "🇹🇼 HTTP 164.52.11.194:18080 S"
-      - "🇬🇷 HTTP 150.140.148.235:80 S"
-      - "🇺🇸 HTTP 108.170.12.14:80 S"
-      - "🇻🇪 HTTP 13.143.240.243:999 S"
-      - "🇧🇷 HTTP 138.185.190.149:8080 S"
-      - "🇮🇩 HTTP 103.165.155.55:1111 S"
-      - "🇮🇩 HTTP 160.22.198.21:8082 S"
-      - "🇨🇾 HTTP 185.203.6.219:3128 S"
-      - "🇮🇩 HTTP 103.166.213.249:8080 S"
-      - "🇵🇭 HTTP 126.209.107.122:5050 S"
-      - "🇮🇩 HTTP 103.46.11.160:8080 S"
-      - "🇮🇩 HTTP 103.166.33.56:8080 S"
-      - "🇪🇨 HTTP 179.60.189.81:999 S"
-      - "🇵🇾 HTTP 201.222.50.218:80 S"
-      - "🇮🇩 HTTP 117.18.16.47:1111 S"
-      - "🇧🇷 HTTP 179.48.25.1:8095 S"
-      - "🇿🇦 HTTP 20.33.10.132:443 S"
-      - "🇧🇩 HTTP 103.79.183.109:8080 S"
-      - "🇺🇸 HTTP 138.68.235.51:80 S"
-      - "🇪🇨 HTTP 177.234.217.83:999 S"
-      - "🇯🇵 HTTP 160.248.7.177:80 S"
-      - "🇺🇿 HTTP 195.158.8.123:3128 S"
-      - "🇮🇳 HTTP 103.214.189.41:80 S"
-      - "🇨🇱 HTTP 200.39.139.65:999 S"
-      - "🇮🇹 HTTP 2.193.71.141:8080 S"
-      - "🇮🇳 HTTP 202.62.67.209:53281 S"
-      - "🇮🇩 HTTP 103.130.129.231:10001 S"
-      - "🇺🇸 HTTP 104.218.199.8:16062 S"
-      - "🇻🇳 HTTP 103.182.22.54:8000 S"
-      - "🇪🇨 HTTP 177.234.217.85:999 S"
-      - "🇮🇩 HTTP 119.82.242.200:8080 S"
-      - "🇮🇩 HTTP 103.195.65.199:8080 S"
-      - "🇺🇸 HTTP 116.204.166.203:8080 S"
-      - "🇮🇩 HTTP 144.79.37.148:8080 S"
-      - "🇮🇩 HTTP 103.132.53.28:8080 S"
-      - "🇮🇩 HTTP 103.149.239.42:8080 S"
-      - "🇺🇸 HTTP 116.204.166.200:8080 S"
-      - "🇬🇹 HTTP 167.250.222.233:999 S"
+      - "🇮🇩 HTTP 149.129.226.9:104 S"
+      - "🇮🇩 HTTP 149.129.226.9:9090 S"
       - "🇨🇳 HTTP 106.14.104.220:9098 S"
       - "🇨🇳 HTTP 106.14.104.220:8008 S"
-      - "🇮🇳 HTTP 182.78.42.112:83 S"
-      - "🇹🇷 HTTP 185.146.138.159:8080 S"
-      - "🇵🇭 HTTP 124.105.196.148:8081 S"
-      - "🇬🇹 HTTP 190.115.15.100:8080 S"
-      - "🇮🇩 HTTP 115.178.55.221:8080 S"
-      - "🇩🇴 HTTP 154.59.207.8:999 S"
-      - "🇮🇩 HTTP 103.14.111.188:8080 S"
-      - "🇦🇺 HTTP 114.111.151.41:80 S"
-      - "🇮🇩 HTTP 103.152.21.35:3128 S"
-      - "🇮🇩 HTTP 103.154.73.14:8080 S"
-      - "🇦🇷 HTTP 190.123.83.137:999 S"
-      - "🇪🇨 HTTP 177.234.217.93:999 S"
-      - "🇬🇹 HTTP 200.119.141.114:999 S"
-      - "🇮🇳 HTTP 122.160.30.99:80 S"
-      - "🇨🇴 HTTP 181.78.80.125:999 S"
-      - "🇮🇩 HTTP 154.19.39.50:80 S"
-      - "🇨🇴 HTTP 186.194.160.122:999 S"
-      - "🇫🇷 HTTP 188.165.199.207:80 S"
-      - "🇲🇽 HTTP 148.230.212.70:8080 S"
-      - "🇹🇭 HTTP 1.20.101.25:80 S"
-      - "🇪🇬 HTTP 154.236.179.229:1976 S"
-      - "🇮🇳 HTTP 151.185.58.17:80 S"
-      - "🇦🇷 HTTP 187.102.219.34:999 S"
-      - "🇻🇳 HTTP 14.225.240.23:8562 S"
-      - "🇧🇩 HTTP 202.5.47.228:8080 S"
-      - "🇮🇩 HTTP 103.82.246.129:8181 S"
-      - "🇧🇷 HTTP 170.81.131.70:3128 S"
-      - "🇺🇸 HTTP 198.111.166.184:80 S"
-      - "🇱🇾 HTTP 154.73.28.89:8080 S"
-      - "🇰🇭 HTTP 111.118.149.40:8080 S"
-      - "🇵🇱 HTTP 148.253.212.68:8080 S"
-      - "🇮🇳 HTTP 103.209.88.72:8080 S"
-      - "🇰🇷 HTTP 183.110.216.159:8090 S"
-      - "🇧🇩 HTTP 103.92.218.121:9514 S"
-      - "🇩🇪 HTTP 165.232.67.22:3128 S"
-      - "🇪🇬 HTTP 197.164.101.13:1981 S"
-      - "🇮🇩 HTTP 124.158.186.254:8080 S"
-      - "🇭🇳 HTTP 179.49.113.230:999 S"
+      - "🇮🇩 HTTP 149.129.226.9:8443 S"
+      - "🇨🇳 HTTP 139.224.186.221:7878 S"
+      - "🇮🇩 HTTP 149.129.255.179:6588 S"
+      - "🇮🇩 HTTP 149.129.255.179:5060 S"
+      - "🇮🇩 HTTP 149.129.255.179:10443 S"
+      - "🇮🇩 HTTP 149.129.255.179:119 S"
+      - "🇨🇳 HTTP 106.14.91.83:4000 S"
+      - "🇨🇳 HTTP 121.43.109.88:8047 S"
+      - "🇨🇳 HTTP 120.25.189.254:8008 S"
+      - "🇹🇭 HTTP 110.238.113.119:19 S"
+      - "🇨🇳 HTTP 120.26.52.35:8081 S"
+      - "🇮🇩 HTTP 103.8.59.12:8080 S"
+      - "🇨🇳 HTTP 114.215.127.92:80 S"
       - "🇪🇨 HTTP 177.234.217.235:999 S"
-      - "🇮🇩 HTTP 103.166.159.93:8080 S"
+      - "🇪🇨 HTTP 177.234.217.93:999 S"
+      - "🇬🇹 HTTP 190.115.15.100:8080 S"
+      - "🇺🇸 HTTP 165.154.162.73:8888 S"
+      - "🇦🇷 HTTP 187.102.219.34:999 S"
+      - "🇫🇷 HTTP 176.191.124.3:80 S"
       - "🇿🇦 HTTP 196.223.129.21:80 S"
-      - "🇮🇩 HTTP 103.180.118.109:8090 S"
-      - "🇮🇩 HTTP 103.227.187.3:6090 S"
-      - "🇮🇩 HTTP 160.19.146.72:2022 S"
-      - "🇨🇴 HTTP 181.129.147.163:8080 S"
-      - "🇮🇩 HTTP 103.144.102.82:8080 S"
-      - "🇦🇷 HTTP 170.155.2.119:80 S"
-      - "🇭🇳 HTTP 181.115.67.3:999 S"
-      - "🇺🇸 HTTP 116.204.166.40:8080 S"
-      - "🇧🇷 HTTP 177.20.167.139:8080 S"
-      - "🇵🇱 HTTP 201.4.65.103:8080 S"
-      - "🇺🇸 HTTP 104.225.220.233:80 S"
-      - "🇨🇴 HTTP 190.2.209.59:999 S"
-      - "🇱🇾 HTTP 102.68.128.211:8080 S"
-      - "🇮🇩 HTTP 103.154.178.106:8080 S"
-      - "🇮🇩 HTTP 182.253.109.182:8080 S"
-      - "🇻🇳 HTTP 115.73.178.252:3128 S"
+      - "🇲🇽 HTTP 177.124.87.106:999 S"
+      - "🇮🇩 HTTP 157.20.35.40:9090 S"
+      - "🇦🇷 HTTP 190.123.83.137:999 S"
+      - "🇪🇬 HTTP 197.164.101.14:1976 S"
+      - "🇮🇳 HTTP 122.160.30.99:80 S"
+      - "🇲🇽 HTTP 189.51.168.165:999 S"
+      - "🇻🇳 HTTP 123.58.199.232:8168 S"
+      - "🇺🇿 HTTP 195.158.8.123:3128 S"
+      - "🇫🇷 HTTP 188.165.199.207:80 S"
+      - "🇪🇨 HTTP 181.78.195.136:999 S"
+      - "🇺🇸 HTTP 143.198.135.176:80 S"
+      - "🇺🇸 HTTP 116.204.166.132:8080 S"
+      - "🇨🇴 HTTP 200.10.31.42:8081 S"
+      - "🇺🇸 HTTP 138.68.235.51:80 S"
+      - "🇹🇷 HTTP 185.146.138.159:8080 S"
+      - "🇺🇸 HTTP 152.53.81.29:8888 S"
+      - "🇵🇾 HTTP 201.222.50.218:80 S"
+      - "🇺🇸 HTTP 198.111.166.184:80 S"
+      - "🇨🇴 HTTP 200.116.198.222:9812 S"
+      - "🇻🇪 HTTP 161.22.32.31:8080 S"
+      - "🇧🇩 HTTP 103.79.183.109:8080 S"
+      - "🇰🇷 HTTP 183.110.216.128:8091 S"
+      - "🇮🇩 HTTP 103.68.213.51:7789 S"
+      - "🇧🇩 HTTP 202.5.47.228:8080 S"
+  - name: 🇺🇸 US
+    type: select
+    proxies:
+      - "🇺🇸 HTTP 137.66.1.45:80 F"
+      - "🇺🇸 HTTP 198.199.86.11:3128 F"
+      - "🇺🇸 HTTP 159.65.230.46:8888 F"
+      - "🇺🇸 HTTP 142.93.202.130:3128 F"
+      - "🇺🇸 HTTP 174.138.119.88:80 F"
+      - "🇺🇸 HTTP 143.246.138.227:80 F"
+      - "🇺🇸 HTTP 159.65.221.25:80 F"
+      - "🇺🇸 HTTP 191.101.1.116:80 F"
+      - "🇺🇸 HTTP 138.68.60.8:3128 F"
+      - "🇺🇸 HTTP 172.239.170.24:3128 F"
+      - "🇺🇸 HTTP 167.99.236.14:80 M"
+      - "🇺🇸 HTTP 165.154.162.73:8888 S"
+      - "🇺🇸 HTTP 143.198.135.176:80 S"
+      - "🇺🇸 HTTP 116.204.166.132:8080 S"
+      - "🇺🇸 HTTP 138.68.235.51:80 S"
+      - "🇺🇸 HTTP 152.53.81.29:8888 S"
+      - "🇺🇸 HTTP 198.111.166.184:80 S"
+  - name: 🇿🇼 ZW
+    type: select
+    proxies:
+      - "🇿🇼 HTTP 197.221.234.253:80 M"
+      - "🇿🇼 HTTP 197.221.234.252:80 M"
+      - "🇿🇼 HTTP 197.221.235.122:80 M"
+      - "🇿🇼 HTTP 197.221.240.176:80 M"
+      - "🇿🇼 HTTP 197.221.234.149:80 M"
+      - "🇿🇼 HTTP 197.221.249.199:80 M"
+      - "🇿🇼 HTTP 197.221.237.248:80 M"
+      - "🇿🇼 HTTP 197.221.240.246:80 M"
+      - "🇿🇼 HTTP 197.221.240.247:80 M"
+      - "🇿🇼 HTTP 197.221.240.182:80 M"
+      - "🇿🇼 HTTP 197.221.249.197:80 M"
+      - "🇿🇼 HTTP 197.221.240.178:80 M"
+      - "🇿🇼 HTTP 197.221.249.198:80 M"
+      - "🇿🇼 HTTP 197.221.249.196:80 M"
   - name: 🇮🇩 ID
     type: select
     proxies:
       - "🇮🇩 HTTP 103.156.17.83:8080 F"
       - "🇮🇩 HTTP 103.65.237.92:5678 M"
-      - "🇮🇩 HTTP 103.174.122.4:3128 M"
-      - "🇮🇩 HTTP 103.143.105.138:8080 M"
-      - "🇮🇩 HTTP 149.129.226.9:104 S"
-      - "🇮🇩 HTTP 149.129.255.179:119 S"
-      - "🇮🇩 HTTP 149.129.255.179:10443 S"
-      - "🇮🇩 HTTP 149.129.226.9:9090 S"
       - "🇮🇩 HTTP 149.129.226.9:80 S"
-      - "🇮🇩 HTTP 149.129.255.179:5060 S"
-      - "🇮🇩 HTTP 149.129.255.179:6588 S"
+      - "🇮🇩 HTTP 149.129.226.9:104 S"
+      - "🇮🇩 HTTP 149.129.226.9:9090 S"
       - "🇮🇩 HTTP 149.129.226.9:8443 S"
-      - "🇮🇩 HTTP 103.178.41.46:9291 S"
-      - "🇮🇩 HTTP 103.165.155.55:1111 S"
-      - "🇮🇩 HTTP 160.22.198.21:8082 S"
-      - "🇮🇩 HTTP 103.166.213.249:8080 S"
-      - "🇮🇩 HTTP 103.46.11.160:8080 S"
-      - "🇮🇩 HTTP 103.166.33.56:8080 S"
-      - "🇮🇩 HTTP 117.18.16.47:1111 S"
-      - "🇮🇩 HTTP 103.130.129.231:10001 S"
-      - "🇮🇩 HTTP 119.82.242.200:8080 S"
-      - "🇮🇩 HTTP 103.195.65.199:8080 S"
-      - "🇮🇩 HTTP 144.79.37.148:8080 S"
-      - "🇮🇩 HTTP 103.132.53.28:8080 S"
-      - "🇮🇩 HTTP 103.149.239.42:8080 S"
-      - "🇮🇩 HTTP 115.178.55.221:8080 S"
-      - "🇮🇩 HTTP 103.14.111.188:8080 S"
-      - "🇮🇩 HTTP 103.152.21.35:3128 S"
-      - "🇮🇩 HTTP 103.154.73.14:8080 S"
-      - "🇮🇩 HTTP 154.19.39.50:80 S"
-      - "🇮🇩 HTTP 103.82.246.129:8181 S"
-      - "🇮🇩 HTTP 124.158.186.254:8080 S"
-      - "🇮🇩 HTTP 103.166.159.93:8080 S"
-      - "🇮🇩 HTTP 103.180.118.109:8090 S"
-      - "🇮🇩 HTTP 103.227.187.3:6090 S"
-      - "🇮🇩 HTTP 160.19.146.72:2022 S"
-      - "🇮🇩 HTTP 103.144.102.82:8080 S"
-      - "🇮🇩 HTTP 103.154.178.106:8080 S"
-      - "🇮🇩 HTTP 182.253.109.182:8080 S"
-      - "🇮🇩 HTTP 160.191.180.121:8080 S"
-      - "🇮🇩 HTTP 157.20.35.40:9090 S"
-      - "🇮🇩 HTTP 154.18.255.112:1080 S"
-      - "🇮🇩 HTTP 103.155.196.182:8080 S"
-      - "🇮🇩 HTTP 119.82.240.78:3128 S"
-      - "🇮🇩 HTTP 103.188.33.74:8085 S"
-      - "🇮🇩 HTTP 103.46.186.126:8080 S"
-      - "🇮🇩 HTTP 103.188.173.101:1080 S"
-      - "🇮🇩 HTTP 103.165.155.210:2016 S"
+      - "🇮🇩 HTTP 149.129.255.179:6588 S"
+      - "🇮🇩 HTTP 149.129.255.179:5060 S"
+      - "🇮🇩 HTTP 149.129.255.179:10443 S"
+      - "🇮🇩 HTTP 149.129.255.179:119 S"
       - "🇮🇩 HTTP 103.8.59.12:8080 S"
+      - "🇮🇩 HTTP 157.20.35.40:9090 S"
       - "🇮🇩 HTTP 103.68.213.51:7789 S"
-      - "🇮🇩 HTTP 202.179.188.6:8080 S"
-      - "🇮🇩 HTTP 103.190.62.137:3125 S"
-  - name: 🇺🇸 US
-    type: select
-    proxies:
-      - "🇺🇸 HTTP 191.101.1.116:80 F"
-      - "🇺🇸 HTTP 138.68.60.8:3128 F"
-      - "🇺🇸 HTTP 165.154.162.73:8888 F"
-      - "🇺🇸 HTTP 159.65.230.46:8888 F"
-      - "🇺🇸 HTTP 159.65.221.25:80 F"
-      - "🇺🇸 HTTP 174.138.119.88:80 F"
-      - "🇺🇸 HTTP 142.93.202.130:3128 F"
-      - "🇺🇸 HTTP 198.199.86.11:3128 F"
-      - "🇺🇸 HTTP 137.66.1.45:80 F"
-      - "🇺🇸 HTTP 143.246.138.227:80 F"
-      - "🇺🇸 HTTP 172.239.170.24:3128 M"
-      - "🇺🇸 HTTP 167.99.236.14:80 M"
-      - "🇺🇸 HTTP 167.99.3.26:5001 M"
-      - "🇺🇸 HTTP 152.53.81.29:8888 M"
-      - "🇺🇸 HTTP 143.198.135.176:80 S"
-      - "🇺🇸 HTTP 108.170.12.14:80 S"
-      - "🇺🇸 HTTP 138.68.235.51:80 S"
-      - "🇺🇸 HTTP 104.218.199.8:16062 S"
-      - "🇺🇸 HTTP 116.204.166.203:8080 S"
-      - "🇺🇸 HTTP 116.204.166.200:8080 S"
-      - "🇺🇸 HTTP 198.111.166.184:80 S"
-      - "🇺🇸 HTTP 116.204.166.40:8080 S"
-      - "🇺🇸 HTTP 104.225.220.233:80 S"
-      - "🇺🇸 HTTP 116.204.166.132:8080 S"
-  - name: 🇿🇼 ZW
-    type: select
-    proxies:
-      - "🇿🇼 HTTP 197.221.249.198:80 M"
-      - "🇿🇼 HTTP 197.221.240.247:80 M"
-      - "🇿🇼 HTTP 197.221.240.246:80 M"
-      - "🇿🇼 HTTP 197.221.249.197:80 M"
-      - "🇿🇼 HTTP 197.221.249.199:80 M"
-      - "🇿🇼 HTTP 197.221.249.196:80 M"
-      - "🇿🇼 HTTP 197.221.240.182:80 M"
-      - "🇿🇼 HTTP 197.221.240.178:80 M"
-      - "🇿🇼 HTTP 197.221.240.176:80 M"
-      - "🇿🇼 HTTP 197.221.235.122:80 M"
-      - "🇿🇼 HTTP 197.221.234.149:80 M"
-      - "🇿🇼 HTTP 197.221.234.252:80 M"
-      - "🇿🇼 HTTP 197.221.234.253:80 M"
-      - "🇿🇼 HTTP 197.221.237.248:80 M"
   - name: 🇨🇳 CN
     type: select
     proxies:
       - "🇨🇳 HTTP 115.239.234.43:7302 F"
-      - "🇨🇳 HTTP 121.43.109.88:8047 S"
-      - "🇨🇳 HTTP 106.14.91.83:4000 S"
+      - "🇨🇳 HTTP 106.14.104.220:9098 S"
+      - "🇨🇳 HTTP 106.14.104.220:8008 S"
       - "🇨🇳 HTTP 139.224.186.221:7878 S"
+      - "🇨🇳 HTTP 106.14.91.83:4000 S"
+      - "🇨🇳 HTTP 121.43.109.88:8047 S"
       - "🇨🇳 HTTP 120.25.189.254:8008 S"
       - "🇨🇳 HTTP 120.26.52.35:8081 S"
       - "🇨🇳 HTTP 114.215.127.92:80 S"
-      - "🇨🇳 HTTP 106.14.104.220:9098 S"
-      - "🇨🇳 HTTP 106.14.104.220:8008 S"
-  - name: 🇮🇳 IN
+  - name: 🇩🇪 DE
     type: select
     proxies:
-      - "🇮🇳 HTTP 15.207.138.141:3128 M"
-      - "🇮🇳 HTTP 139.59.1.14:8080 M"
-      - "🇮🇳 HTTP 103.214.189.41:80 S"
-      - "🇮🇳 HTTP 202.62.67.209:53281 S"
-      - "🇮🇳 HTTP 182.78.42.112:83 S"
-      - "🇮🇳 HTTP 122.160.30.99:80 S"
-      - "🇮🇳 HTTP 151.185.58.17:80 S"
-      - "🇮🇳 HTTP 103.209.88.72:8080 S"
-      - "🇮🇳 HTTP 103.130.70.253:83 S"
-  - name: 🇻🇳 VN
+      - "🇩🇪 HTTP 128.140.113.110:8081 F"
+      - "🇩🇪 HTTP 161.35.70.249:80 F"
+      - "🇩🇪 HTTP 103.237.102.191:11111 F"
+      - "🇩🇪 HTTP 116.202.108.111:3128 F"
+  - name: 🇨🇲 CM
     type: select
     proxies:
-      - "🇻🇳 HTTP 103.28.37.131:3128 M"
-      - "🇻🇳 HTTP 103.82.20.76:8080 M"
-      - "🇻🇳 HTTP 123.58.199.232:8168 M"
-      - "🇻🇳 HTTP 103.182.22.54:8000 S"
-      - "🇻🇳 HTTP 14.225.240.23:8562 S"
-      - "🇻🇳 HTTP 115.73.178.252:3128 S"
-      - "🇻🇳 HTTP 118.69.186.75:1452 S"
-      - "🇻🇳 HTTP 14.170.154.193:19132 S"
-      - "🇻🇳 HTTP 116.101.54.121:8080 S"
-  - name: 🇨🇴 CO
+      - "🇨🇲 HTTP 102.244.78.61:8085 M"
+      - "🇨🇲 HTTP 102.244.78.61:8090 M"
+      - "🇨🇲 HTTP 102.244.78.61:8083 M"
+      - "🇨🇲 HTTP 102.244.78.61:8082 M"
+  - name: 🇭🇰 HK
     type: select
     proxies:
-      - "🇨🇴 HTTP 200.116.198.222:9812 M"
-      - "🇨🇴 HTTP 181.78.172.141:999 S"
-      - "🇨🇴 HTTP 181.78.80.125:999 S"
-      - "🇨🇴 HTTP 186.194.160.122:999 S"
-      - "🇨🇴 HTTP 181.129.147.163:8080 S"
-      - "🇨🇴 HTTP 190.2.209.59:999 S"
-      - "🇨🇴 HTTP 200.10.31.42:8081 S"
-  - name: 🇪🇨 EC
+      - "🇭🇰 HTTP 16.163.88.228:80 F"
+      - "🇭🇰 HTTP 176.111.37.5:39811 F"
+      - "🇭🇰 HTTP 176.111.37.216:39811 M"
+  - name: 🇫🇷 FR
     type: select
     proxies:
-      - "🇪🇨 HTTP 179.60.189.81:999 S"
-      - "🇪🇨 HTTP 177.234.217.83:999 S"
-      - "🇪🇨 HTTP 177.234.217.85:999 S"
-      - "🇪🇨 HTTP 177.234.217.93:999 S"
-      - "🇪🇨 HTTP 177.234.217.235:999 S"
-      - "🇪🇨 HTTP 181.78.195.136:999 S"
+      - "🇫🇷 HTTP 202.133.88.173:80 F"
+      - "🇫🇷 HTTP 176.191.124.3:80 S"
+      - "🇫🇷 HTTP 188.165.199.207:80 S"
 rules:
   - "DOMAIN-SUFFIX,local,DIRECT"
   - "IP-CIDR,127.0.0.0/8,DIRECT"
